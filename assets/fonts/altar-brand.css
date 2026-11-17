@@ -1,0 +1,16 @@
+/* Familias de la carpeta de identidad ALTAR 2026, servidas localmente. */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./montserrat-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./lora-regular.woff2") format("woff2");
+}

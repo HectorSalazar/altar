@@ -1,0 +1,3 @@
+DM Sans by Colophon Foundry. Fonts downloaded unmodified through the Google Fonts CSS API, weights 400, 500 and 700.
+https://fonts.google.com/specimen/DM+Sans
+License: OFL.txt

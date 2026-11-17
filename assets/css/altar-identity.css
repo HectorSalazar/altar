@@ -1,0 +1,224 @@
+/* Identidad ALTAR 2026: fuentes y paleta del material oficial. */
+:root {
+  --font-global: 'Montserrat', Arial, sans-serif;
+  --font-alt: 'Montserrat', Arial, sans-serif;
+  --altar-ivory: #d8d1c8;
+  --altar-ink: #181818;
+  --altar-muted: #62605d;
+  --altar-wash: #f6f4f1;
+  --altar-line: #ded9d3;
+}
+[data-cms-visible][hidden], [data-cms-hidden-link][hidden] { display: none !important; }
+.series-art-link { display: block; }
+body.altar-site { font-family: var(--font-global); }
+.altar-site h1, .altar-site h2, .altar-site h3, .altar-site h4 {
+  font-family: var(--font-alt);
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+/* El mismo velo gris del fondo de video en CREE. */
+.main-one-hero {
+  --altar-hero-shade: linear-gradient(90deg, #181818a7, #18181877);
+  --altar-hero-ivory: #e4dacf;
+  background: #1c1c1c;
+  color: #f6f3ed;
+}
+.main-one-hero::after {
+  background: var(--altar-hero-shade);
+}
+.main-hero-brand-mark { filter: invert(1); opacity: .025; }
+.main-hero-copy .section-caption { color: #f5eee6; letter-spacing: .16em; }
+.main-one-hero .hs-title-1 {
+  color: var(--altar-hero-ivory);
+  font-weight: 500;
+  font-size: clamp(44px, 4.5vw, 67px);
+  letter-spacing: -.055em;
+  line-height: 1.12;
+}
+.main-one-hero .section-descr { color: #f0ece6; font-size: 18px; line-height: 1.8; letter-spacing: -.01em; }
+.main-one-hero .btn-mod.btn-large { background: var(--altar-hero-ivory); color: #181818; font-size: 12px; }
+.main-one-hero .btn-mod.btn-hover-anim::before { background: #fff; }
+.main-hero-story { color: #fff; font-size: 14px; }
+.main-hero-signature, .main-hero-signature .tiny-cross { color: var(--altar-ivory); }
+.main-hero-signature { font-family: 'Lora', Georgia, serif; font-weight: 400; font-size: 24px; }
+.main-hero-bottom, .main-hero-bottom .scroll-down-1 { color: #f1ede7; }
+.main-hero-bottom .scroll-down-1-icon { border-color: #d8d1c880; }
+.hero-photo-reveal { border: 1px solid #d8d1c83d; box-shadow: 0 20px 65px #0004; }
+.about-copy .body-lead, .about-copy .faith-confession p, .footer-top > p {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -.02em;
+}
+.identity-band, .messages-section, .life-houses, .events-section,
+.branches-section, .missions-section { background: #f6f4f1; border-color: var(--altar-line); }
+.carisma-card { background: #e9e8e5; }
+.discipleship-card, .book-display { background: var(--altar-ivory); }
+.discipleship-card p { color: #4f4b46; }
+.life-houses-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  margin-top: clamp(32px, 4vw, 58px);
+  overflow: hidden;
+  border: 1px solid #3b3632;
+  background: #23201e;
+  color: #f6f3ed;
+}
+.life-houses-feature-copy {
+  align-self: center;
+  padding: clamp(28px, 4.7vw, 66px);
+}
+.life-houses-feature-copy .eyebrow {
+  color: var(--altar-ivory);
+  letter-spacing: .14em;
+}
+.life-houses-feature h3 {
+  margin: 14px 0 20px;
+  color: inherit;
+  font-size: clamp(32px, 4.15vw, 57px);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.life-houses-feature h3 em {
+  color: var(--altar-ivory);
+  font-family: 'Lora', Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.life-houses-feature p {
+  max-width: 42ch;
+  margin: 0 0 28px;
+  color: #ddd6ce;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.7;
+}
+.life-houses-feature .altar-button {
+  max-width: 100%;
+  gap: 18px;
+  padding-inline: 18px;
+  border-radius: 3px;
+  background: var(--altar-ivory);
+  white-space: normal;
+}
+.life-houses-feature .altar-button:hover { background: #fff; }
+.life-houses-feature .altar-button:focus-visible { outline-color: #fff; }
+.life-houses-feature .arrow-icon { flex: none; }
+.life-houses-feature-media {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  background: #38312d;
+}
+.life-houses-feature-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 58%;
+}
+.life-houses-feature-media::after {
+  position: absolute;
+  inset: -18% 16% -18% auto;
+  width: 15%;
+  border-inline: 1px solid #f6f3ed40;
+  background: #f6f3ed08;
+  transform: skewX(-26deg);
+  pointer-events: none;
+  content: '';
+}
+@media (max-width: 767px) {
+  .life-houses-feature { grid-template-columns: minmax(0, 1fr); }
+  .life-houses-feature-copy { padding: 32px clamp(22px, 5vw, 34px); }
+  .life-houses-feature-media { min-height: 0; aspect-ratio: 16 / 9; }
+}
+.mission-card { border-color: var(--altar-line); background: #fff; }
+.mission-card-local, .special-events .event-conferences { background: #e8e2da; border-color: #d1c9be; }
+.mission-card-top { color: #514b44; border-color: #b5aaa066; }
+.mission-card p { color: #57524d; }
+.activity-panel { border-color: var(--altar-line); }
+.event-group-heading svg, .event-conferences .event-group-heading svg { background: #d8d1c8; color: #38332e; }
+.special-events .activity-list li { border-color: #b6ada066; }
+.first-visit-section { background: #252525; }
+.altar-footer { background: #151515; }
+.footer-brand img { width: clamp(250px, 28vw, 390px); max-width: 100%; }
+.program-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-top: auto; }
+.program-actions .text-link { margin-top: 0; }
+.manual-download { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 15px; font-weight: 500; text-underline-offset: 4px; }
+.manual-download > span { font-size: 12px; font-weight: 400; }
+.manual-download:hover, .event-description h3 a:hover { text-decoration: underline; }
+.dialog-shell .dialog-download { margin: 12px 0; }
+.branch-details-body {
+  display: grid;
+  grid-template-columns: minmax(235px, .8fr) minmax(0, 1.7fr);
+  gap: 34px;
+  align-items: center;
+  padding-top: 8px;
+}
+.branch-welcome {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  min-height: 210px;
+  padding: 24px;
+  border-radius: 4px;
+  background:
+    radial-gradient(ellipse 100% 45% at 27% -10%, #d2dadd66, transparent 74%),
+    linear-gradient(180deg, #69777e6b, #48545adb 22%, #333e43a8 60%, #11191eea),
+    #424d52 url('../images/altar-mountains-mist.webp') center 72% / cover no-repeat;
+  color: #fff;
+}
+.branch-welcome-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .14em;
+}
+.branch-welcome-title {
+  margin: 0 0 8px;
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.branch-welcome-title, .branch-welcome-motto { overflow-wrap: anywhere; }
+.branch-welcome-motto { margin: 0; color: #eee7de; font-size: 15px; line-height: 1.55; }
+.branch-contact-details { min-width: 0; }
+.branch-badge { font-size: 15px; letter-spacing: 0; text-transform: none; margin-bottom: 16px; }
+.branch-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.branch-info-grid h3 { color: #49443f; font-size: 15px; font-weight: 600; letter-spacing: 0; }
+.branch-info-grid address { font-size: 18px; }
+.branch-service-times { display: flex; flex-wrap: wrap; gap: 2px 18px; font-size: 24px; line-height: 1.5; }
+.branch-details-body .branch-actions { align-items: center; gap: 12px 18px; margin-top: 24px; }
+.branch-accordion summary { font-size: clamp(21px, 2.4vw, 31px); }
+.event-description h3 a { text-underline-offset: 6px; }
+@media (max-width: 1024px) {
+  .main-one-hero .hs-title-1 { font-size: 45px; }
+  .branch-details-body { gap: 24px; }
+  .branch-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .main-one-hero::after {
+    background: linear-gradient(180deg, #18181852 0%, #18181830 48%, transparent 76%),
+      var(--altar-hero-shade);
+  }
+  .main-hero-container { padding-top: 125px; }
+  .main-one-hero .hs-title-1 { font-size: clamp(34px, 8.8vw, 48px); letter-spacing: -.045em; }
+  .main-one-hero .section-descr { font-size: 16px; line-height: 1.75; }
+  .main-hero-story { font-size: 13px; }
+  .main-hero-signature { font-size: 23px; }
+  .main-hero-bottom { font-size: 12px; }
+  .main-hero-bottom > span { display: none; }
+  .main-hero-bottom .scroll-down-1-text { font-size: 12px; }
+  .branch-details-body { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 0 20px 28px; }
+  .branch-welcome { min-height: 0; padding: 20px; }
+  .branch-service-times { font-size: 22px; }
+  .footer-brand img { width: min(100%, 350px); }
+  .footer-top { grid-template-columns: 1fr; }
+}

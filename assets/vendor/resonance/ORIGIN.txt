@@ -1,0 +1,7 @@
+Resonance - Multipurpose One/Multi Page Template
+Author: Bestlooker
+Base demo: main-one-page.html (Main)
+Official source: https://themeforest.net/item/resonance-html-onemulti-page-multipurpose-template/48140535
+
+The CSS, JavaScript, webfonts and arrow SVG in this directory are original files from the purchased template archive, copied without modification.
+ALTAR customizations are maintained outside this vendor directory.

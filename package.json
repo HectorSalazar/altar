@@ -1,0 +1,11 @@
+{
+  "name": "altar-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing informativa de ALTAR Comunidad Cristiana sobre Resonance Modern.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/preview.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

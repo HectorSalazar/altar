@@ -1,0 +1,30 @@
+.altar-verse {
+  max-width: 440px;
+  margin: 16px 0 0;
+  padding-inline-start: 16px;
+  border-inline-start: 2px solid #d8d1c87a;
+  color: #f1ede7;
+}
+
+.altar-verse blockquote,
+.altar-verse blockquote p {
+  margin: 0;
+  font-family: Lora, Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.altar-verse figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.altar-verse figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

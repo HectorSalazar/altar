@@ -1,0 +1,20 @@
+Fuentes de identidad ALTAR 2026
+
+Montserrat variable y Lora Regular proceden de la carpeta Fonts del paquete
+de identidad facilitado para este proyecto. Se han convertido a WOFF2 sin
+alterar los contornos ni los nombres de las familias.
+
+Montserrat
+Copyright 2011 The Montserrat Project Authors
+https://github.com/JulietaUla/Montserrat
+
+Lora
+Copyright 2011 The Lora Project Authors
+https://github.com/cyrealtype/Lora-Cyrillic
+Reserved Font Name: Lora
+
+Ambas fuentes se distribuyen bajo la SIL Open Font License, versión 1.1.
+El texto de la licencia se conserva en OFL.txt.
+
+La referencia de identidad también menciona Neutrif Pro. Esa familia no
+está incluida en los archivos facilitados y no se declara como instalada.

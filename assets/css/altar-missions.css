@@ -1,0 +1,118 @@
+.mission-cover {
+  color: #f5eee6;
+  background: linear-gradient(105deg, #181818e8, #18181870),
+    #333 url('../images/altar-mountains-mist.webp') center 65% / cover;
+}
+
+.mission-cover-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 92px);
+  padding-block: clamp(56px, 7vw, 106px);
+}
+
+.mission-eyebrow {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mission-cover h1 {
+  margin: 14px 0 20px;
+  color: #e4dacf;
+  font-size: clamp(3.25rem, 6.5vw, 6.5rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.mission-cover-copy > p { max-width: 38ch; font-size: clamp(1rem, 1.4vw, 1.2rem); }
+.mission-cover .cree-button {
+  margin-top: 28px;
+  gap: 28px;
+  border-color: #e4dacf;
+  background: #e4dacf;
+  color: #181818;
+}
+.mission-cover .cree-button:hover { background: #f5eee6; }
+
+.mission-cover-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid #e4dacf55;
+}
+.mission-cover-pucallpa img { object-position: center 10%; }
+.mission-cover-photo figcaption { margin-top: 10px; font-size: .8125rem; color: #e4dacf; }
+
+.mission-overview .intro-grid,
+.mission-testimonials .intro-grid { margin-top: 24px; }
+.mission-testimonials .intro-copy > p { color: #4a443d; }
+.mission-testimonials .text-link { margin-top: 16px; }
+
+.mission-record {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 9%;
+  align-items: start;
+  margin-top: 42px;
+  padding-top: 22px;
+  border-top: 1px solid var(--cree-line);
+}
+.mission-record h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+.mission-record-links { display: grid; justify-items: start; gap: 12px; }
+.mission-record .text-link { margin: 0; }
+.mission-page .text-link { gap: 20px; align-items: center; }
+.mission-page .text-link:hover { border-bottom-width: 2px; padding-bottom: 6px; }
+
+.mission-support { background: #1c1c1c; color: #f5eee6; }
+.mission-support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(32px, 6vw, 92px);
+}
+.mission-support h2 { margin: 18px 0 24px; color: #e4dacf; }
+.mission-support-copy > p { max-width: 46ch; }
+.mission-support-copy > p + p { margin-top: 12px; }
+.mission-support-copy .altar-verse { margin-top: 24px; }
+.mission-support-copy .altar-verse blockquote { text-wrap: pretty; }
+.mission-support-copy .cree-button {
+  margin-top: 24px;
+  gap: 20px;
+  border-color: #e4dacf;
+  background: transparent;
+  color: #f5eee6;
+}
+.mission-support-copy .cree-button:hover { background: #e4dacf; color: #181818; }
+
+.mission-payment {
+  background: #f4f2ef;
+  color: #181818;
+  border: 1px solid #d8d5d0;
+  padding: clamp(20px, 3.2vw, 42px);
+}
+.mission-payment h3 { margin: 0; font-size: 1.25rem; line-height: 1.35; font-weight: 600; }
+.mission-payment dl { margin: 14px 0 0; }
+.mission-payment dl > div { padding-block: 13px; border-bottom: 1px solid #d8d5d0; }
+.mission-payment dl > div:last-child { border: 0; padding-bottom: 0; }
+.mission-payment dt { font-size: .8125rem; color: #57524b; }
+.mission-payment dd {
+  margin: 2px 0 0;
+  font-size: clamp(1rem, 1.55vw, 1.25rem);
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 800px) {
+  .mission-cover-inner,
+  .mission-support-grid { grid-template-columns: minmax(0, 1fr); }
+  .mission-cover h1 { font-size: clamp(2.75rem, 8vw, 4.75rem); }
+}
+
+@media (max-width: 700px) {
+  .mission-record { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}

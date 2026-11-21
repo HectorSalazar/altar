@@ -28,6 +28,8 @@ Montserrat variable y Lora Regular proceden de la carpeta de fuentes oficial fac
 
 El encabezado compartido combina el isotipo oficial con los textos ALTAR y Comunidad Cristiana en Montserrat. El subtítulo mide 11 px y el conjunto ocupa 234 px en escritorio y 207 px en móvil. La barra mide 85 px en escritorio y 78 px en móvil. Al desplazarse se aclara, pasa a 70 px y muestra el isotipo oscuro con una transición de 0,5 segundos. Los estilos se comparten en `assets/css/altar-navbar.css`.
 
+El pie de las seis páginas públicas usa la plantilla de `scripts/footer.mjs` y los estilos de `assets/css/altar-footer.css`. Ejecuta `npm run sync:footer` después de editar la plantilla o los valores base del pie en el catálogo del CMS. El comando actualiza los HTML que se publican y `npm run check` verifica que estén sincronizados.
+
 La portada usa el fondo de montañas y bruma con el encuadre y velo gris del video de CREE. El titular y el botón principal toman su marfil `#e4dacf`. Las fotografías superpuestas se muestran a color y mantienen sus efectos de entrada y movimiento.
 
 ## Estructura

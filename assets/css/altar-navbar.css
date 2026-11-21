@@ -17,7 +17,7 @@
 }
 .altar-site .main-nav .inner-nav > ul > li > a {
   color: inherit;
-  font-size: 14px;
+  font-size: 15px;
   transition: color .5s ease, height .5s ease, line-height .5s ease;
 }
 .altar-site .main-nav .inner-nav > ul > li > a.active { color: inherit; }
@@ -181,7 +181,7 @@
 @media (max-width: 1199px) {
   .altar-site .inner-nav > ul > li { margin-inline: 9px; }
   .altar-site .inner-nav > ul > li:last-child { margin-left: 16px; }
-  .altar-site .main-nav .inner-nav > ul > li > a { font-size: 13px; }
+  .altar-site .main-nav .inner-nav > ul > li > a { font-size: 14px; }
   .altar-navbar-lockup { gap: 10px; }
   .altar-navbar-icon { flex-basis: 52px; width: 52px; }
   .altar-navbar-copy { width: 159px; }

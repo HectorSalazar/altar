@@ -1,7 +1,7 @@
 /* Content and destinations are kept separate for future informative pages. */
 window.ALTAR_CONTENT = {
   programs: {
-    carisma: { label: 'Formación bíblica · ALTAR', title: 'Carisma', paragraphs: ['Un programa de estudio de dos años para profundizar en la Palabra y seguir creciendo como discípulos de Jesús.', 'La formación aborda distintos temas y contempla un certificado al concluir.'], items: ['Duración: 2 años.', 'Consulta la próxima convocatoria, modalidad y requisitos con la iglesia.'] },
+    carisma: { label: 'Formación bíblica · ALTAR', title: 'Charisma', paragraphs: ['Un programa de estudio de dos años para profundizar en la Palabra y seguir creciendo como discípulos de Jesús.', 'La formación aborda distintos temas y contempla un certificado al concluir.'], items: ['Duración: 2 años.', 'Consulta la próxima convocatoria, modalidad y requisitos con la iglesia.'] },
     discipulado: {
       label: 'Fundamentos de la fe · 12 capítulos',
       title: 'El camino del discípulo',

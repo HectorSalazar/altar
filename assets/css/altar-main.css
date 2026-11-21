@@ -92,8 +92,8 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .welcome-strip{background:white;padding:28px 40px;border-bottom:1px solid #e5e5e0;gap:30px}
 .strip-label{color:#888;font-size:10px;letter-spacing:.075em}
 .welcome-strip strong{font-size:14px;color:#252525}
-.about-statement{font-size:clamp(32px,3.55vw,51px);line-height:1.3;letter-spacing:-.035em!important;margin-bottom:65px;max-width:1200px}
-.about-statement .statement-emphasis{color:#73736c}
+.about-statement{font-size:clamp(32px,3.55vw,51px);line-height:1.3;letter-spacing:-.035em!important;margin-bottom:65px;max-width:1200px;color:#454340}
+.about-statement .statement-emphasis{color:#242321;font-weight:550}
 .about-grid{gap:8%;align-items:center}
 .community-frame img{height:510px;filter:none;border-radius:4px}
 .image-reveal-frame{border-radius:4px}
@@ -423,12 +423,15 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .branch-schedule p{font-size:24px;letter-spacing:-.02em}
 .first-visit-section{background:#242c2c}
 .visit-grid h2{font-size:clamp(42px,4.2vw,62px);line-height:1.12;letter-spacing:-.035em}
+.visit-grid > div > p {
+    color: var(--altar-ivory);
+    font-size: clamp(1.0625rem, 1.35vw, 1.1875rem);
+}
+.visit-grid > div > .altar-button {
+    max-width: 100%;
+    font-size: 1rem;
+}
 .visit-questions .altar-accordion{border-color:#5c6664}
-.altar-footer{background:#161c1c}
-.footer-top{grid-template-columns:minmax(0,1.2fr) minmax(0,1.25fr) minmax(0,.55fr);gap:6%}
-.footer-brand img{filter:none}
-.footer-top>p{font-size:21px;font-weight:400;letter-spacing:-.01em}
-.footer-bottom{border-color:#39403e}
 .altar-site .parallax-mousemove{will-change:transform}
 .altar-site .mobile-on .desktop-nav ul{background:#fff;color:#171717}
 .altar-site .mobile-on .desktop-nav>ul>li>a:hover,.altar-site .mobile-on .desktop-nav>ul>li>a:focus{background:#f5f5f2;color:#171717}
@@ -436,7 +439,7 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 @media(min-width:1600px){.main-hero-container{max-width:1440px}.main-one-hero .hs-title-1{font-size:74px}.main-one-hero .section-descr{font-size:22px}.main-hero-copy{padding-right:35px}}
 @media(max-width:1199px){.altar-site .main-nav-sub{padding:0 30px}.altar-site .inner-nav>ul>li{margin-left:10px;margin-right:10px}.altar-site .inner-nav>ul>li:last-child{margin-left:17px}.altar-site .inner-nav>ul>li>a{font-size:12px}.altar-site .logo .altar-brand-symbol{width:42px;height:38px}.main-hero-container{padding-left:35px;padding-right:35px;padding-top:135px;padding-bottom:115px}.main-one-hero .hs-title-1{font-size:54px}.main-one-hero .section-descr{font-size:18px}.main-hero-actions{gap:20px}.main-hero-story{font-size:12px}.main-one-hero .btn-mod.btn-large{padding:16px 20px;font-size:10px}.altar-container{width:calc(100% - 70px)}.community-frame img{height:520px}.pastors-grid{gap:30px}.pastors-photo img{height:320px}.legacy-number{font-size:80px}.program-asterisk{font-size:56px;top:147px}.program-card{padding:30px}}
 @media(max-width:1024px){.altar-site .main-nav{height:78px}.altar-site .main-nav.small-height{height:70px}.altar-site .main-nav-sub{padding:0 28px}.altar-site .mobile-nav{height:78px;line-height:78px;color:#171717}.altar-site .small-height .mobile-nav{height:70px;line-height:70px}.altar-site .inner-nav.desktop-nav{background:white;color:#171717;max-height:calc(100svh - 78px);box-shadow:0 12px 20px #00000008}.altar-site .mobile-on .inner-nav>ul>li>a,.altar-site .small-height.mobile-on .inner-nav>ul>li>a{height:auto;line-height:1.5;font-size:14px;color:#171717;padding:17px 28px}.main-one-hero .hs-title-1{font-size:47px}.main-one-hero .section-descr{font-size:17px}.main-hero-actions{gap:20px}.main-hero-copy{padding-right:0}.main-hero-art{padding-top:0;padding-bottom:0}.main-hero-bottom{left:35px;right:35px}.series-grid{grid-template-columns:1fr .9fr;gap:8%}.series-copy h2{font-size:8vw}.series-copy .series-subtitle{font-size:31px}.series-copy>p{font-size:15px}.pastors-photo img{height:300px}.branch-panel{padding:30px}}
-@media(max-width:767px){.altar-container{width:calc(100% - 40px)}.altar-section{padding-top:75px;padding-bottom:75px}.section-heading-line{margin-bottom:32px}.display-title{font-size:43px;line-height:1.13}.altar-site .main-nav-sub{padding:0 20px}.altar-site .logo.altar-brand{gap:8px}.altar-site .logo .altar-brand-symbol{width:40px;height:36px}.altar-brand-copy{width:146px}.main-hero-container{min-height:0!important;padding:130px 26px 95px}.main-hero-copy{padding:0 12px;margin-bottom:48px}.main-hero-copy .section-caption{font-size:10px;letter-spacing:.095em;margin-bottom:23px}.main-one-hero .hs-title-1{font-size:44px;line-height:1.13;letter-spacing:-.05em;margin-bottom:24px}.main-one-hero .section-descr{font-size:17px;line-height:1.8;max-width:500px;margin-bottom:28px}.main-hero-actions{align-items:flex-start;gap:23px}.main-one-hero .btn-mod.btn-large{padding:16px 22px;font-size:10px;min-height:50px}.main-hero-story{font-size:12px;align-self:center}.main-hero-signature{margin-top:24px}.main-hero-art{padding:0 20px;max-width:560px;margin:auto}.altar-stack{max-width:420px}.altar-stack img{aspect-ratio:3/4}.main-hero-bottom{bottom:22px;left:26px;right:26px;font-size:9px}.main-hero-bottom .scroll-down-1-text{font-size:10px}.main-hero-bottom>span{font-size:9px}.welcome-strip{padding:24px 20px;gap:18px}.welcome-strip>div,.welcome-strip>a{gap:18px}.welcome-strip strong{font-size:11px}.strip-label{font-size:9px}.about-statement{font-size:31px;line-height:1.4;margin-bottom:38px}.community-frame img{height:340px}.about-copy .body-lead{font-size:25px;line-height:1.5}.about-copy p{font-size:15px}.pastors-grid{margin-top:65px;padding-top:40px;gap:25px}.pastors-copy h3{font-size:39px}.pastors-photo img{height:290px;object-position:50% center}.legacy-number{font-size:73px}.legacy-note>p{font-size:21px;line-height:1.35}.legacy-small{font-size:12px}.series-grid{grid-template-columns:1fr;gap:38px}.series-copy h2{font-size:19vw}.series-copy .series-subtitle{font-size:31px}.series-copy>p{font-size:15px}.featured-message h3{font-size:24px}.featured-message p{font-size:11px}.split-heading{grid-template-columns:1fr;gap:23px}.split-heading>p{font-size:15px}.program-card{padding:30px;min-height:390px}.program-card h3{font-size:53px}.carisma-card h3{font-size:43px}.program-asterisk{font-size:51px;top:139px;right:23px}.program-card p{font-size:14px}.coffee-section h3{font-size:39px}.coffee-options>button{font-size:22px}.life-houses{padding:26px 22px}.life-houses h3{font-size:22px}.event-description h3{font-size:23px}.event-marker>strong{font-size:27px}.book-display{min-height:410px}.branch-panel{padding:28px}.branch-tabs>button{font-size:21px}.branch-panel h3{font-size:44px}.branch-schedule p{font-size:22px}.visit-grid h2{font-size:43px}.footer-brand img{width:100px}.footer-top>p{font-size:17px}.altar-site .parallax-mousemove{transform:none!important;will-change:auto}}
+@media(max-width:767px){.altar-container{width:calc(100% - 40px)}.altar-section{padding-top:75px;padding-bottom:75px}.section-heading-line{margin-bottom:32px}.display-title{font-size:43px;line-height:1.13}.altar-site .main-nav-sub{padding:0 20px}.altar-site .logo.altar-brand{gap:8px}.altar-site .logo .altar-brand-symbol{width:40px;height:36px}.altar-brand-copy{width:146px}.main-hero-container{min-height:0!important;padding:130px 26px 95px}.main-hero-copy{padding:0 12px;margin-bottom:48px}.main-hero-copy .section-caption{font-size:10px;letter-spacing:.095em;margin-bottom:23px}.main-one-hero .hs-title-1{font-size:44px;line-height:1.13;letter-spacing:-.05em;margin-bottom:24px}.main-one-hero .section-descr{font-size:17px;line-height:1.8;max-width:500px;margin-bottom:28px}.main-hero-actions{align-items:flex-start;gap:23px}.main-one-hero .btn-mod.btn-large{padding:16px 22px;font-size:10px;min-height:50px}.main-hero-story{font-size:12px;align-self:center}.main-hero-signature{margin-top:24px}.main-hero-art{padding:0 20px;max-width:560px;margin:auto}.altar-stack{max-width:420px}.altar-stack img{aspect-ratio:3/4}.main-hero-bottom{bottom:22px;left:26px;right:26px;font-size:9px}.main-hero-bottom .scroll-down-1-text{font-size:10px}.main-hero-bottom>span{font-size:9px}.welcome-strip{padding:24px 20px;gap:18px}.welcome-strip>div,.welcome-strip>a{gap:18px}.welcome-strip strong{font-size:11px}.strip-label{font-size:9px}.about-statement{font-size:31px;line-height:1.4;margin-bottom:38px}.community-frame img{height:340px}.about-copy .body-lead{font-size:25px;line-height:1.5}.about-copy p{font-size:15px}.pastors-grid{margin-top:65px;padding-top:40px;gap:25px}.pastors-copy h3{font-size:39px}.pastors-photo img{height:290px;object-position:50% center}.legacy-number{font-size:73px}.legacy-note>p{font-size:21px;line-height:1.35}.legacy-small{font-size:12px}.series-grid{grid-template-columns:1fr;gap:38px}.series-copy h2{font-size:19vw}.series-copy .series-subtitle{font-size:31px}.series-copy>p{font-size:15px}.featured-message h3{font-size:24px}.featured-message p{font-size:11px}.split-heading{grid-template-columns:1fr;gap:23px}.split-heading>p{font-size:15px}.program-card{padding:30px;min-height:390px}.program-card h3{font-size:53px}.carisma-card h3{font-size:43px}.program-asterisk{font-size:51px;top:139px;right:23px}.program-card p{font-size:14px}.coffee-section h3{font-size:39px}.coffee-options>button{font-size:22px}.life-houses{padding:26px 22px}.life-houses h3{font-size:22px}.event-description h3{font-size:23px}.event-marker>strong{font-size:27px}.book-display{min-height:410px}.branch-panel{padding:28px}.branch-tabs>button{font-size:21px}.branch-panel h3{font-size:44px}.branch-schedule p{font-size:22px}.visit-grid h2{font-size:43px}.altar-site .parallax-mousemove{transform:none!important;will-change:auto}}
 @media(max-width:370px){.main-hero-container{padding-left:22px;padding-right:22px}.main-one-hero .hs-title-1{font-size:39px}.main-one-hero .section-descr{font-size:16px}.main-hero-copy{margin-bottom:40px}.main-hero-art{padding-left:15px;padding-right:15px}.main-hero-actions{gap:20px}.main-hero-bottom>span{display:none}.program-card{padding:26px}.carisma-card h3{font-size:39px}.legacy-number{font-size:63px}.legacy-note>p{font-size:20px}}
 @media(max-width:767px){.main-hero-container{padding-top:115px}.main-hero-copy{margin-bottom:32px}.main-hero-copy .section-caption{margin-bottom:20px}.main-one-hero .hs-title-1{font-size:40px;line-height:1.12}.main-one-hero .section-descr{font-size:16px;line-height:1.75;margin-bottom:24px}.main-hero-actions{gap:16px}.main-hero-signature{margin-top:20px}}
 @media(max-width:370px){.main-one-hero .hs-title-1{font-size:37px}}
@@ -450,22 +453,94 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .dialog-shell>.eyebrow{display:block;padding-right:40px}
 .altar-site .dialog-close{line-height:1}
 @media(max-width:370px){.discipleship-card .program-top{align-items:flex-start;flex-wrap:wrap;gap:10px}}
-/* Shared readable sizes for supporting text, including inherited template styles. */
-:root{--altar-text-label:13px;--altar-text-small:14px;--altar-text-action:15px}
+/* Tipografía de apoyo de la portada. */
+:root {
+    --altar-text-label: .875rem;
+    --altar-text-small: .9375rem;
+    --altar-text-action: 15px;
+    --altar-text-intro: clamp(1.0625rem, 1.3vw, 1.125rem);
+}
 .altar-site .inner-nav>ul>li>a,.nav-visit{font-size:var(--altar-text-action)}
-.altar-site .eyebrow,.section-side-note,.strip-label,.pill,.program-badge,.coffee-number,.event-marker>span,.branch-tabs>button>span:first-child{font-size:var(--altar-text-label);line-height:1.6}
-.main-hero-copy .section-caption,.main-hero-bottom,.main-hero-bottom .scroll-down-1-text,.community-frame figcaption,.legacy-small,.books-copy .books-note,.book-item figcaption{font-size:var(--altar-text-small);line-height:1.6}
-.main-one-hero .btn-mod.btn-large,.altar-button,.branch-actions .altar-button{font-size:var(--altar-text-small)}
-.main-hero-story,.text-link,.legacy-note .text-link,.life-houses .text-link,.branch-actions .text-link,.video-dialog .text-link,.footer-socials a{font-size:var(--altar-text-action)}
+.altar-site .eyebrow,
+.main-hero-copy .section-caption,
+.main-one-hero .altar-verse figcaption,
+.strip-label,.pill,.event-marker>span{
+    font-size:var(--altar-text-label);
+    line-height:1.5;
+    font-weight:500;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+.program-badge,.coffee-number,.branch-index,.book-download-mark,
+.community-frame .family-video-play,.manual-download>span{
+    font-size:var(--altar-text-label);
+    line-height:1.5;
+}
+.main-hero-bottom,.main-hero-bottom .scroll-down-1-text,
+.community-frame figcaption,.legacy-small,.books-copy .books-note,.book-item figcaption{
+    font-size:var(--altar-text-small);
+    line-height:1.6;
+}
+.community-frame figcaption,.book-item figcaption{margin-top:.75rem}
+.featured-message .message-thumbnail img {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+.strip-label,.featured-message p{color:var(--altar-muted)}
+.main-one-hero .btn-mod.btn-large,.altar-button,.branch-actions .altar-button{font-size:var(--altar-text-label)}
+.main-hero-story,.text-link,.legacy-note .text-link,.life-houses .text-link,.branch-actions .text-link,.video-dialog .text-link{font-size:var(--altar-text-action)}
 .altar-site .text-link.btn-mod,.altar-site .text-link.btn-mod:hover,.altar-site .text-link.btn-mod:focus{font-size:var(--altar-text-action)}
 .altar-site .section-heading-line .text-link .btn-animate-y,.altar-site .section-heading-line .text-link .btn-animate-y-1,.altar-site .section-heading-line .text-link .btn-animate-y-2{font-size:inherit}
-.featured-message p,.life-houses p,.event-description p,.welcome-strip strong{font-size:15px}
-.footer-bottom{font-size:var(--altar-text-label);line-height:1.7}
+.life-houses p,.welcome-strip strong{font-size:15px}
+.series-copy > p:not(.series-subtitle),
+.split-heading > p,
+.program-card > p,
+.books-copy > p:not(.books-note),
+.special-events > p,
+.family-sundays > p:first-of-type {
+    font-size: var(--altar-text-intro);
+}
+.about-copy > p:not(.body-lead),
+.pastors-copy > p,
+.featured-message p,
+.event-description > p,
+.visit-questions .altar-accordion p {
+    font-size: 1rem;
+}
+.family-sundays .activity-panel p {
+    font-size: 1.0625rem;
+}
+.first-visit-section .eyebrow {
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: .05em;
+}
+.series-copy .altar-button,
+.life-houses-feature .altar-button,
+.books-copy .altar-button {
+    font-size: var(--altar-text-action);
+}
 .main-hero-bottom{gap:16px;flex-wrap:wrap;color:#626262}
 .main-hero-bottom .scroll-down-1-text{opacity:1}
 .main-hero-bottom>span{font-size:inherit;margin-left:auto;text-align:right}
 @media(max-width:1024px){.altar-site .mobile-on .inner-nav>ul>li>a,.altar-site .small-height.mobile-on .inner-nav>ul>li>a{font-size:16px}.nav-visit{font-size:inherit}}
-@media(max-width:767px){.section-heading-line{flex-wrap:wrap}.section-heading-line .text-link{font-size:var(--altar-text-action)}.main-hero-bottom,.main-hero-bottom .scroll-down-1-text{font-size:var(--altar-text-label)}.welcome-strip .strip-label{max-width:135px;flex-shrink:0}.welcome-strip strong{font-size:14px}.life-houses .text-link{margin-left:0;max-width:100%;white-space:normal}.event-marker>span{letter-spacing:.03em}.footer-socials{flex-wrap:wrap;column-gap:24px;row-gap:16px}}
+@media(max-width:767px){.section-heading-line{flex-wrap:wrap}.section-heading-line .text-link{font-size:var(--altar-text-action)}.main-hero-bottom,.main-hero-bottom .scroll-down-1-text{font-size:var(--altar-text-label)}.welcome-strip .strip-label{max-width:44%;flex-shrink:0}.welcome-strip strong{font-size:var(--altar-text-label)}.life-houses .text-link{margin-left:0;max-width:100%;white-space:normal}.event-row{grid-template-columns:5rem minmax(0,1fr) 35px}.event-marker>span{overflow-wrap:anywhere}}
+@media (max-width: 480px) {
+    .featured-message {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px 16px;
+    }
+    .featured-message .message-thumbnail {
+        grid-column: 1 / -1;
+    }
+    .featured-message p {
+        padding-right: 0;
+    }
+    .featured-message > .round-arrow {
+        position: static;
+        align-self: start;
+    }
+}
 @media(prefers-reduced-motion:reduce){.altar-site .parallax-mousemove,.altar-site .parallax-mousemove-follow{transform:none!important;transition:none!important}}
 
 .altar-site {
@@ -503,9 +578,6 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 }
 .altar-site .main-hero-bottom {
     right: calc(var(--whatsapp-clearance) + env(safe-area-inset-right, 0px));
-}
-.altar-site .altar-footer {
-    padding-bottom: calc(var(--whatsapp-clearance) + env(safe-area-inset-bottom, 0px));
 }
 @media (max-width: 767px) {
     .altar-site {

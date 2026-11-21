@@ -140,8 +140,9 @@
   function renderTestimonials(fields) {
     const grid = document.querySelector('[data-cms-testimonials]');
     if (!grid) return;
+    const fieldGroup = grid.dataset.cmsTestimonials || 'testimonios';
     for (let index = 1; index <= 3; index += 1) {
-      const prefix = `testimonios.testimonio-${index}`;
+      const prefix = `${fieldGroup}.testimonio-${index}`;
       const quote = fields[`${prefix}.cita`];
       const name = fields[`${prefix}.nombre`];
       const detail = fields[`${prefix}.detalle`];

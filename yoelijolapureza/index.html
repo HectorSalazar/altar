@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../assets/css/altar-navbar.css">
   <script src="../assets/js/altar-event-navbar.js" defer></script>
   <script src="../assets/js/cms.js" data-page="yelp" defer></script>
+  <link rel="stylesheet" href="../assets/css/altar-footer.css">
 </head>
 <body>
   <a class="yelp-skip" href="#contenido">Ir al contenido</a>
@@ -147,10 +148,47 @@
       </div>
     </section>
   </main>
-  <footer class="yelp-footer">
-    <div class="yelp-container">
-      <div class="yelp-footer-main"><img class="yelp-footer-logo" src="../assets/images/yelp/logo-claro.webp" width="391" height="351" alt="Yo Elijo la Pureza" loading="lazy" data-cms-src="pie-de-pagina.imagen" data-cms-alt="pie-de-pagina.texto-alternativo"><p data-cms-text="pie-de-pagina.parrafo">Acompañamos a esta generación a descubrir el diseño de Dios para la sexualidad.</p><nav class="yelp-socials" aria-label="Redes sociales de YELP"><a href="https://www.facebook.com/YoElijoLaPureza/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de YELP, abre en una pestaña nueva" data-cms-href="pie-de-pagina.destino-del-enlace" data-cms-aria-label="pie-de-pagina.etiqueta-accesible" data-cms-text="pie-de-pagina.texto-del-enlace">Facebook ↗</a><a href="https://www.instagram.com/yoelijolapureza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de YELP, abre en una pestaña nueva" data-cms-href="pie-de-pagina.destino-del-enlace-2" data-cms-aria-label="pie-de-pagina.etiqueta-accesible-2" data-cms-text="pie-de-pagina.texto-del-enlace-2">Instagram ↗</a></nav></div>
-      <div class="yelp-footer-bottom"><span data-cms-text="pie-de-pagina.texto">© 2026 Yo Elijo la Pureza · ALTAR Comunidad Cristiana</span><a href="../index.html" data-cms-text="pie-de-pagina.texto-del-enlace-3">← Volver a ALTAR</a></div>
+  <footer class="altar-shared-footer" id="pie-de-pagina">
+    <!-- Plantilla compartida en scripts/footer.mjs -->
+    <div class="altar-footer-inner">
+      <div class="altar-footer-event">
+        <img src="../assets/images/yelp/logo-claro.webp" width="391" height="351" alt="Yo Elijo la Pureza" loading="lazy" data-cms-src="pie-de-pagina.imagen" data-cms-alt="pie-de-pagina.texto-alternativo">
+        <p data-cms-text="pie-de-pagina.parrafo">Acompañamos a esta generación a descubrir el diseño de Dios para la sexualidad.</p>
+        <nav class="altar-footer-event-links" aria-label="Redes sociales de YELP">
+          <a href="https://www.facebook.com/YoElijoLaPureza/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de YELP, abre en una pestaña nueva" data-cms-href="pie-de-pagina.destino-del-enlace" data-cms-aria-label="pie-de-pagina.etiqueta-accesible" data-cms-text="pie-de-pagina.texto-del-enlace">Facebook ↗</a>
+          <a href="https://www.instagram.com/yoelijolapureza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de YELP, abre en una pestaña nueva" data-cms-href="pie-de-pagina.destino-del-enlace-2" data-cms-aria-label="pie-de-pagina.etiqueta-accesible-2" data-cms-text="pie-de-pagina.texto-del-enlace-2">Instagram ↗</a>
+        </nav>
+      </div>
+      <div class="altar-footer-main">
+        <a class="altar-footer-logo" href="../index.html" aria-label="ALTAR, volver al inicio" data-cms-media-container>
+          <img src="../assets/images/altar-logo-white.png" width="960" height="201" alt="ALTAR Comunidad Cristiana" loading="lazy">
+        </a>
+        <p class="altar-footer-statement">En Él encontramos a Dios.<br>En Él rendimos nuestra vida.<br>Desde Él somos enviados.</p>
+        <nav class="altar-footer-socials" aria-label="Redes sociales de ALTAR">
+          <a href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer">
+            <span class="fa-instagram altar-footer-icon" aria-hidden="true"></span>
+            <span class="altar-footer-social-name">Instagram</span>
+            <span class="altar-footer-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.facebook.com/AltarComunidadCristiana" target="_blank" rel="noopener noreferrer">
+            <span class="fa-facebook-f altar-footer-icon" aria-hidden="true"></span>
+            <span class="altar-footer-social-name">Facebook</span>
+            <span class="altar-footer-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.youtube.com/@AltarComunidadCristiana" target="_blank" rel="noopener noreferrer">
+            <span class="fa-youtube altar-footer-icon" aria-hidden="true"></span>
+            <span class="altar-footer-social-name">YouTube</span>
+            <span class="altar-footer-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+      <div class="altar-footer-note">
+        <small class="altar-footer-copyright" data-cms-text="pie-de-pagina.texto">© 2026 Yo Elijo la Pureza · ALTAR Comunidad Cristiana</small>
+        <p class="altar-footer-motto">Encuentro. Rendición. Envío</p>
+        <div class="altar-footer-links">
+          <a href="../index.html" data-cms-text="pie-de-pagina.texto-del-enlace-3">← Volver a ALTAR</a>
+        </div>
+      </div>
     </div>
   </footer>
 </body>

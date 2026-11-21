@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/preview.mjs",
-    "check": "node scripts/check.mjs"
+    "sync:footer": "node scripts/footer.mjs",
+    "check": "node scripts/footer.mjs --check && node scripts/check.mjs"
   }
 }

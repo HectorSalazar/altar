@@ -28,9 +28,32 @@
   const programDialog = document.getElementById('program-dialog');
   const programContact = document.getElementById('program-dialog-contact');
   const defaultProgramContact = programContact.href;
+  const programTestimonials = document.getElementById('program-dialog-testimonials');
+  const classroomLink = document.getElementById('charisma-classroom');
+  const dialogClassroomLink = document.getElementById('program-dialog-classroom');
+  const defaultClassroomUrl = classroomLink.href;
+
+  function syncClassroomLink() {
+    const isDefault = classroomLink.href === defaultClassroomUrl;
+    const isLoopback = ['localhost', '127.0.0.1'].includes(location.hostname);
+    const isLocalStaticPreview = isLoopback && ['4173', '5500'].includes(location.port);
+    const isStaticPage = location.protocol === 'file:' || location.hostname.endsWith('.github.io');
+    if (isDefault && isLocalStaticPreview) classroomLink.href = 'http://127.0.0.1:5173/intranet/';
+    classroomLink.hidden = !classroomLink.hasAttribute('href') || (isDefault && isStaticPage);
+    dialogClassroomLink.hidden = classroomLink.hidden || programDialog.dataset.activeProgram !== 'carisma';
+    if (!dialogClassroomLink.hidden) {
+      dialogClassroomLink.href = classroomLink.href;
+      dialogClassroomLink.querySelector('span').textContent = classroomLink.querySelector('span').textContent;
+    }
+  }
+
   let programFields = {};
+  syncClassroomLink();
   document.addEventListener('DOMContentLoaded', () => {
-    window.ALTAR_CMS?.ready.then(fields => { programFields = fields; });
+    window.ALTAR_CMS?.ready.then(fields => {
+      programFields = fields;
+      syncClassroomLink();
+    });
   }, { once: true });
   let lastDialogTrigger;
   function openDialog(dialog, trigger) {
@@ -61,6 +84,9 @@
     document.getElementById('program-dialog-label').textContent = program.label;
     document.getElementById('program-dialog-title').textContent = program.title;
     programContact.href = program.contactUrl ?? defaultProgramContact;
+    programDialog.dataset.activeProgram = id;
+    programTestimonials.hidden = id !== 'carisma';
+    syncClassroomLink();
     const body = document.getElementById('program-dialog-body');
     body.replaceChildren();
     program.paragraphs.forEach(text => { const p = document.createElement('p'); p.textContent = text; body.append(p); });

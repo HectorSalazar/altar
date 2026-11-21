@@ -1,0 +1,129 @@
+@import url('../vendor/resonance/css/font-awesome-brands.css');
+
+.altar-shared-footer {
+  --altar-footer-gutter: clamp(20px, 5vw, 80px);
+  background: #181818;
+  color: #f6f3ee;
+  font: 400 14px/1.6 'Montserrat', Arial, sans-serif;
+  padding-block: clamp(34px, 4vw, 54px) calc(24px + env(safe-area-inset-bottom, 0px));
+}
+
+.altar-footer-inner {
+  width: min(1280px, calc(100% - 2 * var(--altar-footer-gutter)));
+  margin-inline: auto;
+}
+
+.altar-shared-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.altar-shared-footer a:hover { text-decoration: underline; }
+
+.altar-shared-footer a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.altar-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.2fr) minmax(0, .65fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 62px);
+  padding-bottom: clamp(24px, 3vw, 38px);
+}
+
+.altar-footer-logo {
+  display: block;
+  width: min(100%, 390px);
+}
+
+.altar-footer-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.altar-shared-footer .altar-footer-statement {
+  margin: 0;
+  font: 400 clamp(18px, 1.5vw, 22px)/1.45 'Lora', Georgia, serif;
+}
+
+.altar-footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.altar-footer-socials a {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.altar-footer-social-name { overflow-wrap: anywhere; }
+.altar-footer-icon { color: #e4dacf; font-size: 17px; text-align: center; }
+.altar-footer-arrow { font-size: 12px; }
+
+.altar-footer-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px 24px;
+  border-top: 1px solid #ffffff2b;
+  padding-top: 17px;
+}
+
+.altar-footer-copyright { color: #c8c0b6; font-size: 13px; }
+
+.altar-shared-footer .altar-footer-motto {
+  color: #e4dacf;
+  font: 400 17px/1.5 'Lora', Georgia, serif;
+  margin: 0;
+}
+
+.altar-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 16px;
+}
+
+.altar-site .altar-shared-footer {
+  --altar-footer-button-room: max(0px, calc(var(--whatsapp-clearance, 0px) + env(safe-area-inset-right, 0px) - max(var(--altar-footer-gutter), (100vw - 1280px) / 2)));
+}
+
+.altar-site .altar-footer-links { padding-inline-end: var(--altar-footer-button-room); }
+
+.altar-footer-event {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  border-bottom: 1px solid #ffffff2b;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.altar-footer-event > img { width: 48px; height: auto; }
+
+.altar-shared-footer .altar-footer-event > p {
+  flex: 1 1 210px;
+  margin: 0;
+  color: #e4dacf;
+}
+
+.altar-footer-event-links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+
+@media (max-width: 767px) {
+  .altar-footer-main { grid-template-columns: 1fr; gap: 18px; }
+  .altar-footer-logo { width: min(100%, 300px); }
+  .altar-footer-socials { flex-direction: row; flex-wrap: wrap; gap: 10px 18px; }
+  .altar-footer-socials a { grid-template-columns: 18px auto auto; gap: 6px; }
+  .altar-footer-note { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .altar-footer-motto { grid-row: 1; }
+  .altar-footer-links { justify-content: flex-start; }
+  .altar-site .altar-footer-note { padding-inline-end: var(--altar-footer-button-room); }
+  .altar-site .altar-footer-links { padding-inline-end: 0; }
+}

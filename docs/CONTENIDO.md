@@ -36,6 +36,8 @@ Por indicación del responsable del proyecto, la sección Sobre nosotros destaca
 - El ADN de ALTAR es la generosidad.
 - Dios es bueno, todo el tiempo
 
+La página de Viajes misioneros añade «Y en todo lugar» a la frase.
+
 La visión y la misión se presentan completas y siempre abiertas. Los ocho puntos del Word se conservan bajo «Así vivimos nuestra fe», junto al mensaje destacado de generosidad; no se presentan como un sustituto de esta aclaración del responsable. Las preguntas frecuentes del final mantienen su comportamiento desplegable.
 
 ## Identidad institucional del Word
@@ -112,7 +114,9 @@ Las cinco sedes incluyen sus gráficas oficiales optimizadas: `altar-sede-san-is
 
 La fotografía frontal de las tres imágenes superpuestas muestra a la congregación en alabanza (`assets/images/altar-community-praise.webp`). La fotografía de Danny y Daniela Príncipe permanece en su sección de presentación. Los archivos fotográficos conservan sus colores originales; el matiz de la portada se aplica mediante CSS en `assets/css/altar-identity.css`.
 
-Para volver a la portada anterior, sustituir la precarga y la imagen `.stack-images-3 img` en `index.html` por `assets/images/altar-pastores-color.webp`, restaurar su texto alternativo y cambiar el encuadre `.stack-gathering` a `object-position:50% center;transform:none`. El retrato original no se ha sobrescrito ni eliminado.
+La portada alterna las tres fotos cada 6,5 segundos. Cada foto abre un visor que muestra el encuadre original. Las imágenes y sus textos alternativos se editan en la sección Portada de la intranet.
+
+Para volver a usar el retrato pastoral en la tercera posición, sustituir la imagen del campo `portada.imagen-3` por `assets/images/altar-pastores-color.webp`, restaurar su texto alternativo y cambiar el encuadre de `.stack-gathering` en `assets/css/altar-main.css` a `object-position: 50% center` y `transform: none`.
 
 ### El camino del discípulo
 

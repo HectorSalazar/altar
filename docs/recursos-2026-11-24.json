@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-24",
+  "assets": [
+    {
+      "path": "assets/images/altar-estudio-laptop-conceptual.webp",
+      "kind": "conceptual_generated_photo",
+      "tool": "image_gen",
+      "mode": "built_in",
+      "documentary": false,
+      "description": "Escena conceptual de estudio con laptop y Biblia. No representa a un alumno, pastor o sede reales.",
+      "prompt": "Use case: photorealistic-natural. Asset type: conceptual editorial photograph for two matching Christian adult education course panels on ALTAR church website. Generate one wide landscape photograph, understated and realistic. An adult Latin American person in simple casual clothing studies at a laptop with an open Bible and a notebook at a modest tidy wooden desk in a bright contemporary home. Side view, the person sits on the right half of the frame, their laptop screen angled away and no readable screen content. Leave calm dark soft-focus negative space on the left to overlay official course logos in HTML. Soft natural daylight, neutral charcoal, warm gray and pale wood tones, gentle film-like texture, authentic and welcoming rather than corporate stock. No text, no logos, no watermarks, no identifiable real pastor, no church signage. This is an illustrative conceptual scene, not documentary church photography. Good natural hands and anatomically plausible pose. Aspect ratio about 3:2, suitable for cropping to matching course card artwork."
+    }
+  ],
+  "course_covers": {
+    "source": "Imágenes de los manuales incluidas en los PPT de los cursos de Charisma facilitados por ALTAR.",
+    "directory": "assets/images/cursos/",
+    "processing": "Extracción de la imagen original y conversión a WebP, conservando la carátula completa.",
+    "pending": "La Autoridad del Creyente: el PPT no incluye carátula y la primera página del manual está en blanco."
+  },
+  "official_logos": {
+    "source": "Archivos oficiales facilitados por ALTAR.",
+    "processing": "Se conservaron los diseños y proporciones de los logos."
+  }
+}

@@ -1,0 +1,269 @@
+#bienvenido { background: #eee7dc; }
+
+.visitor-registration {
+  --registration-ink: #26231e;
+  --registration-muted: #5c554b;
+  --registration-line: #d6cec2;
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--registration-line);
+  border-radius: 6px;
+  background: #fffdfa;
+  color: var(--registration-ink);
+}
+
+.visitor-registration-photo {
+  position: relative;
+  min-height: 0;
+  background: #38312e;
+}
+
+.visitor-registration-photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 42% 32%;
+}
+
+.visitor-registration-body {
+  min-width: 0;
+  padding: clamp(24px, 3.5vw, 48px);
+}
+
+.visitor-registration-heading { margin-bottom: var(--home-compact-inset, 24px); }
+
+.visitor-registration-heading h2 {
+  margin: 0 0 8px;
+  font-size: clamp(33px, 3.45vw, 53px);
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.visitor-registration-heading p {
+  margin: 0;
+  color: var(--registration-muted);
+  font-size: 14px;
+}
+
+.visitor-registration [hidden] { display: none !important; }
+
+.visitor-fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.visitor-contact-fields,
+.visitor-family-fields {
+  display: grid;
+  gap: 16px 18px;
+}
+
+.visitor-contact-fields { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.visitor-contact-fields > .visitor-field { grid-column: span 6; }
+.visitor-contact-fields > :is(.visitor-district, .visitor-birth) { grid-column: span 5; }
+.visitor-contact-fields > .visitor-age { grid-column: span 2; }
+
+.visitor-family-fields {
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  margin-top: 19px;
+}
+
+.visitor-field {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  gap: 6px;
+}
+
+.visitor-field label,
+.visitor-choice-group legend {
+  width: auto;
+  margin: 0;
+  color: var(--registration-ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.visitor-field label > span {
+  color: var(--registration-muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.visitor-field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  margin: 0;
+  padding: 10px 11px;
+  border: 1px solid #bcb3a6;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--registration-ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.visitor-field input:disabled { background: #f1eee8; }
+.visitor-field input[aria-invalid="true"] { border-color: #a72f29; }
+
+.visitor-registration :is(input, button, a):focus-visible {
+  outline: 2px solid #695238;
+  outline-offset: 3px;
+}
+
+.visitor-choice-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.visitor-choice-group legend { float: none; margin-bottom: 7px; }
+.visitor-choices { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.visitor-choices label {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid var(--registration-line);
+  border-radius: 4px;
+  color: var(--registration-ink);
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.visitor-choices label:has(:checked) {
+  border-color: #796446;
+  background: #f1eadf;
+}
+
+.visitor-registration :is([type="radio"], [type="checkbox"]) {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--registration-ink);
+}
+
+.visitor-conditional { margin-top: 11px; }
+
+.visitor-form-footer {
+  display: grid;
+  justify-items: start;
+  gap: 15px;
+  margin-top: var(--home-compact-inset, 24px);
+  padding-top: 15px;
+  border-top: 1px solid var(--registration-line);
+}
+
+.visitor-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: var(--registration-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.visitor-consent input { margin-top: 3px !important; }
+.visitor-registration label:has(:disabled) { cursor: default; }
+
+.visitor-form-footer .altar-button {
+  min-height: 48px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.visitor-form-footer .altar-button:disabled {
+  transform: none;
+  background: #625c54;
+  cursor: default;
+}
+
+.visitor-form-status,
+.visitor-form-error,
+.visitor-unavailable {
+  margin: 0 0 16px;
+  color: var(--registration-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.visitor-form-status:empty { display: none; }
+
+.visitor-form-status.visitor-success,
+.visitor-form-error,
+.visitor-unavailable {
+  padding: 12px 15px;
+  border: 1px solid var(--registration-line);
+  border-radius: 4px;
+  background: #f4efe7;
+}
+
+.visitor-form-status.visitor-success {
+  margin: 0;
+  border-color: #a6b9a4;
+  background: #f0f6ed;
+  color: #274124;
+}
+
+.visitor-form-error {
+  border-color: #d5a39f;
+  background: #fff2f0;
+  color: #812a25;
+}
+
+.visitor-unavailable p { margin: 0; }
+
+.visitor-notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-top: 6px;
+}
+
+.visitor-registration .text-link {
+  min-height: 34px;
+  padding: 4px 0;
+  gap: 8px;
+  color: var(--registration-ink);
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.visitor-restart { margin-top: 12px; }
+
+@media (max-width: 980px) {
+  .visitor-registration { grid-template-columns: minmax(0, 1fr); max-width: 710px; }
+  .visitor-registration-photo { min-height: clamp(120px, 23vw, 205px); }
+  .visitor-registration-photo img { object-position: 50% 26%; }
+}
+
+@media (max-width: 620px) {
+  .visitor-registration-body { padding: clamp(15px, 4vw, 24px); }
+  .visitor-contact-fields, .visitor-family-fields { gap: 13px; }
+  .visitor-contact-fields > .visitor-field { grid-column: 1 / -1; }
+  .visitor-contact-fields > .visitor-age { grid-column: span 4; }
+  .visitor-contact-fields > .visitor-birth { grid-column: span 8; }
+  .visitor-family-fields { grid-template-columns: minmax(0, 1fr); }
+  .visitor-form-footer .altar-button { width: 100%; }
+}

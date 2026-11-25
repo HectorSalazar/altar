@@ -204,3 +204,28 @@ a:focus-visible{outline:3px solid var(--yelp-pink);outline-offset:6px}
 @media(max-width:900px){.yelp-history-grid{gap:36px}.yelp-contact-grid{gap:40px}.yelp-resource{gap:35px}.yelp-speaker-grid{gap:30px 20px}.yelp-speaker h3{font-size:16px}.yelp-section{padding:80px 0}.yelp-topic-grid{gap:26px 18px}}
 @media(max-width:600px){.yelp-container{width:calc(100% - 36px)}.yelp-section{padding:62px 0}.yelp-section-header{display:block}.yelp-section-header>p{margin-top:20px}.yelp-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}.yelp-speaker,.yelp-speaker:nth-child(4),.yelp-speaker:nth-child(5){grid-column:auto}.yelp-speaker:first-child{grid-column:1/-1;max-width:330px;justify-self:center}.yelp-speaker-photo{aspect-ratio:.98;object-position:center 30%}.yelp-speaker-role{font-size:9px;margin-top:15px}.yelp-speaker h3{font-size:15px}.yelp-speaker p{font-size:12px;overflow-wrap:anywhere}.yelp-topic-jump{gap:8px}.yelp-topic-jump a{padding:8px 10px;font-size:10px}.yelp-topic-group{margin-top:45px}.yelp-topic-heading h3{font-size:21px}.yelp-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.yelp-topic h4{font-size:12px}.yelp-topic figcaption{font-size:11px;margin-top:10px}.yelp-history-grid,.yelp-resource,.yelp-contact-grid{grid-template-columns:minmax(0,1fr);gap:30px}.yelp-history-art{width:180px}.yelp-history-photo{aspect-ratio:1.4}.yelp-resource{padding:30px 0 40px}.yelp-resource-image{max-height:280px}.yelp-resource h3{font-size:30px}.yelp-resource:nth-of-type(2) .yelp-resource-image{max-width:280px}.yelp-contact-photo{max-height:330px}.yelp-button{padding:13px 18px;font-size:11px;gap:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Three confirmed speakers and accessible topic tabs. */
+.yelp-speaker-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.yelp-speaker{grid-column:auto}
+.yelp-speaker-photo{transition:transform .35s,filter .35s}
+.yelp-speaker-role{font-size:.875rem;letter-spacing:.09em}
+.yelp-speaker p,.yelp-topic figcaption,.yelp-resource p{font-size:1rem}
+.yelp-topic h4{font-size:1rem}
+.yelp-eyebrow{font-size:.875rem;letter-spacing:.12em}
+.yelp-button{font-size:.875rem}
+.yelp-resource .yelp-file-info{font-size:.8125rem}
+.yelp-topic-jump a{font-size:.875rem;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.yelp-topic-jump.is-enhanced a[aria-selected="true"]{background:#fff;color:var(--yelp-purple);border-color:#fff;font-weight:600}
+.yelp-topic-jump a:focus-visible,.yelp-topic-group:focus-visible{outline:3px solid var(--yelp-lime);outline-offset:5px}
+.yelp-topic-group[role="tabpanel"]{margin-top:36px}
+.yelp-topic-group[hidden]{display:none}
+.yelp-topic img,.yelp-history-photo,.yelp-contact-photo{transition:transform .4s,filter .4s}
+[data-yelp-parallax]{background-position:center calc(50% + var(--yelp-parallax,0px))}
+.yelp-library-link{padding:52px 0;background:#251038;color:#fff;border-top:1px solid #ffffff25}
+.yelp-library-link>.yelp-container{display:flex;justify-content:space-between;align-items:center;gap:28px}
+.yelp-library-link h2{font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.035em;line-height:1.2;margin:0;font-weight:500}
+.yelp-library-link .yelp-eyebrow{margin-bottom:10px}
+@media(hover:hover) and (pointer:fine){.yelp-speaker:hover .yelp-speaker-photo{transform:translateY(-4px);filter:brightness(1.04)}.yelp-topic:hover img{transform:translateY(-3px)}.yelp-history-photo:hover,.yelp-contact-photo:hover{filter:brightness(1.035)}}
+@media(max-width:600px){.yelp-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.yelp-speaker:first-child{grid-column:1/-1;max-width:330px}.yelp-speaker-role{font-size:.875rem}.yelp-speaker p,.yelp-topic figcaption{font-size:.9375rem}.yelp-topic h4{font-size:1rem}.yelp-topic-jump{gap:8px}.yelp-topic-jump a{padding:9px 12px;font-size:.875rem}.yelp-button{font-size:.875rem}.yelp-library-link>.yelp-container{align-items:start;flex-direction:column}.yelp-library-link{padding:40px 0}}
+@media(prefers-reduced-motion:reduce){[data-yelp-parallax]{background-position:center}.yelp-speaker-photo,.yelp-topic img,.yelp-history-photo,.yelp-contact-photo{transform:none!important}}

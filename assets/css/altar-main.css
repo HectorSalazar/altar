@@ -8,8 +8,8 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .display-title{font-size:clamp(43px,4.5vw,65px);line-height:1.1}
 .section-heading-line{margin-bottom:48px}
 .section-side-note{font-size:11px}
-.altar-site .main-nav{height:85px;border-bottom:1px solid transparent;color:#171717;background:transparent}
-.altar-site .main-nav.small-height{height:70px;background:rgba(255,255,255,.97)!important;border-bottom:1px solid #e4e4df;box-shadow:0 2px 12px #00000004}
+.altar-site .main-nav{height:85px}
+.altar-site .main-nav.small-height{height:70px}
 .altar-site .main-nav-sub{padding-left:40px;padding-right:40px}
 .altar-site .logo.altar-brand{gap:10px}
 .altar-site .logo .altar-brand-symbol{filter:none;width:44px;height:40px;object-fit:contain}
@@ -47,9 +47,6 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .main-hero-art{padding-top:0;padding-bottom:0}
 .altar-stack{width:100%;max-width:540px}
 .altar-stack img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;filter:none;border-radius:2px}
-.altar-stack .stack-community{object-position:54% 48%}
-.altar-stack .stack-sermon{object-position:center 47%}
-.altar-stack .stack-gathering{object-position:24% bottom;transform:scale(1.2);transform-origin:center bottom}
 .hero-photo-reveal{overflow:hidden;box-shadow:0 14px 40px #3a28200d}
 .main-hero-bottom{position:absolute;left:40px;right:40px;bottom:27px;display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:11px;color:#777}
 .main-hero-bottom .scroll-down-1{position:static;display:inline-flex;align-items:center;gap:12px;transform:none;width:auto}
@@ -77,9 +74,9 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
         --hero-duration: 700ms;
         --hero-effect: clipRightIn;
     }
-    .altar-stack .stack-images-1 { --hero-delay: 1120ms; }
-    .altar-stack .stack-images-2 { --hero-delay: 1260ms; }
-    .altar-stack .stack-images-3 { --hero-delay: 1400ms; }
+    .hero-carousel-slide:nth-child(1) { --hero-delay: 1120ms; }
+    .hero-carousel-slide:nth-child(2) { --hero-delay: 1260ms; }
+    .hero-carousel-slide:nth-child(3) { --hero-delay: 1400ms; }
     .main-hero-bottom { --hero-delay: 1480ms; }
 
     .hero-intro-waiting .main-one-hero:focus-within [data-hero-reveal],
@@ -105,7 +102,6 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .belief-block{border-top:1px solid var(--altar-line);padding-top:28px}
 .belief-block h3{font-size:26px;line-height:1.25;margin:0 0 18px}
 .belief-block p{font-size:17px;line-height:1.8;color:#5f5f5b;margin:0}
-.identity-band{display:grid;grid-template-columns:1fr 1.35fr;gap:7%;background:#f5f5f2;border:1px solid #e3e3dd;border-radius:4px;padding:40px;margin-top:44px;align-items:center}
 .identity-intro h3{font-size:clamp(30px,2.8vw,40px);line-height:1.2;margin:18px 0 0}
 .identity-values-label{font-size:16px;font-weight:500;color:#333;margin:0 0 20px}
 .identity-values-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 26px}
@@ -116,9 +112,8 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .identity-values-column p{margin:0;font:inherit}
 .identity-values-column ul li{position:relative;padding-left:15px}
 .identity-values-column ul li:before{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#85857d;left:0;top:.7em}
-@media(max-width:1024px){.identity-band{grid-template-columns:1fr;gap:30px}.identity-intro h3 br{display:none}}
-@media(max-width:767px){.about-grid{gap:35px;align-items:start}.about-copy .faith-confession p{font-size:24px}.beliefs-grid{grid-template-columns:1fr;gap:28px;margin-top:40px}.belief-block{padding-top:24px}.belief-block h3{font-size:24px;margin-bottom:14px}.belief-block p{font-size:16px;line-height:1.8}.identity-band{padding:28px 24px;margin-top:36px;gap:26px}.identity-intro h3{font-size:32px}.identity-values-columns{grid-template-columns:1fr;gap:13px}}
-.purpose-line{font-size:22px;gap:17px;letter-spacing:-.025em}
+@media(max-width:1024px){.identity-intro h3 br{display:none}}
+@media(max-width:767px){.about-grid{gap:35px;align-items:start}.about-copy .faith-confession p{font-size:24px}.beliefs-grid{grid-template-columns:1fr;gap:28px;margin-top:40px}.belief-block{padding-top:24px}.belief-block h3{font-size:24px;margin-bottom:14px}.belief-block p{font-size:16px;line-height:1.8}.identity-intro h3{font-size:32px}.identity-values-columns{grid-template-columns:1fr;gap:13px}}
 .altar-accordion summary{font-size:16px}
 .pastors-grid{margin-top:100px;padding-top:60px;gap:50px}
 .pastors-copy h3{font-size:clamp(34px,3vw,46px);line-height:1.15}
@@ -206,38 +201,6 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
     max-width: 46ch;
     margin: 0;
     color: #485044;
-}
-.mission-preview {
-    display: block;
-    margin-top: auto;
-    padding-top: 24px;
-    color: var(--altar-ink);
-    text-decoration: none;
-}
-.mission-preview img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-.mission-preview .mission-photo-pucallpa {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center 10%;
-}
-.mission-preview-label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 12px;
-    font-size: var(--altar-text-action);
-    line-height: 1.45;
-}
-.mission-preview:hover .mission-preview-label,
-.mission-preview:focus-visible .mission-preview-label {
-    text-decoration: underline;
-    text-underline-offset: 3px;
 }
 .missions-contact {
     display: flex;
@@ -370,7 +333,6 @@ body.altar-site{font-family:var(--font-global);font-size:17px;line-height:1.7}
 .about-grid:has(>.community-frame[data-cms-media-removed]),
 .series-grid:has(>[data-cms-media-removed]),
 .life-houses-feature:has(>.life-houses-feature-media[data-cms-media-removed]){grid-template-columns:minmax(0,1fr)}
-.pastors-grid:has(>[data-cms-media-removed]){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .featured-message:has(>.message-thumbnail[data-cms-media-removed]){grid-template-columns:minmax(0,1fr) auto}
 .book-display:after{background:#d5cbbc}
 .branches-section{background:#f6f7f5}

@@ -138,32 +138,88 @@
   }
 
   function renderTestimonials(fields) {
-    const grid = document.querySelector('[data-cms-testimonials]');
-    if (!grid) return;
-    const fieldGroup = grid.dataset.cmsTestimonials || 'testimonios';
-    for (let index = 1; index <= 3; index += 1) {
-      const prefix = `${fieldGroup}.testimonio-${index}`;
-      const quote = fields[`${prefix}.cita`];
-      const name = fields[`${prefix}.nombre`];
-      const detail = fields[`${prefix}.detalle`];
-      if (typeof quote !== 'string' || !quote.trim() || typeof name !== 'string' || !name.trim()) continue;
-      const figure = document.createElement('figure');
-      figure.className = 'testimony';
-      const blockquote = document.createElement('blockquote');
-      blockquote.textContent = `“${quote}”`;
-      const caption = document.createElement('figcaption');
-      caption.textContent = name;
-      if (typeof detail === 'string' && detail.trim()) {
-        const detailText = document.createElement('span');
-        detailText.textContent = detail;
-        caption.append(detailText);
+    document.querySelectorAll('[data-cms-testimonials]').forEach(grid => {
+      grid.querySelectorAll('[data-cms-generated-testimony]').forEach(figure => figure.remove());
+      const fieldGroup = grid.dataset.cmsTestimonials || 'testimonios';
+      for (let index = 1; index <= 3; index += 1) {
+        const prefix = `${fieldGroup}.testimonio-${index}`;
+        const quote = fields[`${prefix}.cita`];
+        const name = fields[`${prefix}.nombre`];
+        const detail = fields[`${prefix}.detalle`];
+        if (typeof quote !== 'string' || !quote.trim() || typeof name !== 'string' || !name.trim()) continue;
+        const figure = document.createElement('figure');
+        figure.className = 'testimony';
+        figure.setAttribute('data-cms-generated-testimony', '');
+        const blockquote = document.createElement('blockquote');
+        blockquote.textContent = `“${quote.trim()}”`;
+        const caption = document.createElement('figcaption');
+        caption.textContent = name.trim();
+        if (typeof detail === 'string' && detail.trim()) {
+          const detailText = document.createElement('span');
+          detailText.textContent = detail.trim();
+          caption.append(detailText);
+        }
+        figure.append(blockquote, caption);
+        grid.append(figure);
       }
-      figure.append(blockquote, caption);
-      grid.append(figure);
-      grid.hidden = false;
+      grid.hidden = !grid.children.length;
+      const scope = grid.closest('[data-testimonials-scope], section') || grid.parentElement;
+      const pending = scope?.querySelector('[data-cms-testimonials-pending], #testimonials-pending');
+      if (pending) pending.hidden = !grid.hidden;
+    });
+  }
+
+  function prepareAnnouncements(fields) {
+    const list = document.querySelector('[data-announcements]');
+    const template = list?.firstElementChild;
+    if (!template) return;
+
+    const order = fields['avisos.orden'];
+    if (typeof order !== 'string' && !Object.keys(fields).some(key => key.startsWith('avisos.item.campana.'))) return;
+    const ids = new Set((order ?? 'campana').split(',').filter(id => /^[a-z0-9-]{1,40}$/.test(id)));
+    const cards = [];
+    for (const id of ids) {
+      const prefix = `avisos.item.${id}.`;
+      if (fields[`${prefix}visible`] === 'false') continue;
+
+      const card = template.cloneNode(true);
+      const title = card.querySelector('h4');
+      title.id = `announcement-title-${id}`;
+      card.setAttribute('aria-labelledby', title.id);
+      for (const binding of ['data-cms-text', 'data-cms-rich', 'data-cms-src', 'data-cms-alt']) {
+        for (const node of card.querySelectorAll(`[${binding}]`)) {
+          const legacyKey = node.getAttribute(binding);
+          const key = prefix + legacyKey.slice('avisos.'.length);
+          const fallback = id === 'campana' ? fields[legacyKey] : '';
+          if (fields[key] === undefined && typeof fallback === 'string') fields[key] = fallback;
+          node.setAttribute(binding, key);
+        }
+      }
+      cards.push(card);
     }
-    const pending = document.getElementById('testimonials-pending');
-    if (!grid.hidden && pending) pending.hidden = true;
+    list.replaceChildren(...cards);
+  }
+
+  function finishAnnouncements() {
+    const list = document.querySelector('[data-announcements]');
+    if (!list) return;
+    for (const card of [...list.children]) {
+      const title = card.querySelector('h4');
+      if (!title.textContent.trim()) {
+        card.remove();
+        continue;
+      }
+      const details = card.querySelector('.announcement-details');
+      const copy = details.querySelector('.announcement-details-copy');
+      const poster = details.querySelector('.announcement-image img');
+      if (!copy.hasChildNodes() && !poster.hasAttribute('src')) {
+        details.remove();
+        continue;
+      }
+      const action = details.querySelector('summary [data-cms-text]');
+      if (!action.textContent.trim()) action.textContent = 'Ver detalles';
+    }
+    if (!list.childElementCount) list.closest('.general-announcements').hidden = true;
   }
 
   function removeMediaBinding(element, attribute, pictures) {
@@ -209,7 +265,18 @@
 
   function apply(page) {
     if (typeof page.title === 'string' && page.title.trim()) document.title = page.title;
-    const fields = page.fields && typeof page.fields === 'object' ? page.fields : {};
+    const fields = page.fields && typeof page.fields === 'object' ? { ...page.fields } : {};
+    const missionKey = 'sobre-nosotros.parrafo-5';
+    if (slug === 'home' && typeof fields[missionKey] === 'string') {
+      // Older mission text included the summary that now has its own field.
+      fields[missionKey] = fields[missionKey].replace(/ \(Conectar - Formar - Enviar\)\.\s*$/, '.');
+    }
+    if (slug === 'home') {
+      for (const key of ['registro.titulo', 'registro.texto-acceso']) {
+        if (typeof fields[key] === 'string' && !fields[key].trim()) delete fields[key];
+      }
+      prepareAnnouncements(fields);
+    }
     const changedSplits = [];
     for (const [element, { children, keys }] of splitTemplates) {
       if (!element.classList.contains('splitting') || !keys.some(key => typeof fields[key] === 'string')) continue;
@@ -248,7 +315,10 @@
       const value = fields[element.dataset.cmsRich];
       if (typeof value === 'string') element.replaceChildren(richBlocks(value));
     });
-    if (slug === 'home') applyHomePresentation(fields);
+    if (slug === 'home') {
+      applyHomePresentation(fields);
+      finishAnnouncements();
+    }
 
     changedSplits.forEach(target => window.Splitting?.({ target, force: true }));
     renderTestimonials(fields);

@@ -7,11 +7,60 @@
 
   const youtube = document.querySelector('[data-family-youtube]');
   const thumbnail = trigger.querySelector('img');
+  const intro = trigger.querySelector('[data-family-intro]');
   const play = trigger.querySelector('.family-video-play');
   const player = dialog.querySelector('[data-family-player]');
   const status = dialog.querySelector('[data-family-status]');
   const external = dialog.querySelector('[data-family-external]');
   const defaultVideo = trigger.href;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let introObserver;
+  let introFinished = false;
+  let introLoadTimer;
+
+  function finishIntro() {
+    if (!intro || introFinished) return;
+    introFinished = true;
+    introObserver?.disconnect();
+    window.clearTimeout(introLoadTimer);
+    trigger.removeAttribute('data-family-intro-pending');
+    trigger.removeAttribute('data-family-intro-playing');
+    if (intro.hasAttribute('src')) {
+      intro.pause();
+      intro.removeAttribute('src');
+      intro.load();
+    }
+  }
+
+  function observeIntro() {
+    if (!intro || introFinished || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+    trigger.setAttribute('data-family-intro-pending', '');
+    intro.addEventListener('playing', () => {
+      if (introFinished) return;
+      window.clearTimeout(introLoadTimer);
+      trigger.removeAttribute('data-family-intro-pending');
+      trigger.setAttribute('data-family-intro-playing', '');
+    });
+    intro.addEventListener('ended', finishIntro, { once: true });
+    intro.addEventListener('error', finishIntro, { once: true });
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) finishIntro();
+    });
+    introObserver = new IntersectionObserver(entries => {
+      const entry = entries.at(-1);
+      if (introFinished) return;
+      if (intro.hasAttribute('src')) {
+        if (!entry.isIntersecting) finishIntro();
+        return;
+      }
+      if (entry.intersectionRatio < .5 || document.hidden) return;
+      intro.muted = true;
+      intro.src = intro.dataset.familyIntro;
+      introLoadTimer = window.setTimeout(finishIntro, 4000);
+      intro.play().catch(finishIntro);
+    }, { threshold: [0, .5] });
+    introObserver.observe(trigger);
+  }
 
   function youtubeId(value) {
     if (!value) return null;
@@ -53,13 +102,17 @@
       trigger.removeAttribute('aria-controls');
       play.hidden = true;
       if (!poster) trigger.closest('figure').setAttribute('data-cms-media-removed', '');
-    } else if (!poster) trigger.setAttribute('data-family-no-poster', '');
+    } else {
+      if (!poster) trigger.setAttribute('data-family-no-poster', '');
+      observeIntro();
+    }
     return { id, src, poster };
   });
 
   async function openVideo(event) {
     if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || dialog.open) return;
     event.preventDefault();
+    finishIntro();
     const { id, src, poster } = await sources;
     if ((!id && !src) || dialog.open) return;
     status.hidden = true;

@@ -16,6 +16,9 @@ const pages = {
   'viajes-misioneros': ['viajes-misioneros/index.html', '../index.html#misiones', 'texto-del-enlace'],
   'casas-de-vida': ['casas-de-vida/index.html', '../index.html#casas-de-vida', 'texto-del-enlace'],
   yelp: ['yoelijolapureza/index.html', '../index.html', 'texto-del-enlace-3'],
+  'nuestro-legado': ['nuestro-legado/index.html', '../index.html#nosotros', 'texto-del-enlace'],
+  pastores: ['pastores/index.html', '../index.html#nosotros', 'texto-del-enlace'],
+  libreria: ['libreria/index.html', '../index.html#libros', 'texto-del-enlace'],
 };
 
 function escapeHtml(value) {
@@ -94,6 +97,9 @@ ${altarSocials(isHome).split('\n').map(line => `  ${line}`).join('\n')}
       ${copyright}
       <p class="altar-footer-motto"${isYelp ? '' : cmsAttribute('text', mottoKey)}>${motto}</p>
       <div class="altar-footer-links">
+        <a href="${prefix}libreria/" data-cms-text="pie-de-pagina.enlace-libreria-texto">${escapeHtml(footerValue(slug, 'enlace-libreria-texto'))}</a>
+        <a href="${prefix}pastores/" data-cms-text="pie-de-pagina.enlace-pastores-texto">${escapeHtml(footerValue(slug, 'enlace-pastores-texto'))}</a>
+        <a href="${prefix}nuestro-legado/" data-cms-text="pie-de-pagina.enlace-legado-texto">${escapeHtml(footerValue(slug, 'enlace-legado-texto'))}</a>
 ${isHome ? '        <a href="/intranet/" data-intranet-link hidden>Intranet</a>\n' : ''}        <a href="${returnUrl}"${cmsAttribute('text', returnKey)}>${escapeHtml(footerValue(slug, returnKey))}${!isHome && !isYelp ? ' <span aria-hidden="true">↗</span>' : ''}</a>
       </div>
     </div>

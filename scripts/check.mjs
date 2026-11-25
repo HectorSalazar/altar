@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const pageSlugs = ['yoelijolapureza', 'cree', 'comparte', 'viajes-misioneros', 'casas-de-vida'];
+const pageSlugs = ['yoelijolapureza', 'cree', 'comparte', 'viajes-misioneros', 'casas-de-vida', 'nuestro-legado', 'pastores', 'libreria'];
 const pages = ['index.html', ...pageSlugs.flatMap(slug => [`${slug}/index.html`, `${slug}.html`])];
 const cms = JSON.parse(fs.readFileSync(path.join(root, 'assets/cms-schema.json'), 'utf8'));
 const checkedCss = new Set();
@@ -81,6 +81,18 @@ for (const page of cms.pages) {
   }
   for (const [, value] of html.matchAll(/\sdata-cms-(?:text|combined|srcset|src|alt|href|poster|content|aria-label|background(?:-mobile)?|rich|visible|color|font-size)="([^"]+)"/g)) {
     for (const key of value.split(' ')) assert.ok(keys.has(key), `Campo ausente del catálogo: ${page.slug}/${key}`);
+  }
+  for (const [, value] of html.matchAll(/\sdata-cms-testimonials="([^"]*)"/g)) {
+    const group = value || 'testimonios';
+    for (let index = 1; index <= 3; index += 1) {
+      for (const part of ['cita', 'nombre', 'detalle']) {
+        const key = `${group}.testimonio-${index}.${part}`;
+        assert.ok(keys.has(key), `Campo de testimonio ausente: ${page.slug}/${key}`);
+      }
+    }
+  }
+  for (const [, key] of html.matchAll(/\sdata-secondary-video-key="([^"]+)"/g)) {
+    assert.ok(keys.has(key), `Campo de video adicional ausente: ${page.slug}/${key}`);
   }
   const downloadable = new Set(page.fields.filter(field => ['video', 'pdf'].includes(field.type)).map(field => field.key));
   for (const [tag, key] of html.matchAll(/<a\b[^>]*\bdata-cms-href="([^"]+)"[^>]*>/g)) {

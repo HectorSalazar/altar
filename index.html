@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ALTAR — Comunidad Cristiana</title>
-  <meta name="description" content="Somos ALTAR, una comunidad cristiana carismática en Lima y Callao. Conoce nuestra familia, mensajes, formación y sedes. Cristo es nuestro altar." data-cms-content="metadatos.descripcion">
+  <meta name="description" content="Somos ALTAR, una comunidad cristiana. Encuentra tu sede, conoce nuestros cursos y comparte la vida en familia. Cristo es nuestro altar." data-cms-content="metadatos.descripcion">
   <meta name="theme-color" content="#181818">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
@@ -54,17 +54,21 @@
   <link rel="stylesheet" href="assets/fonts/altar-brand.css">
   <link rel="stylesheet" href="assets/css/altar.css">
   <link rel="stylesheet" href="assets/css/altar-main.css">
-  <link rel="stylesheet" href="assets/css/altar-identity.css">
-  <link rel="stylesheet" href="assets/css/altar-family-video.css">
+  <link rel="stylesheet" href="assets/css/altar-identity.css?v=sedes-logos-grandes">
+  <link rel="stylesheet" href="assets/css/altar-family-video.css?v=intro-mensaje">
   <link rel="stylesheet" href="assets/css/altar-navbar.css">
   <link rel="stylesheet" href="assets/css/altar-verse.css">
   <noscript><style>.wow,.wow-menubar,.wow-p,.word,.char{opacity:1!important;visibility:visible!important;transform:none!important;animation:none!important}</style></noscript>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Church","name":"ALTAR Comunidad Cristiana","description":"Comunidad cristiana carismática en Lima y Callao.","address":{"@type":"PostalAddress","streetAddress":"Calle Roma 221","addressLocality":"San Isidro","addressRegion":"Lima","addressCountry":"PE"},"sameAs":["https://www.youtube.com/@AltarComunidadCristiana","https://www.facebook.com/AltarComunidadCristiana","https://www.instagram.com/cc.altar/"]}
+  {"@context":"https://schema.org","@type":"Church","name":"ALTAR Comunidad Cristiana","description":"Comunidad cristiana. Encuentro, Rendición y Envío.","address":{"@type":"PostalAddress","streetAddress":"Calle Roma 221","addressLocality":"San Isidro","addressRegion":"Lima","addressCountry":"PE"},"sameAs":["https://www.youtube.com/@AltarComunidadCristiana","https://www.facebook.com/AltarComunidadCristiana","https://www.instagram.com/cc.altar/"]}
   </script>
-  <script src="assets/js/cms.js" data-page="home" defer></script>
-  <script src="assets/js/altar-family-video.js" defer></script>
+  <script src="assets/js/cms.js?v=registro-visible" data-page="home" defer></script>
+  <script src="assets/js/altar-family-video.js?v=intro-mensaje" defer></script>
+  <script src="assets/js/hero-carousel.js" defer></script>
   <link rel="stylesheet" href="assets/css/altar-footer.css">
+  <link rel="stylesheet" href="assets/css/altar-home-revision.css?v=franja-inicio">
+  <link rel="stylesheet" href="assets/css/visitor-registration.css?v=registro-visible">
+  <script src="assets/js/visitor-registration.js?v=registro-pages" defer></script>
 </head>
 <body class="altar-site appear-animate">
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -99,7 +103,7 @@
               <li><a href="#misiones" data-btn-animate="y">Misiones</a></li>
               <li><a href="#eventos" data-btn-animate="y">Eventos</a></li>
               <li><a href="#sedes" data-btn-animate="y">Sedes</a></li>
-              <li><a class="no-hover" href="#sedes"><span class="nav-visit">Te esperamos <span class="arrow-icon" aria-hidden="true">↗</span></span></a></li>
+              <li><a class="no-hover" href="#bienvenido"><span class="nav-visit">Registrarme <span class="arrow-icon" aria-hidden="true">↗</span></span></a></li>
             </ul>
           </div>
         </div>
@@ -116,47 +120,60 @@
               <div class="col-md-6 main-hero-copy">
                 <p class="section-caption" data-hero-reveal data-cms-text="portada.parrafo" data-cms-font-size="estilo-portada.identidad-tamano" data-cms-color="estilo-portada.identidad-color">ALTAR · Comunidad Cristiana</p>
                 <h1 class="hs-title-1" id="hero-title" data-cms-font-size="estilo-portada.titulo-tamano" data-cms-color="estilo-portada.titulo-color"><span class="hero-title-reveal" data-hero-reveal data-cms-text="portada.texto">Un encuentro con Jesús. Una vida transformada.</span></h1>
-                <p class="section-descr" data-hero-reveal data-cms-text="portada.parrafo-2" data-cms-font-size="estilo-portada.descripcion-tamano" data-cms-color="estilo-portada.descripcion-color">Caminamos en Su presencia, crecemos en Su Palabra y compartimos la vida en familia.</p>
+                <p class="section-descr" data-hero-reveal data-cms-text="portada.parrafo-2" data-cms-font-size="estilo-portada.descripcion-tamano" data-cms-color="estilo-portada.descripcion-color">Juntos en su presencia, juntos en su propósito.</p>
                 <div class="main-hero-actions local-scroll" data-hero-reveal>
                   <a href="#sedes" class="btn btn-mod btn-large btn-round btn-hover-anim"><span data-cms-text="portada.texto-2" data-cms-font-size="estilo-portada.boton-tamano" data-cms-color="estilo-portada.boton-color">Encuentra tu sede <i class="mi-arrow-right" aria-hidden="true"></i></span></a>
-                  <a href="#nosotros" class="main-hero-story link-hover-anim underline" data-link-animate="y" data-cms-text="portada.texto-del-enlace" data-cms-font-size="estilo-portada.enlace-tamano" data-cms-color="estilo-portada.enlace-color">Conoce nuestra familia <i class="mi-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#bienvenido" class="main-hero-story link-hover-anim underline" data-link-animate="y" data-cms-text="registro.texto-acceso" data-cms-font-size="estilo-portada.enlace-tamano" data-cms-color="estilo-portada.enlace-color">Quiero registrarme <i class="mi-arrow-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="main-hero-signature" data-hero-reveal><span class="tiny-cross" aria-hidden="true">✦</span><span data-cms-text="portada.texto-3" data-cms-font-size="estilo-portada.lema-tamano" data-cms-color="estilo-portada.lema-color">Cristo es nuestro altar.</span></div>
-                <figure class="hero-verse altar-verse" data-hero-reveal>
-                  <blockquote cite="https://www.bible.com/es/bible/127/HEB.13.10.NTV">
-                    <p data-cms-text="portada.parrafo-3" data-cms-font-size="estilo-portada.versiculo-tamano" data-cms-color="estilo-portada.versiculo-color">«Tenemos un altar del cual los sacerdotes del tabernáculo no tienen derecho a comer.»</p>
-                  </blockquote>
-                  <figcaption><a href="https://www.bible.com/es/bible/127/HEB.13.10.NTV" target="_blank" rel="noopener noreferrer" data-cms-href="portada.destino-del-enlace" data-cms-text="portada.texto-del-enlace-2" data-cms-font-size="estilo-portada.cita-tamano" data-cms-color="estilo-portada.cita-color">Hebreos 13:10 · NTV</a></figcaption>
-                </figure>
               </div>
               <div class="col-md-5 offset-md-1 main-hero-art">
-                <div class="stack-images altar-stack">
-                  <div class="stack-images-1 parallax-mousemove" data-offset="30"><div class="hero-photo-reveal" data-cms-media-container data-hero-reveal><img src="assets/images/altar-worship-detail.webp" width="600" height="800" alt="Nuestra comunidad compartiendo un tiempo de alabanza" class="stack-community" decoding="async" data-cms-src="portada.imagen" data-cms-alt="portada.texto-alternativo"></div></div>
-                  <div class="stack-images-2 parallax-mousemove" data-offset="60"><div class="hero-photo-reveal" data-cms-media-container data-hero-reveal><img src="assets/images/altar-danny-predica.jpg" width="720" height="1280" alt="El pastor Danny Príncipe predica con el micrófono en la mano y el brazo levantado" class="stack-sermon" decoding="async" data-cms-src="portada.imagen-2" data-cms-alt="portada.texto-alternativo-2"></div></div>
-                  <div class="stack-images-3 parallax-mousemove" data-offset="90"><div class="hero-photo-reveal" data-cms-media-container data-hero-reveal><img src="assets/images/altar-community-praise.webp" width="600" height="800" alt="La comunidad compartiendo un tiempo de alabanza con las manos levantadas" class="stack-gathering" decoding="async" data-cms-src="portada.imagen-3" data-cms-alt="portada.texto-alternativo-3"></div></div>
+                <div class="altar-stack" data-hero-carousel role="group" aria-roledescription="carrusel" aria-label="Encuentro, Rendición y Envío">
+                  <div class="hero-carousel-slide" data-hero-slide="back" data-cms-media-container>
+                    <button class="hero-carousel-open parallax-mousemove" type="button" data-offset="30" aria-haspopup="dialog" aria-controls="hero-photo-viewer" disabled>
+                      <span class="hero-photo-reveal" data-hero-reveal><img src="assets/images/altar-portada-envio.webp" width="600" height="1200" alt="Envío. Un niño extiende la mano hacia una mujer en la calle." decoding="async" data-cms-src="portada.imagen" data-cms-alt="portada.texto-alternativo"></span>
+                    </button>
+                  </div>
+                  <div class="hero-carousel-slide" data-hero-slide="middle" data-cms-media-container>
+                    <button class="hero-carousel-open parallax-mousemove" type="button" data-offset="60" aria-haspopup="dialog" aria-controls="hero-photo-viewer" disabled>
+                      <span class="hero-photo-reveal" data-hero-reveal><img src="assets/images/altar-portada-rendicion.webp" width="600" height="1200" alt="Rendición. Dos personas acompañan a una mujer durante su bautismo." decoding="async" data-cms-src="portada.imagen-2" data-cms-alt="portada.texto-alternativo-2"></span>
+                    </button>
+                  </div>
+                  <div class="hero-carousel-slide" data-hero-slide="front" data-cms-media-container>
+                    <button class="hero-carousel-open parallax-mousemove" type="button" data-offset="90" aria-haspopup="dialog" aria-controls="hero-photo-viewer" disabled>
+                      <span class="hero-photo-reveal" data-hero-reveal><img src="assets/images/altar-portada-encuentro.webp" width="600" height="1200" alt="Encuentro. Un hombre ora de rodillas." decoding="async" data-cms-src="portada.imagen-3" data-cms-alt="portada.texto-alternativo-3"></span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="main-hero-bottom local-scroll" data-hero-reveal><a href="#nosotros" class="scroll-down-1"><span class="scroll-down-1-icon"><i class="mi-arrow-down" aria-hidden="true"></i></span><span class="scroll-down-1-text" data-cms-text="portada.texto-4" data-cms-font-size="estilo-portada.descubre-tamano" data-cms-color="estilo-portada.descubre-color">Descubre ALTAR</span></a><span data-cms-text="portada.texto-5" data-cms-font-size="estilo-portada.ubicacion-tamano" data-cms-color="estilo-portada.ubicacion-color">Una familia en Lima y Callao.</span></div>
+        <div class="main-hero-bottom local-scroll" data-hero-reveal><a href="#nosotros" class="scroll-down-1"><span class="scroll-down-1-icon"><i class="mi-arrow-down" aria-hidden="true"></i></span><span class="scroll-down-1-text" data-cms-text="portada.texto-4" data-cms-font-size="estilo-portada.descubre-tamano" data-cms-color="estilo-portada.descubre-color">Descubre ALTAR</span></a><span data-cms-text="portada.texto-5" data-cms-font-size="estilo-portada.ubicacion-tamano" data-cms-color="estilo-portada.ubicacion-color">Una familia que camina contigo.</span></div>
       </section>
 
-      <div class="welcome-strip" data-cms-visible="visibilidad.horarios" aria-label="Reuniones y comunidad">
-        <div><span class="strip-label" data-cms-text="horarios-destacados.texto">Nos vemos el domingo</span><strong data-cms-text="horarios-destacados.texto-destacado">San Isidro · 11:00 a. m. y 5:00 p. m.</strong></div>
-        <div><span class="strip-label" data-cms-text="horarios-destacados.texto-2">Una sola iglesia</span><strong data-cms-text="horarios-destacados.texto-destacado-2">Cinco sedes. La misma familia.</strong></div>
-        <a href="#casas-de-vida"><span class="strip-label" data-cms-text="horarios-destacados.texto-3">También entre semana</span><strong data-cms-text="horarios-destacados.texto-destacado-3">Casas de vida <span class="arrow-icon" aria-hidden="true">↗</span></strong></a>
-      </div>
+      <nav class="welcome-strip" data-cms-visible="visibilidad.horarios" aria-label="Reuniones y comunidad">
+        <a href="#sedes"><span class="strip-label" data-cms-text="horarios-destacados.texto">Nos vemos el domingo</span><strong data-cms-text="horarios-destacados.texto-destacado">Cinco sedes. Una sola familia.</strong></a>
+        <a href="https://www.youtube.com/watch?v=7NZe6wNRMvo" target="_blank" rel="noopener noreferrer" data-cms-href="horarios-destacados.enlace-mensaje"><span class="strip-label" data-cms-text="horarios-destacados.texto-2">Serie actual · Guiados</span><strong data-cms-text="horarios-destacados.texto-destacado-2">Escucha la última enseñanza ↗</strong></a>
+        <a href="#casas-de-vida"><span class="strip-label" data-cms-text="horarios-destacados.texto-3">También entre semana</span><strong data-cms-text="horarios-destacados.texto-destacado-3">Casas de vida&nbsp;<span class="arrow-icon" aria-hidden="true">↗</span></strong></a>
+      </nav>
 
       <section class="page-section altar-section about-section" id="nosotros" data-cms-visible="visibilidad.nosotros" aria-labelledby="about-title">
         <div class="altar-container">
-          <div class="section-heading-line"><span class="eyebrow" data-cms-text="sobre-nosotros.texto">01 / Sobre nosotros</span><span class="eyebrow section-side-note" data-cms-text="sobre-nosotros.texto-2">Presencia → Transformación → Misión</span></div>
+          <div class="section-heading-line"><span class="eyebrow" data-cms-text="sobre-nosotros.texto">01 / Sobre nosotros</span><span class="eyebrow section-side-note" data-cms-text="sobre-nosotros.texto-2">Encuentro → Rendición → Envío</span></div>
           <h2 class="about-statement wow linesAnimIn" id="about-title" data-splitting="lines" data-cms-text="sobre-nosotros.titulo" data-cms-combined="sobre-nosotros.titulo-completo" data-cms-combined-emphasis="statement" data-cms-format="inline">Somos una iglesia <span class="statement-emphasis" data-cms-text="sobre-nosotros.texto-3" data-cms-format="inline">que avanza.</span></h2>
-          <div class="about-grid">
+          <div class="about-presentation">
             <figure class="community-frame">
-              <a class="family-video-trigger image-reveal-frame" href="assets/videos/altar-familia.webm" data-family-video data-cms-href="sobre-nosotros.video" data-cms-clear-href aria-haspopup="dialog" aria-controls="family-video-dialog">
-                <img src="assets/images/altar-familia-video-poster.webp" width="960" height="810" alt="Danny y Daniela Príncipe en el video de presentación de ALTAR" loading="lazy" decoding="async" data-cms-src="sobre-nosotros.imagen" data-cms-alt="sobre-nosotros.texto-alternativo">
-                <span class="family-video-play"><span class="family-video-icon" aria-hidden="true"></span><span data-cms-text="sobre-nosotros.texto-video">Ver video</span></span>
+              <a class="family-video-trigger image-reveal-frame" href="assets/videos/altar-familia.webm" data-family-video data-cms-href="sobre-nosotros.video" data-cms-clear-href aria-haspopup="dialog" aria-controls="family-video-dialog" aria-labelledby="family-video-action" aria-describedby="family-video-headline">
+                <img src="assets/images/altar-intro-final.webp" width="960" height="540" alt="ALTAR Comunidad Cristiana. Reproducir el video de presentación" loading="lazy" decoding="async" data-cms-src="sobre-nosotros.imagen" data-cms-alt="sobre-nosotros.texto-alternativo">
+                <video class="family-video-intro" data-family-intro="assets/videos/altar-presentacion-intro.mp4" preload="none" muted playsinline aria-hidden="true"></video>
+                <span class="family-video-play">
+                  <span class="family-video-headline" id="family-video-headline" data-cms-text="sobre-nosotros.texto-video">Un mensaje de nuestros pastores</span>
+                  <span class="family-video-action">
+                    <span class="family-video-icon" aria-hidden="true"></span>
+                    <span id="family-video-action" data-cms-text="sobre-nosotros.accion-video">Ver el mensaje</span>
+                  </span>
+                </span>
               </a>
               <a data-family-youtube data-cms-href="sobre-nosotros.video-youtube" hidden></a>
               <dialog class="family-video-dialog" id="family-video-dialog" aria-labelledby="family-video-title">
@@ -168,14 +185,8 @@
                 <p class="family-video-status" data-family-status role="status" hidden>El video no está disponible en este momento.</p>
                 <a class="family-video-external" data-family-external target="_blank" rel="noopener noreferrer" hidden>Abrir en YouTube</a>
               </dialog>
-              <figcaption data-cms-text="sobre-nosotros.pie-de-imagen">Hacer comunidad como familia. Esto es ALTAR.</figcaption>
             </figure>
-            <div class="about-copy wow fadeInUp">
-              <p class="body-lead" data-cms-text="sobre-nosotros.parrafo" data-cms-format="inline">En Cristo encontramos a Dios, rendimos nuestra vida y somos enviados.</p>
-              <p data-cms-text="sobre-nosotros.parrafo-2" data-cms-format="inline">Somos una iglesia cristiana carismática. Queremos conectar a las personas con Dios y con la familia de la fe, crecer en Su Palabra y caminar en el Espíritu Santo.</p>
-              <div class="purpose-line" data-cms-combined="sobre-nosotros.lema"><span data-cms-text="sobre-nosotros.texto-4">Encuentro.</span><span data-cms-text="sobre-nosotros.texto-5">Rendición.</span><span data-cms-text="sobre-nosotros.texto-6">Envío</span></div>
-              <blockquote class="faith-confession"><p data-cms-text="sobre-nosotros.parrafo-3" data-cms-format="inline">Dios es bueno, todo el tiempo</p></blockquote>
-            </div>
+            <p class="about-presentation-motto" data-cms-text="sobre-nosotros.parrafo-3" data-cms-format="inline">Dios es bueno, todo el tiempo</p>
           </div>
           <div class="beliefs-grid">
             <section class="belief-block" aria-labelledby="vision-title">
@@ -184,61 +195,148 @@
             </section>
             <section class="belief-block" aria-labelledby="mission-title">
               <h3 id="mission-title" data-cms-text="sobre-nosotros.subtitulo-2">Nuestra misión</h3>
-              <p data-cms-text="sobre-nosotros.parrafo-5" data-cms-format="inline">Conectar a las personas con Dios y con la familia de la fe, formar discípulos que viven en Su Palabra, caminan en el Espíritu, viven en santidad, y enviarlos a llevar el Evangelio a otros (Conectar - Formar - Enviar).</p>
+              <p data-cms-text="sobre-nosotros.parrafo-5" data-cms-format="inline">Conectar a las personas con Dios y con la familia de la fe, formar discípulos que viven en Su Palabra, caminan en el Espíritu, viven en santidad, y enviarlos a llevar el Evangelio a otros.</p>
+              <p class="mission-summary" data-cms-text="sobre-nosotros.cierre-mision">Conectar · Formar · Enviar</p>
             </section>
           </div>
-          <section class="identity-band" data-cms-visible="visibilidad.adn" aria-labelledby="dna-title">
-            <div class="identity-intro"><span class="eyebrow" data-cms-text="sobre-nosotros.texto-7">Lo que nos identifica</span><h3 id="dna-title" data-cms-text="sobre-nosotros.subtitulo-3 sobre-nosotros.subtitulo-4" data-cms-combined="sobre-nosotros.titulo-adn" data-cms-format="inline">El ADN de ALTAR<br> es la generosidad.</h3></div>
-            <div class="identity-values">
+        </div>
+        <section class="identity-band" id="adn" data-cms-visible="visibilidad.adn" aria-labelledby="dna-title">
+          <div class="altar-container identity-layout">
+            <div class="identity-intro">
+              <h3 id="dna-title" data-cms-combined="sobre-nosotros.titulo-adn" data-cms-format="inline"><span data-cms-text="sobre-nosotros.subtitulo-3" data-cms-format="inline"></span> <span data-cms-text="sobre-nosotros.subtitulo-4" data-cms-format="inline">El ADN de ALTAR</span></h3>
               <p class="identity-values-label" data-cms-text="sobre-nosotros.parrafo-6" data-cms-format="inline">Así vivimos nuestra fe</p>
-              <div class="identity-values-columns">
-                <div class="identity-values-column" data-cms-rich="sobre-nosotros.dna-columna-1">
-                  <ul class="dna-list">
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista">Buscar la intimidad con Dios.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-3">Hacer comunidad como familia.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-5">Vivir en generosidad.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-7">Caminar en santidad.</li>
-                  </ul>
-                </div>
-                <div class="identity-values-column" data-cms-rich="sobre-nosotros.dna-columna-2">
-                  <ul class="dna-list">
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-2">Avanzar con el Evangelio.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-4">Amar la Palabra.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-6">Darle su lugar de honor al Espíritu Santo.</li>
-                    <li data-cms-text="sobre-nosotros.elemento-de-lista-8">Servir con excelencia.</li>
-                  </ul>
-                </div>
+            </div>
+            <div class="identity-photo" data-cms-media-container>
+              <img src="assets/images/altar-community.webp" width="2200" height="1467" alt="La comunidad comparte un tiempo de alabanza" loading="lazy" decoding="async" data-rellax-y data-rellax-speed="-0.7" data-rellax-min-y="-22" data-rellax-max-y="22" data-rellax-percentage="0.5" data-cms-src="sobre-nosotros.imagen-adn" data-cms-alt="sobre-nosotros.texto-alternativo-adn">
+            </div>
+            <div class="identity-values-columns">
+              <div class="identity-values-column" data-cms-rich="sobre-nosotros.dna-columna-1">
+                <ul>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista">Buscar la intimidad con Dios.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-3">Hacer comunidad como familia.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-5">Vivir en generosidad.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-7">Caminar en santidad.</li>
+                </ul>
+              </div>
+              <div class="identity-values-column" data-cms-rich="sobre-nosotros.dna-columna-2">
+                <ul>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-2">Avanzar con el Evangelio.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-4">Amar la Palabra.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-6">Darle su lugar de honor al Espíritu Santo.</li>
+                  <li data-cms-text="sobre-nosotros.elemento-de-lista-8">Servir con excelencia.</li>
+                </ul>
               </div>
             </div>
-          </section>
-          <div class="pastors-grid" data-cms-visible="visibilidad.pastores">
-            <div class="pastors-copy wow fadeInUp"><span class="eyebrow" data-cms-text="sobre-nosotros.texto-8">Nuestros pastores principales</span><h3 data-cms-text="sobre-nosotros.subtitulo-5 sobre-nosotros.subtitulo-6" data-cms-combined="sobre-nosotros.nombre-pastores">Danny y Daniela<br>Príncipe.</h3><p data-cms-text="sobre-nosotros.parrafo-7" data-cms-format="inline">Acompañan a nuestra comunidad a seguir a Jesús.</p><a class="text-link" href="https://www.youtube.com/@AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="sobre-nosotros.destino-del-enlace" data-cms-text="sobre-nosotros.texto-del-enlace">Escucha nuestros mensajes <span class="arrow-icon" aria-hidden="true">↗</span></a></div>
-            <div class="resonance-parallax-frame" data-cms-media-container data-rellax-y data-rellax-speed="-1" data-rellax-percentage="0.5"><figure class="pastors-photo wow fadeScaleIn"><img src="assets/images/altar-pastores-color.webp" width="1000" height="667" loading="lazy" alt="Los pastores principales Danny y Daniela Príncipe" data-cms-src="sobre-nosotros.imagen-2" data-cms-alt="sobre-nosotros.texto-alternativo-2"></figure></div>
-            <div class="legacy-note wow fadeInUp"><span class="legacy-number" data-cms-text="sobre-nosotros.numero-aniversario" data-cms-combined="sobre-nosotros.aniversario" data-cms-combined-emphasis="unit">30<span data-cms-text="sobre-nosotros.texto-9">años</span></span><p data-cms-text="sobre-nosotros.parrafo-8" data-cms-format="inline">Una historia de fe que sigue escribiéndose.</p><span class="legacy-small" data-cms-text="sobre-nosotros.texto-10">Honramos la memoria de nuestro pastor fundador, Hernán Paredes.</span><a class="text-link" href="https://www.youtube.com/watch?v=OM0AIRHinfc" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="sobre-nosotros.destino-del-enlace-2" data-cms-text="sobre-nosotros.texto-del-enlace-2">Conoce parte de su legado <span class="arrow-icon" aria-hidden="true">↗</span></a></div>
+          </div>
+        </section>
+        <div class="altar-container">
+          <div class="pastors-grid" id="pastores" data-cms-visible="visibilidad.pastores">
+            <section class="pastors-feature" aria-labelledby="pastors-title">
+              <div class="pastors-copy wow fadeInUp">
+                <span class="eyebrow" data-cms-text="sobre-nosotros.texto-8">Nuestros pastores principales</span>
+                <h3 id="pastors-title" data-cms-text="sobre-nosotros.subtitulo-5 sobre-nosotros.subtitulo-6" data-cms-combined="sobre-nosotros.nombre-pastores">Danny y Daniela<br>Príncipe.</h3>
+                <p data-cms-text="sobre-nosotros.parrafo-7" data-cms-format="inline">Acompañan a nuestra comunidad a seguir a Jesús.</p>
+                <a class="text-link" href="pastores/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="sobre-nosotros.destino-del-enlace" data-cms-text="sobre-nosotros.texto-del-enlace">Conoce a todos nuestros pastores <span class="arrow-icon" aria-hidden="true">↗</span></a>
+              </div>
+              <div class="resonance-parallax-frame" data-cms-media-container data-rellax-y data-rellax-speed="-1" data-rellax-min-y="-12" data-rellax-max-y="12" data-rellax-percentage="0.5">
+                <figure class="pastors-photo wow fadeScaleIn">
+                  <img src="assets/images/altar-pastores-color.webp" width="1000" height="667" loading="lazy" alt="Los pastores principales Danny y Daniela Príncipe" data-cms-src="sobre-nosotros.imagen-2" data-cms-alt="sobre-nosotros.texto-alternativo-2">
+                </figure>
+              </div>
+            </section>
+            <section class="legacy-note wow fadeInUp" aria-labelledby="legacy-title" data-cms-background="sobre-nosotros.imagen-aniversario">
+              <span class="legacy-number" data-cms-text="sobre-nosotros.numero-aniversario" data-cms-combined="sobre-nosotros.aniversario" data-cms-combined-emphasis="unit">30<span data-cms-text="sobre-nosotros.texto-9">años</span></span>
+              <div class="legacy-copy">
+                <h3 id="legacy-title" data-cms-text="sobre-nosotros.parrafo-8" data-cms-format="inline">Una historia de fe que sigue escribiéndose.</h3>
+                <p class="legacy-small" data-cms-text="sobre-nosotros.texto-10">Honramos la memoria de nuestro pastor fundador, Hernán Paredes.</p>
+              </div>
+              <a class="altar-button button-light" href="nuestro-legado/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="sobre-nosotros.destino-del-enlace-2" data-cms-text="sobre-nosotros.texto-del-enlace-2">Conoce el legado <span class="arrow-icon" aria-hidden="true">↗</span></a>
+            </section>
           </div>
         </div>
       </section>
 
-      <section class="page-section altar-section messages-section" id="mensajes" data-cms-visible="visibilidad.mensajes" aria-labelledby="messages-title">
+      <section class="page-section altar-section messages-section" id="mensajes" data-cms-visible="visibilidad.mensajes" aria-labelledby="messages-section-title">
         <div class="altar-container">
-          <div class="section-heading-line"><span class="eyebrow" data-cms-text="mensajes.texto">02 / La Palabra nos transforma</span><a class="text-link" href="https://www.youtube.com/@AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="mensajes.destino-del-enlace" data-cms-text="mensajes.texto-del-enlace">Todos los mensajes <span class="arrow-icon" aria-hidden="true">↗</span></a></div>
-          <div class="series-grid">
-            <div class="series-copy wow fadeInUp"><span class="pill pill-dark" data-cms-text="mensajes.texto-2">Serie actual · Noviembre 2026</span><h2 id="messages-title" data-cms-text="mensajes.titulo">GUIADOS<span class="arrow-icon" aria-hidden="true">↗</span></h2><p class="series-subtitle" data-cms-text="mensajes.parrafo mensajes.parrafo-2" data-cms-combined="mensajes.subtitulo-serie">Escuchar. Discernir.<br>Seguir al Espíritu Santo.</p><p data-cms-text="mensajes.parrafo-3">Caminemos atentos a Su dirección. La serie comenzó el 1 de noviembre.</p><a class="altar-button button-outline-light" href="https://www.instagram.com/cc.altar/p/DfH5harC8md/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="mensajes.destino-del-enlace-2" data-cms-text="mensajes.texto-del-enlace-2">Conoce la serie <span class="arrow-icon" aria-hidden="true">↗</span></a></div>
-            <div class="resonance-parallax-frame" data-cms-media-container data-rellax-y data-rellax-speed="1" data-rellax-percentage="0.5"><figure class="series-art wow fadeScaleIn"><a class="series-art-link" target="_blank" rel="noopener noreferrer" data-cms-href="mensajes.enlace-portada-serie"><img src="assets/images/altar-guiados-official.jpg" width="1350" height="1688" alt="Arte oficial de la serie Guiados: una persona frente a un camino iluminado" loading="lazy" data-cms-src="mensajes.imagen" data-cms-alt="mensajes.texto-alternativo"></a></figure></div>
-          </div>
-          <div class="featured-message wow fadeInUp">
-            <a class="message-thumbnail" data-cms-media-container href="https://www.youtube.com/watch?v=RaTn5MeJZZw" target="_blank" rel="noopener noreferrer" aria-label="Ver Dios te guía a través de tus pastores, de Daniela Príncipe, en YouTube" data-cms-href="mensajes.destino-del-enlace-3" data-cms-aria-label="mensajes.etiqueta-accesible">
-              <img src="assets/images/altar-message-guiados-pastores.jpg" alt="Miniatura del mensaje Dios te guía a través de tus pastores" width="1280" height="720" loading="lazy" data-cms-src="mensajes.imagen-2" data-cms-alt="mensajes.texto-alternativo-2">
-              <span class="play-ring" aria-hidden="true">▶</span>
-            </a>
-            <div>
-              <span class="eyebrow" data-cms-text="mensajes.texto-3">Un mensaje para tu semana</span>
-              <h3 data-cms-text="mensajes.subtitulo">Dios te guía a través de tus pastores</h3>
-              <p data-cms-text="mensajes.parrafo-4">Mira el último capítulo de Guiados con Daniela Príncipe y descubre cómo seguir la dirección de Dios en comunidad.</p>
+          <h2 class="eyebrow messages-section-title" id="messages-section-title" data-cms-text="mensajes.texto">02 / La Palabra nos transforma</h2>
+          <section class="messages-series" aria-labelledby="messages-series-title">
+            <div class="section-heading-line">
+              <h3 class="messages-subtitle" id="messages-series-title" data-cms-text="mensajes.titulo-seccion">Serie de enseñanzas</h3>
+              <a class="text-link" href="https://www.youtube.com/@AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" aria-describedby="messages-link-description" data-btn-animate="y" data-cms-href="mensajes.destino-del-enlace" data-cms-text="mensajes.texto-del-enlace">Todos los mensajes <span class="arrow-icon" aria-hidden="true">↗</span></a>
             </div>
-            <a class="round-arrow" href="https://www.youtube.com/watch?v=RaTn5MeJZZw" target="_blank" rel="noopener noreferrer" aria-label="Ver el mensaje Dios te guía a través de tus pastores en YouTube" data-cms-href="mensajes.destino-del-enlace-4" data-cms-aria-label="mensajes.etiqueta-accesible-2">↗</a>
-          </div>
+            <div class="series-grid">
+              <div class="series-copy wow fadeInUp">
+                <span class="pill pill-dark" data-cms-text="mensajes.texto-2">Noviembre 2026</span>
+                <h4 class="series-title" id="messages-title" data-cms-text="mensajes.titulo">GUIADOS</h4>
+                <p class="series-subtitle" data-cms-text="mensajes.parrafo mensajes.parrafo-2" data-cms-combined="mensajes.subtitulo-serie">Escuchar. Discernir.<br>Seguir al Espíritu Santo.</p>
+                <p data-cms-text="mensajes.parrafo-3">Caminemos atentos a Su dirección. La serie comenzó el 1 de noviembre.</p>
+              </div>
+              <div class="resonance-parallax-frame" data-cms-media-container>
+                <figure class="series-art wow fadeScaleIn">
+                  <img src="assets/images/altar-guiados-official.jpg" width="1350" height="1688" alt="Una persona camina entre montañas hacia una luz en forma de cruz." loading="lazy" data-cms-src="mensajes.imagen" data-cms-alt="mensajes.texto-alternativo">
+                </figure>
+              </div>
+            </div>
+            <a class="featured-message wow fadeInUp" href="https://www.youtube.com/watch?v=7NZe6wNRMvo" target="_blank" rel="noopener noreferrer" aria-label="Ver el mensaje «Escuchando la voz del Espíritu Santo», con Danny Príncipe, en YouTube" aria-describedby="messages-link-description" data-cms-href="mensajes.destino-del-enlace-3" data-cms-aria-label="mensajes.etiqueta-accesible">
+              <div class="message-thumbnail" data-cms-media-container>
+                <img src="assets/images/altar-message-voz-espiritu-santo.webp" alt="" width="960" height="540" loading="lazy" decoding="async" data-cms-src="mensajes.imagen-2" data-cms-alt="mensajes.texto-alternativo-2">
+              </div>
+              <div>
+                <span class="eyebrow" data-cms-text="mensajes.texto-3">Un mensaje para tu semana</span>
+                <h4 data-cms-text="mensajes.subtitulo">Escuchando la voz del Espíritu Santo</h4>
+                <p data-cms-text="mensajes.parrafo-4">En este mensaje de Guiados, el pastor Danny Príncipe nos invita a prestar atención a la dirección del Espíritu Santo.</p>
+              </div>
+              <span class="featured-message-action" aria-hidden="true"><span data-cms-text="mensajes.accion-destacada">Ver el mensaje</span><span>↗</span></span>
+            </a>
+            <span class="visually-hidden" id="messages-link-description">Se abre en una pestaña nueva.</span>
+          </section>
         </div>
+
+        <section class="general-announcements" id="avisos" aria-labelledby="announcements-title" data-cms-visible="visibilidad.avisos-generales">
+          <div class="altar-container">
+            <h3 class="messages-subtitle" id="announcements-title" data-cms-text="avisos.titulo">Avisos de ALTAR</h3>
+            <p class="announcements-intro" data-cms-text="avisos.introduccion">Todas las personas son bienvenidas a participar y apoyar.</p>
+            <div class="announcements-list" data-announcements>
+              <article class="announcement-card" aria-labelledby="announcement-title">
+                <div class="announcement-overview">
+                  <div class="announcement-visual" aria-hidden="true" data-cms-media-container>
+                    <img src="assets/images/aviso-librito-jesus-con-ninos.webp" alt="" loading="lazy" decoding="async" data-cms-src="avisos.fondo">
+                  </div>
+                  <div class="announcement-copy">
+                    <p class="eyebrow announcement-kicker" data-cms-text="avisos.contexto">Campaña de Navidad</p>
+                    <h4 id="announcement-title" data-cms-text="avisos.campana">¿Quién es Jesús?</h4>
+                    <div class="announcement-summary" data-cms-rich="avisos.resumen">
+                      <p>Un librito ilustrado con enseñanzas bíblicas para que más niños conozcan a Jesús. Los ejemplares se repartirán gratuitamente en nuestras sedes y campañas de Navidad, y también se compartirán con otras obras.</p>
+                    </div>
+                    <div class="announcement-facts" data-cms-rich="avisos.datos">
+                      <p><strong>2 000 libritos</strong> Meta de impresión</p>
+                      <p><strong>S/ 2</strong> Costo por ejemplar</p>
+                    </div>
+                  </div>
+                </div>
+                <details class="announcement-details">
+                  <summary>
+                    <span data-cms-text="avisos.accion">Cómo apoyar</span>
+                    <span class="announcement-chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="announcement-support">
+                    <div class="announcement-details-copy" data-cms-rich="avisos.detalles">
+                      <p>¡Amada familia! Queremos invitarte a sumarte a este proyecto con una ofrenda de corazón. Cada granito de arena nos ayudará a imprimir más libritos y llevar este mensaje a muchos pequeños. Cada libro cuesta 2 soles para ser impreso.</p>
+                      <p>Si deseas apoyarnos, ¡será de muchísima bendición! Gracias por tu apoyo, generosidad y por ayudarnos a compartir el Evangelio. 🙏✨</p>
+                      <ul>
+                        <li><strong>Yape:</strong> 944 720 062, a nombre del Ps. Danny Príncipe.</li>
+                        <li><strong>Mesa de inscripciones:</strong> en efectivo o por transferencia.</li>
+                      </ul>
+                    </div>
+                    <figure class="announcement-image" data-cms-media-container>
+                      <img src="assets/images/aviso-librito-quien-es-jesus.webp" loading="lazy" decoding="async" alt="Afiche de ¿Quién es Jesús?, con la portada del librito ilustrada por una escena de Jesús rodeado de niños." data-cms-src="avisos.imagen" data-cms-alt="avisos.texto-alternativo">
+                    </figure>
+                  </div>
+                </details>
+              </article>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="page-section altar-section grow-section" id="crecer" data-cms-visible="visibilidad.formacion" aria-labelledby="grow-title">
@@ -247,21 +345,21 @@
           <div class="split-heading"><h2 class="display-title wow linesAnimIn" data-splitting="lines" id="grow-title" data-cms-text="formacion.titulo formacion.titulo-2" data-cms-combined="formacion.titulo-completo">Hay un siguiente<br>paso para ti.</h2><p data-cms-text="formacion.parrafo">Conoce la Palabra y crece en comunidad como discípulo de Jesús.</p></div>
           <div class="program-grid">
             <article class="program-card carisma-card wow fadeScaleIn">
-              <div class="program-top"><span class="eyebrow" data-cms-text="formacion.texto-3">Formación bíblica</span><span class="program-badge" data-cms-text="formacion.texto-4">2 años</span></div>
-              <h3 data-cms-text="formacion.subtitulo">CHARISMA<span class="program-asterisk" aria-hidden="true">✳</span></h3>
-              <p data-cms-text="formacion.parrafo-2">Estudia la Biblia y recibe un certificado al completar la formación.</p>
+              <div class="program-visual program-visual-charisma"><img class="program-scene" src="assets/images/altar-estudio-laptop-conceptual.webp" width="1536" height="1024" alt="Imagen conceptual de una persona estudiando con una Biblia y una laptop" loading="lazy" decoding="async" data-cms-src="formacion.imagen-charisma" data-cms-alt="formacion.texto-alternativo-charisma"><img class="program-logo" src="assets/images/charisma-logo-white.png" width="2367" height="1346" alt="Escuela Bíblica Charisma" loading="lazy" data-cms-src="formacion.logo-charisma" data-cms-alt="formacion.logo-charisma-alt"></div>
+              <div class="program-top"><span class="eyebrow" data-cms-text="formacion.texto-3">Escuela bíblica</span><span class="program-badge" data-cms-text="formacion.texto-4">2 años</span></div>
+              <h3 data-cms-text="formacion.subtitulo">Charisma</h3>
+              <p data-cms-text="formacion.parrafo-2">Profundiza en la Biblia y sigue creciendo como discípulo de Jesús.</p>
               <div class="program-actions">
-                <a class="altar-button button-dark" id="charisma-classroom" href="/intranet/" data-cms-href="formacion.enlace-intranet-charisma" data-cms-clear-href="hide"><span data-cms-text="formacion.texto-intranet-charisma">Ingresar al aula</span><span aria-hidden="true">↗</span></a>
-                <button class="text-link btn-mod" type="button" data-program="carisma" aria-haspopup="dialog" aria-controls="program-dialog" data-btn-animate="y" data-cms-text="formacion.boton">Conoce Charisma <span class="arrow-icon" aria-hidden="true">↗</span></button>
+                <button class="altar-button button-dark" type="button" data-program="carisma" aria-haspopup="dialog" aria-controls="program-dialog" data-btn-animate="y" data-cms-text="formacion.boton">Conoce Charisma <span class="arrow-icon" aria-hidden="true">↗</span></button>
               </div>
             </article>
             <article class="program-card discipleship-card wow fadeScaleIn">
+              <div class="program-visual program-visual-discipleship"><img class="program-scene" src="assets/images/el-camino-del-discipulo.png" width="792" height="971" alt="Arte de El camino del discípulo: una persona avanza por un camino iluminado entre montañas" loading="lazy" decoding="async" data-cms-src="formacion.imagen-discipulado" data-cms-alt="formacion.texto-alternativo-discipulado"></div>
               <div class="program-top"><span class="eyebrow" data-cms-text="formacion.texto-5">Fundamentos de la fe</span><span class="program-badge" data-cms-text="formacion.texto-6">12 capítulos</span></div>
               <h3 data-cms-text="formacion.subtitulo-2 formacion.subtitulo-3" data-cms-combined="formacion.titulo-discipulado">El camino<br>del discípulo</h3>
               <p data-cms-text="formacion.parrafo-3">Conoce los fundamentos de la fe cristiana y crece como discípulo de Jesús.</p>
               <div class="program-actions">
-                <a class="altar-button button-dark manual-download" href="assets/downloads/el-camino-del-discipulo.pdf" download="El camino del discipulo.pdf" data-cms-href="formacion.destino-del-enlace" data-cms-clear-href="hide" data-cms-text="formacion.texto-del-enlace">Descargar manual <span data-cms-text="formacion.texto-7">PDF · 1,8 MB ↓</span></a>
-                <button class="text-link btn-mod" type="button" data-program="discipulado" aria-haspopup="dialog" aria-controls="program-dialog" data-btn-animate="y" data-cms-text="formacion.boton-2">Conoce el curso <span class="arrow-icon" aria-hidden="true">↗</span></button>
+                <button class="altar-button button-dark" type="button" data-program="discipulado" aria-haspopup="dialog" aria-controls="program-dialog" data-btn-animate="y" data-cms-text="formacion.boton-2">Conoce el curso <span class="arrow-icon" aria-hidden="true">↗</span></button>
               </div>
             </article>
           </div>
@@ -285,42 +383,46 @@
 
       <section class="page-section altar-section missions-section" id="misiones" data-cms-visible="visibilidad.misiones" aria-labelledby="missions-title">
         <div class="altar-container">
-          <div class="section-heading-line"><span class="eyebrow" data-cms-text="misiones.texto">04 / En misión</span><span class="eyebrow section-side-note" data-cms-text="misiones.texto-2">De nuestros barrios a Pucallpa</span></div>
+          <div class="section-heading-line"><span class="eyebrow" data-cms-text="misiones.texto">04 / En misión</span><span class="eyebrow section-side-note" data-cms-text="misiones.texto-2">Dios es bueno todo el tiempo y en todo lugar</span></div>
           <div class="split-heading">
             <h2 class="display-title wow linesAnimIn" data-splitting="lines" id="missions-title" data-cms-text="misiones.titulo misiones.titulo-2" data-cms-combined="misiones.titulo-completo">Una fe que sale<br>al encuentro.</h2>
             <p data-cms-text="misiones.parrafo">Compartimos el Evangelio en nuestros barrios y en cada viaje misionero.</p>
           </div>
           <div class="missions-grid">
             <article class="mission-card mission-card-local wow fadeInUp" aria-labelledby="comparte-title">
+              <div class="mission-visual" data-cms-media-container>
+                <img src="assets/images/altar-comparte.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="El equipo de Comparte frente al Hospital del Niño" data-cms-src="misiones.imagen" data-cms-alt="misiones.texto-alternativo">
+              </div>
               <div class="mission-card-top">
-                <span class="eyebrow" data-cms-text="misiones.texto-3">Evangelismo y servicio</span>
                 <svg class="mission-card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                   <path d="M7 12a5 5 0 0 1 5-5h17a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H17l-8 7v-8a5 5 0 0 1-2-4z"/>
                   <path d="M38 17a5 5 0 0 1 4 5v10a5 5 0 0 1-3 4v6l-7-6h-9a5 5 0 0 1-5-5M14 17h13"/>
                 </svg>
+                <span class="eyebrow" data-cms-text="misiones.texto-3">Evangelismo y servicio</span>
               </div>
               <h3 id="comparte-title" data-cms-text="misiones.subtitulo">Comparte</h3>
               <p data-cms-text="misiones.parrafo-2" data-cms-combined="misiones.descripcion-comparte"><strong data-cms-text="misiones.texto-destacado">«Estamos aquí porque Dios está aquí».</strong> Salimos a escuchar, acompañar y orar con nuestros vecinos para dar a conocer a Jesús.</p>
-              <a class="mission-preview" href="comparte.html" target="_blank" rel="noopener noreferrer" data-cms-href="misiones.enlace-comparte" aria-labelledby="comparte-link-label">
-                <img src="assets/images/altar-comparte.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="El equipo de Comparte frente al Hospital del Niño" data-cms-src="misiones.imagen" data-cms-alt="misiones.texto-alternativo">
-                <span class="mission-preview-label" id="comparte-link-label" data-cms-text="misiones.texto-4">Conoce Comparte <span class="arrow-icon" aria-hidden="true">↗</span></span>
+              <a class="altar-button button-light mission-action" href="comparte.html" target="_blank" rel="noopener noreferrer" data-cms-href="misiones.enlace-comparte" aria-labelledby="comparte-link-label">
+                <span id="comparte-link-label" data-cms-text="misiones.texto-4">Conoce Comparte</span><span aria-hidden="true">↗</span>
               </a>
             </article>
             <article class="mission-card mission-card-trips wow fadeInUp" data-wow-delay="0.1s" aria-labelledby="trips-title">
+              <div class="mission-visual" data-cms-media-container>
+                <img src="assets/images/altar-mision-pucallpa-2026.jpg" width="1080" height="1348" loading="lazy" decoding="async" alt="El equipo misionero de ALTAR junto a los niños de una jornada en Pucallpa" data-cms-src="misiones.imagen-2" data-cms-alt="misiones.texto-alternativo-2">
+              </div>
               <div class="mission-card-top">
-                <span class="eyebrow" data-cms-text="misiones.texto-5">Pucallpa · Ucayali</span>
                 <svg class="mission-card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                   <path d="M41 15c0 6-9 14-9 14s-9-8-9-14a9 9 0 0 1 18 0Z"/>
                   <circle cx="32" cy="15" r="2.5"/>
                   <path d="M8 38c5-2 11 4 16 2 6-3 1-9 7-9" stroke-dasharray="2 4"/>
                   <circle cx="7" cy="38" r="3"/>
                 </svg>
+                <span class="eyebrow" data-cms-text="misiones.texto-5">Pucallpa · Ucayali</span>
               </div>
               <h3 id="trips-title" data-cms-text="misiones.subtitulo-2">Viajes misioneros</h3>
               <p data-cms-text="misiones.parrafo-3">En 2026 regresamos a Pucallpa para compartir el Evangelio con actividades para niños, enseñanzas bíblicas y visitas a familias.</p>
-              <a class="mission-preview" href="viajes-misioneros.html" target="_blank" rel="noopener noreferrer" data-cms-href="misiones.enlace-viajes" aria-labelledby="trips-link-label">
-                <img class="mission-photo-pucallpa" src="assets/images/altar-mision-pucallpa-2026.jpg" width="1080" height="1348" loading="lazy" decoding="async" alt="El equipo misionero de ALTAR junto a los niños de una jornada en Pucallpa" data-cms-src="misiones.imagen-2" data-cms-alt="misiones.texto-alternativo-2">
-                <span class="mission-preview-label" id="trips-link-label" data-cms-text="misiones.texto-6">Conoce los viajes misioneros <span class="arrow-icon" aria-hidden="true">↗</span></span>
+              <a class="altar-button button-light mission-action" href="viajes-misioneros.html" target="_blank" rel="noopener noreferrer" data-cms-href="misiones.enlace-viajes" aria-labelledby="trips-link-label">
+                <span id="trips-link-label" data-cms-text="misiones.texto-6">Conoce los viajes misioneros</span><span aria-hidden="true">↗</span>
               </a>
             </article>
           </div>
@@ -331,20 +433,43 @@
         </div>
       </section>
 
+      <section class="page-section altar-section stories-section" id="historias" data-cms-visible="visibilidad.historias" aria-labelledby="stories-title">
+        <div class="altar-container stories-layout">
+          <div class="stories-intro"><span class="eyebrow" data-cms-text="historias.etiqueta">Nuestra comunidad</span><h2 class="display-title" id="stories-title" data-cms-text="historias.titulo">Historias que bendicen</h2><p data-cms-text="historias.descripcion">Conoce las iniciativas en las que compartimos la fe y acompañamos a otros.</p><a class="text-link" href="https://wa.me/51904803980?text=Hola%2C%20quisiera%20compartir%20mi%20testimonio." target="_blank" rel="noopener noreferrer" data-cms-href="historias.enlace-contacto" data-cms-text="historias.contacto">Comparte tu historia <span aria-hidden="true">↗</span></a></div>
+          <div class="stories-content"><div class="stories-testimonials" data-cms-testimonials="historias" hidden></div><nav class="stories-links" aria-label="Historias de nuestra comunidad"><a href="comparte/#testimonios" target="_blank" rel="noopener noreferrer"><span>Comparte</span><span aria-hidden="true">↗</span></a><a href="viajes-misioneros/#testimonios" target="_blank" rel="noopener noreferrer"><span>Viajes misioneros</span><span aria-hidden="true">↗</span></a><a href="cree/#testimonios" target="_blank" rel="noopener noreferrer"><span>CREE</span><span aria-hidden="true">↗</span></a></nav></div>
+        </div>
+      </section>
+
       <section class="page-section altar-section events-section" id="eventos" data-cms-visible="visibilidad.agenda" aria-labelledby="events-title">
         <div class="altar-container">
           <div class="section-heading-line"><span class="eyebrow" data-cms-text="agenda.texto">05 / Nuestra agenda</span><a class="text-link" href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="agenda.destino-del-enlace" data-cms-text="agenda.texto-del-enlace">Novedades en Instagram <span class="arrow-icon" aria-hidden="true">↗</span></a></div>
           <h2 class="display-title wow linesAnimIn" data-splitting="lines" id="events-title" data-cms-text="agenda.titulo agenda.titulo-2" data-cms-combined="agenda.titulo-completo">Momentos que<br>nos reúnen.</h2>
           <div class="event-list">
-            <article class="event-row wow fadeInUp">
-              <div class="event-marker"><span data-cms-text="agenda.texto-2">PRÓXIMA</span><strong data-cms-text="agenda.texto-destacado">YELP</strong></div>
-              <div class="event-description"><span class="pill" data-cms-text="agenda.texto-3">Fecha por anunciar</span><h3 id="agenda-yelp-title"><a href="yoelijolapureza.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-yelp" data-cms-text="agenda.texto-del-enlace-2">Yo Elijo La Pureza</a></h3><p data-cms-text="agenda.parrafo">Conoce a los expositores y los temas del congreso. Descarga sus recursos gratuitos.</p></div>
-              <a class="round-arrow" href="yoelijolapureza.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-yelp" aria-labelledby="agenda-yelp-title">↗</a>
+            <article class="event-spotlight event-spotlight--yelp wow fadeInUp" aria-labelledby="agenda-yelp-title">
+              <div class="event-spotlight-visual" data-cms-media-container>
+                <img src="assets/images/agenda-yelp-logo.webp" width="540" height="473" alt="" loading="lazy" decoding="async" data-cms-src="agenda.logo-yelp" data-cms-alt="agenda.logo-yelp-alt">
+              </div>
+              <div class="event-description event-spotlight-copy">
+                <div class="event-spotlight-meta">
+                  <span class="pill" data-cms-text="agenda.texto-3">Fecha por anunciar</span>
+                  <span class="event-spotlight-edition"><span data-cms-text="agenda.texto-2">PRÓXIMA</span> <strong data-cms-text="agenda.texto-destacado">YELP</strong></span>
+                </div>
+                <h3 id="agenda-yelp-title"><a class="event-spotlight-link" href="yoelijolapureza.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-yelp"><span data-cms-text="agenda.texto-del-enlace-2">Yo Elijo La Pureza</span><span class="event-spotlight-arrow" aria-hidden="true">↗</span></a></h3>
+                <p data-cms-text="agenda.parrafo">Conoce a los expositores y los temas del congreso. Descarga sus recursos gratuitos.</p>
+              </div>
             </article>
-            <article class="event-row wow fadeInUp">
-              <div class="event-marker"><span data-cms-text="agenda.texto-4">EDICIÓN</span><strong data-cms-text="agenda.edicion-cree">2026</strong></div>
-              <div class="event-description"><span class="pill" data-cms-text="agenda.texto-5">Ya lo vivimos</span><h3 id="agenda-cree-title"><a href="cree.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-cree" data-cms-text="agenda.texto-del-enlace-3">CREE · 30 años de historia</a></h3><p data-cms-text="agenda.parrafo-2">Celebramos los 30 años de nuestra iglesia en un encuentro presencial.</p></div>
-              <a class="round-arrow" href="cree.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-cree" aria-labelledby="agenda-cree-title">↗</a>
+            <article class="event-spotlight event-spotlight--cree wow fadeInUp" aria-labelledby="agenda-cree-title">
+              <div class="event-spotlight-visual" data-cms-media-container>
+                <img src="assets/images/agenda-cree-logo.webp" width="900" height="304" alt="" loading="lazy" decoding="async" data-cms-src="agenda.logo-cree" data-cms-alt="agenda.logo-cree-alt">
+              </div>
+              <div class="event-description event-spotlight-copy">
+                <div class="event-spotlight-meta">
+                  <span class="pill" data-cms-text="agenda.texto-5">Ya lo vivimos</span>
+                  <span class="event-spotlight-edition"><span data-cms-text="agenda.texto-4">EDICIÓN</span> <strong data-cms-text="agenda.edicion-cree">2026</strong></span>
+                </div>
+                <h3 id="agenda-cree-title"><a class="event-spotlight-link" href="cree.html" target="_blank" rel="noopener noreferrer" data-cms-href="agenda.enlace-cree"><span data-cms-text="agenda.texto-del-enlace-3">CREE · 30 años de historia</span><span class="event-spotlight-arrow" aria-hidden="true">↗</span></a></h3>
+                <p data-cms-text="agenda.parrafo-2">Celebramos los 30 años de nuestra iglesia en un encuentro presencial.</p>
+              </div>
             </article>
             <article class="event-row event-row--optional" data-cms-visible="agenda.evento-adicional.visible" hidden>
               <div class="event-marker"><span data-cms-text="agenda.evento-adicional.etiqueta"></span><strong data-cms-text="agenda.evento-adicional.marca"></strong></div>
@@ -374,7 +499,7 @@
                   <li data-cms-text="agenda.elemento-de-lista-3">Valiente</li>
                   <li data-cms-text="agenda.elemento-de-lista-4">Ayuno</li>
                   <li data-cms-text="agenda.elemento-de-lista-5">Bautismo</li>
-                  <li data-cms-text="agenda.elemento-de-lista-6">Desayuno de Oro</li>
+                  <li data-cms-visible="agenda.mostrar-desayuno-de-oro" data-cms-text="agenda.elemento-de-lista-6" hidden>Desayuno de Oro</li>
                 </ul>
               </div>
               <div class="activity-panel event-conferences">
@@ -398,7 +523,7 @@
 
       <section class="page-section altar-section books-section" id="libros" data-cms-visible="visibilidad.libreria" aria-labelledby="books-title">
         <div class="altar-container books-grid">
-          <div class="books-copy"><span class="eyebrow" data-cms-text="libreria.texto">06 / Librería ALTAR</span><h2 class="display-title wow linesAnimIn" data-splitting="lines" id="books-title" data-cms-text="libreria.titulo libreria.titulo-2" data-cms-combined="libreria.titulo-completo">Lecturas que<br>dejan huella.</h2><p data-cms-text="libreria.parrafo">Descubre libros de nuestros pastores y de otros autores para crecer en la fe.</p><a class="altar-button button-dark" href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="libreria.destino-del-enlace" data-cms-text="libreria.texto-del-enlace">Consulta por nuestros libros <span class="arrow-icon" aria-hidden="true">↗</span></a><p class="books-note" data-cms-text="libreria.parrafo-2">Consulta disponibilidad y formas de compra con la iglesia.</p></div>
+          <div class="books-copy"><span class="eyebrow" data-cms-text="libreria.texto">06 / Librería ALTAR</span><h2 class="display-title wow linesAnimIn" data-splitting="lines" id="books-title" data-cms-text="libreria.titulo libreria.titulo-2" data-cms-combined="libreria.titulo-completo">Lecturas que<br>dejan huella.</h2><p data-cms-text="libreria.parrafo">Descubre libros de nuestros pastores y de otros autores para crecer en la fe.</p><a class="altar-button button-dark" href="libreria/" target="_blank" rel="noopener noreferrer" data-btn-animate="y" data-cms-href="libreria.destino-del-enlace" data-cms-text="libreria.texto-del-enlace">Explora la Librería <span class="arrow-icon" aria-hidden="true">↗</span></a><p class="books-note" data-cms-text="libreria.parrafo-2">Consulta disponibilidad y formas de compra con la iglesia.</p></div>
           <div class="book-display wow fadeInUp">
             <figure class="book-item book-first">
               <a class="book-cover" href="assets/downloads/el-amor-vino-y-se-quedo.pdf" download target="_blank" rel="noopener noreferrer" data-cms-href="libreria.pdf-1" data-cms-clear-href>
@@ -420,38 +545,39 @@
 
       <section class="page-section altar-section branches-section" id="sedes" data-cms-visible="visibilidad.sedes" aria-labelledby="branches-title">
         <div class="altar-container">
-          <div class="section-heading-line"><span class="eyebrow" data-cms-text="sedes.texto">07 / Encuentra tu sede</span><span class="eyebrow section-side-note" data-cms-text="sedes.texto-2">Una sola iglesia en Lima y Callao</span></div>
+          <div class="section-heading-line"><span class="eyebrow" data-cms-text="sedes.texto">07 / Encuentra tu sede</span><span class="eyebrow section-side-note" data-cms-text="sedes.texto-2">Cinco sedes. Una sola familia.</span></div>
           <div class="split-heading"><h2 class="display-title wow linesAnimIn" data-splitting="lines" id="branches-title" data-cms-text="sedes.titulo sedes.titulo-2" data-cms-combined="sedes.titulo-completo">Hay un lugar<br>para ti.</h2><p data-cms-text="sedes.parrafo">Conoce nuestras cinco sedes y ven a compartir la vida en comunidad.</p></div>
           <div class="branches-accordion" aria-label="Sedes de ALTAR">
-            <details class="branch-accordion" name="altar-sedes" open>
+            <details class="branch-accordion" name="altar-sedes">
               <summary><span class="branch-index">01</span><span data-cms-text="sedes.texto-3">San Isidro</span><span class="branch-toggle" aria-hidden="true"></span></summary>
               <div class="branch-details-body">
-                <div class="branch-welcome">
-                  <div class="branch-welcome-brand" data-cms-text="sedes.texto-4"><img src="assets/images/altar-isotype-white.png" width="36" height="30" alt="">ALTAR</div>
-                  <p class="branch-welcome-title" data-cms-text="sedes.parrafo-2">Bienvenidos.</p>
-                  <p class="branch-welcome-motto" data-cms-text="sedes.parrafo-3 sedes.parrafo-4" data-cms-combined="sedes.lema-san-isidro">Juntos en Su presencia.<br>Juntos en Su propósito.</p>
-                </div>
-                <div class="branch-contact-details">
-                  <p class="branch-badge" data-cms-text="sedes.parrafo-5">Nuestra sede principal</p>
-                  <div class="branch-info-grid">
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo">Dirección</h3>
-                      <address data-cms-text="sedes.texto-5 sedes.texto-6" data-cms-combined="sedes.direccion-san-isidro">Calle Roma 221<br>San Isidro, Lima</address>
-                    </div>
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-2">Prédicas los domingos</h3>
-                      <p class="branch-service-times">
-                        <time datetime="11:00" data-cms-text="sedes.texto-7">11:00 a. m.</time>
-                        <time datetime="17:00" data-cms-text="sedes.texto-8">5:00 p. m.</time>
-                      </p>
-                    </div>
+                <div class="branch-card">
+                  <div class="branch-visual">
+                    <img class="branch-photo" src="assets/images/sede-entorno-san-isidro.webp" width="960" height="641" alt="" loading="lazy" decoding="async" data-cms-src="sedes.foto-san-isidro">
+                    <img class="branch-logo" src="assets/images/altar-logo-sede-san-isidro.webp" width="320" height="320" alt="ALTAR San Isidro" loading="lazy" decoding="async" data-cms-src="sedes.logo-san-isidro" data-cms-alt="sedes.logo-san-isidro-alt">
                   </div>
-                  <div class="branch-actions">
-                    <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Roma+221+San+Isidro+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR San Isidro" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace" data-cms-aria-label="sedes.etiqueta-accesible" data-cms-text="sedes.texto-del-enlace">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
-                    <div class="branch-socials" role="group" aria-label="Redes de ALTAR San Isidro">
-                      <a class="branch-social-link" href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR San Isidro" title="Instagram de ALTAR San Isidro" data-cms-href="sedes.destino-del-enlace-2" data-cms-aria-label="sedes.etiqueta-accesible-2">
-                        <span class="fa-instagram" aria-hidden="true"></span>
-                      </a>
+                  <div class="branch-contact-details">
+                    <p class="branch-badge" data-cms-text="sedes.parrafo-5">Nuestra sede principal</p>
+                    <div class="branch-info-grid">
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo">Dirección</h3>
+                        <address data-cms-text="sedes.texto-5 sedes.texto-6" data-cms-combined="sedes.direccion-san-isidro">Calle Roma 221<br>San Isidro, Lima</address>
+                      </div>
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-2">Prédicas los domingos</h3>
+                        <p class="branch-service-times">
+                          <time datetime="11:00" data-cms-text="sedes.texto-7">11:00 a. m.</time>
+                          <time datetime="17:00" data-cms-text="sedes.texto-8">5:00 p. m.</time>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="branch-actions">
+                      <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Roma+221+San+Isidro+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR San Isidro" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace" data-cms-aria-label="sedes.etiqueta-accesible" data-cms-text="sedes.texto-del-enlace">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
+                      <div class="branch-socials" role="group" aria-label="Redes de ALTAR San Isidro">
+                        <a class="branch-social-link" href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR San Isidro" title="Instagram de ALTAR San Isidro" data-cms-href="sedes.destino-del-enlace-2" data-cms-aria-label="sedes.etiqueta-accesible-2">
+                          <span class="fa-instagram" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -460,31 +586,32 @@
             <details class="branch-accordion" name="altar-sedes">
               <summary><span class="branch-index">02</span><span data-cms-text="sedes.texto-9">Chorrillos</span><span class="branch-toggle" aria-hidden="true"></span></summary>
               <div class="branch-details-body">
-                <div class="branch-welcome">
-                  <div class="branch-welcome-brand" data-cms-text="sedes.texto-10"><img src="assets/images/altar-isotype-white.png" width="36" height="30" alt="">ALTAR</div>
-                  <p class="branch-welcome-title" data-cms-text="sedes.parrafo-6">Bienvenidos.</p>
-                  <p class="branch-welcome-motto" data-cms-text="sedes.parrafo-7 sedes.parrafo-8" data-cms-combined="sedes.lema-chorrillos">Juntos en Su presencia.<br>Juntos en Su propósito.</p>
-                </div>
-                <div class="branch-contact-details">
-                  <div class="branch-info-grid">
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-3">Dirección</h3>
-                      <address data-cms-text="sedes.texto-11 sedes.texto-12" data-cms-combined="sedes.direccion-chorrillos">Av. Defensores del Morro 21<br>Chorrillos, Lima</address>
-                    </div>
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-4">Prédicas los domingos</h3>
-                      <p class="branch-service-times">
-                        <time datetime="10:00" data-cms-text="sedes.texto-13">10:00 a. m.</time>
-                        <time datetime="17:00" data-cms-text="sedes.texto-14">5:00 p. m.</time>
-                      </p>
-                    </div>
+                <div class="branch-card">
+                  <div class="branch-visual">
+                    <img class="branch-photo" src="assets/images/sede-entorno-chorrillos.webp" width="960" height="720" alt="" loading="lazy" decoding="async" data-cms-src="sedes.foto-chorrillos">
+                    <img class="branch-logo" src="assets/images/altar-logo-sede-chorrillos.webp" width="320" height="320" alt="ALTAR Chorrillos" loading="lazy" decoding="async" data-cms-src="sedes.logo-chorrillos" data-cms-alt="sedes.logo-chorrillos-alt">
                   </div>
-                  <div class="branch-actions">
-                    <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Defensores+del+Morro+21+Chorrillos+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Chorrillos" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-3" data-cms-aria-label="sedes.etiqueta-accesible-3" data-cms-text="sedes.texto-del-enlace-2">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
-                    <div class="branch-socials" role="group" aria-label="Redes de ALTAR Chorrillos">
-                      <a class="branch-social-link" href="https://www.instagram.com/jovenes_altar_chorrillos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jóvenes ALTAR Chorrillos" title="Instagram de Jóvenes ALTAR Chorrillos" data-cms-href="sedes.destino-del-enlace-4" data-cms-aria-label="sedes.etiqueta-accesible-4">
-                        <span class="fa-instagram" aria-hidden="true"></span>
-                      </a>
+                  <div class="branch-contact-details">
+                    <div class="branch-info-grid">
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-3">Dirección</h3>
+                        <address data-cms-text="sedes.texto-11 sedes.texto-12" data-cms-combined="sedes.direccion-chorrillos">Av. Defensores del Morro 21<br>Chorrillos, Lima</address>
+                      </div>
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-4">Prédicas los domingos</h3>
+                        <p class="branch-service-times">
+                          <time datetime="10:00" data-cms-text="sedes.texto-13">10:00 a. m.</time>
+                          <time datetime="17:00" data-cms-text="sedes.texto-14">5:00 p. m.</time>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="branch-actions">
+                      <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Defensores+del+Morro+21+Chorrillos+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Chorrillos" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-3" data-cms-aria-label="sedes.etiqueta-accesible-3" data-cms-text="sedes.texto-del-enlace-2">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
+                      <div class="branch-socials" role="group" aria-label="Redes de ALTAR Chorrillos">
+                        <a class="branch-social-link" href="https://www.instagram.com/jovenes_altar_chorrillos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jóvenes ALTAR Chorrillos" title="Instagram de Jóvenes ALTAR Chorrillos" data-cms-href="sedes.destino-del-enlace-4" data-cms-aria-label="sedes.etiqueta-accesible-4">
+                          <span class="fa-instagram" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -493,30 +620,31 @@
             <details class="branch-accordion" name="altar-sedes">
               <summary><span class="branch-index">03</span><span data-cms-text="sedes.texto-15">San Martín de Porres</span><span class="branch-toggle" aria-hidden="true"></span></summary>
               <div class="branch-details-body">
-                <div class="branch-welcome">
-                  <div class="branch-welcome-brand" data-cms-text="sedes.texto-16"><img src="assets/images/altar-isotype-white.png" width="36" height="30" alt="">ALTAR</div>
-                  <p class="branch-welcome-title" data-cms-text="sedes.parrafo-9">Bienvenidos.</p>
-                  <p class="branch-welcome-motto" data-cms-text="sedes.parrafo-10 sedes.parrafo-11" data-cms-combined="sedes.lema-san-martin">Juntos en Su presencia.<br>Juntos en Su propósito.</p>
-                </div>
-                <div class="branch-contact-details">
-                  <div class="branch-info-grid">
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-5">Dirección</h3>
-                      <address data-cms-text="sedes.texto-17 sedes.texto-18" data-cms-combined="sedes.direccion-san-martin">Jirón Macará 162<br>San Martín de Porres, Lima</address>
-                    </div>
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-6">Prédicas los domingos</h3>
-                      <p class="branch-service-times">
-                        <time datetime="10:30" data-cms-text="sedes.texto-19">10:30 a. m.</time>
-                      </p>
-                    </div>
+                <div class="branch-card">
+                  <div class="branch-visual">
+                    <img class="branch-photo" src="assets/images/sede-entorno-san-martin.webp?v=plaza-bicentenario" width="960" height="641" alt="" loading="lazy" decoding="async" data-cms-src="sedes.foto-san-martin">
+                    <img class="branch-logo" src="assets/images/altar-logo-sede-san-martin.webp" width="320" height="320" alt="ALTAR San Martín" loading="lazy" decoding="async" data-cms-src="sedes.logo-san-martin" data-cms-alt="sedes.logo-san-martin-alt">
                   </div>
-                  <div class="branch-actions">
-                    <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Jiron+Macara+162+San+Martin+de+Porres+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR San Martín de Porres" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-5" data-cms-aria-label="sedes.etiqueta-accesible-5" data-cms-text="sedes.texto-del-enlace-3">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
-                    <div class="branch-socials" role="group" aria-label="Redes generales de ALTAR">
-                      <a class="branch-social-link" href="https://www.facebook.com/AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" aria-label="Facebook general de ALTAR" title="Facebook general de ALTAR" data-cms-href="sedes.destino-del-enlace-6" data-cms-aria-label="sedes.etiqueta-accesible-6">
-                        <span class="fa-facebook-f" aria-hidden="true"></span>
-                      </a>
+                  <div class="branch-contact-details">
+                    <div class="branch-info-grid">
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-5">Dirección</h3>
+                        <address data-cms-text="sedes.texto-17 sedes.texto-18" data-cms-combined="sedes.direccion-san-martin">Jirón Macará 162<br>San Martín de Porres, Lima</address>
+                      </div>
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-6">Prédicas los domingos</h3>
+                        <p class="branch-service-times">
+                          <time datetime="10:30" data-cms-text="sedes.texto-19">10:30 a. m.</time>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="branch-actions">
+                      <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Jiron+Macara+162+San+Martin+de+Porres+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR San Martín de Porres" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-5" data-cms-aria-label="sedes.etiqueta-accesible-5" data-cms-text="sedes.texto-del-enlace-3">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
+                      <div class="branch-socials" role="group" aria-label="Redes generales de ALTAR">
+                        <a class="branch-social-link" href="https://www.facebook.com/AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" aria-label="Facebook general de ALTAR" title="Facebook general de ALTAR" data-cms-href="sedes.destino-del-enlace-6" data-cms-aria-label="sedes.etiqueta-accesible-6">
+                          <span class="fa-facebook-f" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -525,33 +653,34 @@
             <details class="branch-accordion" name="altar-sedes">
               <summary><span class="branch-index">04</span><span data-cms-text="sedes.texto-20">Reynoso</span><span class="branch-toggle" aria-hidden="true"></span></summary>
               <div class="branch-details-body">
-                <div class="branch-welcome">
-                  <div class="branch-welcome-brand" data-cms-text="sedes.texto-21"><img src="assets/images/altar-isotype-white.png" width="36" height="30" alt="">ALTAR</div>
-                  <p class="branch-welcome-title" data-cms-text="sedes.parrafo-12">Bienvenidos.</p>
-                  <p class="branch-welcome-motto" data-cms-text="sedes.parrafo-13 sedes.parrafo-14" data-cms-combined="sedes.lema-reynoso">Juntos en Su presencia.<br>Juntos en Su propósito.</p>
-                </div>
-                <div class="branch-contact-details">
-                  <div class="branch-info-grid">
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-7">Dirección</h3>
-                      <address data-cms-text="sedes.texto-22 sedes.texto-23" data-cms-combined="sedes.direccion-reynoso">Av. Jorge Chávez 498<br>Reynoso, Callao</address>
-                    </div>
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-8">Prédicas los domingos</h3>
-                      <p class="branch-service-times">
-                        <time datetime="10:30" data-cms-text="sedes.texto-24">10:30 a. m.</time>
-                      </p>
-                    </div>
+                <div class="branch-card">
+                  <div class="branch-visual">
+                    <img class="branch-photo" src="assets/images/sede-entorno-reynoso.webp?v=paseo-nocturno" width="960" height="720" alt="" loading="lazy" decoding="async" data-cms-src="sedes.foto-reynoso">
+                    <img class="branch-logo" src="assets/images/altar-logo-sede-reynoso.webp" width="320" height="320" alt="ALTAR Carmen de la Legua" loading="lazy" decoding="async" data-cms-src="sedes.logo-reynoso" data-cms-alt="sedes.logo-reynoso-alt">
                   </div>
-                  <div class="branch-actions">
-                    <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Jorge+Chavez+498+Carmen+de+la+Legua+Reynoso+Callao+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Reynoso" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-7" data-cms-aria-label="sedes.etiqueta-accesible-7" data-cms-text="sedes.texto-del-enlace-4">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
-                    <div class="branch-socials" role="group" aria-label="Redes de ALTAR Reynoso">
-                      <a class="branch-social-link" href="https://www.instagram.com/ccaltar.reynoso.callao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR Reynoso" title="Instagram de ALTAR Reynoso" data-cms-href="sedes.destino-del-enlace-8" data-cms-aria-label="sedes.etiqueta-accesible-8">
-                        <span class="fa-instagram" aria-hidden="true"></span>
-                      </a>
-                      <a class="branch-social-link" href="https://www.instagram.com/jovenes.altar_reynoso_callao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jóvenes ALTAR Reynoso" title="Instagram de Jóvenes ALTAR Reynoso" data-cms-href="sedes.destino-del-enlace-9" data-cms-aria-label="sedes.etiqueta-accesible-9">
-                        <span class="fa-instagram" aria-hidden="true"></span>
-                      </a>
+                  <div class="branch-contact-details">
+                    <div class="branch-info-grid">
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-7">Dirección</h3>
+                        <address data-cms-text="sedes.texto-22 sedes.texto-23" data-cms-combined="sedes.direccion-reynoso">Av. Jorge Chávez 498<br>Reynoso, Callao</address>
+                      </div>
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-8">Prédicas los domingos</h3>
+                        <p class="branch-service-times">
+                          <time datetime="10:30" data-cms-text="sedes.texto-24">10:30 a. m.</time>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="branch-actions">
+                      <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Jorge+Chavez+498+Carmen+de+la+Legua+Reynoso+Callao+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Reynoso" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-7" data-cms-aria-label="sedes.etiqueta-accesible-7" data-cms-text="sedes.texto-del-enlace-4">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
+                      <div class="branch-socials" role="group" aria-label="Redes de ALTAR Reynoso">
+                        <a class="branch-social-link" href="https://www.instagram.com/ccaltar.reynoso.callao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR Reynoso" title="Instagram de ALTAR Reynoso" data-cms-href="sedes.destino-del-enlace-8" data-cms-aria-label="sedes.etiqueta-accesible-8">
+                          <span class="fa-instagram" aria-hidden="true"></span>
+                        </a>
+                        <a class="branch-social-link" href="https://www.instagram.com/jovenes.altar_reynoso_callao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jóvenes ALTAR Reynoso" title="Instagram de Jóvenes ALTAR Reynoso" data-cms-href="sedes.destino-del-enlace-9" data-cms-aria-label="sedes.etiqueta-accesible-9">
+                          <span class="fa-instagram" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -560,38 +689,40 @@
             <details class="branch-accordion" name="altar-sedes">
               <summary><span class="branch-index">05</span><span data-cms-text="sedes.texto-25">Mirones</span><span class="branch-toggle" aria-hidden="true"></span></summary>
               <div class="branch-details-body">
-                <div class="branch-welcome">
-                  <div class="branch-welcome-brand" data-cms-text="sedes.texto-26"><img src="assets/images/altar-isotype-white.png" width="36" height="30" alt="">ALTAR</div>
-                  <p class="branch-welcome-title" data-cms-text="sedes.parrafo-15">Bienvenidos.</p>
-                  <p class="branch-welcome-motto" data-cms-text="sedes.parrafo-16 sedes.parrafo-17" data-cms-combined="sedes.lema-mirones">Juntos en Su presencia.<br>Juntos en Su propósito.</p>
-                </div>
-                <div class="branch-contact-details">
-                  <div class="branch-info-grid">
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-9">Dirección</h3>
-                      <address data-cms-text="sedes.texto-27 sedes.texto-28" data-cms-combined="sedes.direccion-mirones">Jirón Joaquín Capello 2854<br>Mirones, Lima</address>
-                    </div>
-                    <div>
-                      <h3 data-cms-text="sedes.subtitulo-10">Prédicas los domingos</h3>
-                      <p class="branch-service-times">
-                        <time datetime="17:30" data-cms-text="sedes.texto-29">5:30 p. m.</time>
-                      </p>
-                    </div>
+                <div class="branch-card">
+                  <div class="branch-visual">
+                    <img class="branch-photo" src="assets/images/sede-entorno-mirones.webp" width="960" height="720" alt="" loading="lazy" decoding="async" data-cms-src="sedes.foto-mirones">
+                    <img class="branch-logo" src="assets/images/altar-logo-sede-mirones.webp" width="320" height="320" alt="ALTAR Mirones" loading="lazy" decoding="async" data-cms-src="sedes.logo-mirones" data-cms-alt="sedes.logo-mirones-alt">
                   </div>
-                  <div class="branch-actions">
-                    <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Jiron+Joaquin+Capello+2854+Mirones+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Mirones" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-10" data-cms-aria-label="sedes.etiqueta-accesible-10" data-cms-text="sedes.texto-del-enlace-5">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
-                    <div class="branch-socials" role="group" aria-label="Redes de ALTAR Mirones">
-                      <a class="branch-social-link" href="https://www.instagram.com/ccaltar.mirones/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR Mirones" title="Instagram de ALTAR Mirones" data-cms-href="sedes.destino-del-enlace-11" data-cms-aria-label="sedes.etiqueta-accesible-11">
-                        <span class="fa-instagram" aria-hidden="true"></span>
-                      </a>
+                  <div class="branch-contact-details">
+                    <div class="branch-info-grid">
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-9">Dirección</h3>
+                        <address data-cms-text="sedes.texto-27 sedes.texto-28" data-cms-combined="sedes.direccion-mirones">Jirón Joaquín Capello 2854<br>Mirones, Lima</address>
+                      </div>
+                      <div>
+                        <h3 data-cms-text="sedes.subtitulo-10">Prédicas los domingos</h3>
+                        <p class="branch-service-times">
+                          <time datetime="17:30" data-cms-text="sedes.texto-29">5:30 p. m.</time>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="branch-actions">
+                      <a class="altar-button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Jiron+Joaquin+Capello+2854+Mirones+Lima+Peru" target="_blank" rel="noopener noreferrer" aria-label="Ver mapa de ALTAR Mirones" data-btn-animate="y" data-cms-href="sedes.destino-del-enlace-10" data-cms-aria-label="sedes.etiqueta-accesible-10" data-cms-text="sedes.texto-del-enlace-5">Ver mapa <span class="arrow-icon" aria-hidden="true">↗</span></a>
+                      <div class="branch-socials" role="group" aria-label="Redes de ALTAR Mirones">
+                        <a class="branch-social-link" href="https://www.instagram.com/ccaltar.mirones/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de ALTAR Mirones" title="Instagram de ALTAR Mirones" data-cms-href="sedes.destino-del-enlace-11" data-cms-aria-label="sedes.etiqueta-accesible-11">
+                          <span class="fa-instagram" aria-hidden="true"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </details>
           </div>
-          <section class="family-sundays" id="domingos-en-familia" data-cms-visible="visibilidad.domingos-en-familia" aria-labelledby="family-sundays-title">
-            <h3 id="family-sundays-title" data-cms-text="sedes.subtitulo-11">Domingos en familia</h3>
+          <details class="family-sundays family-ministries" id="domingos-en-familia" data-cms-visible="visibilidad.domingos-en-familia">
+            <summary id="family-sundays-title"><span data-cms-text="sedes.subtitulo-11">Domingos en familia</span><span aria-hidden="true">+</span></summary>
+            <div class="family-ministries-body">
             <p data-cms-text="sedes.parrafo-18">Además de la prédica, los más pequeños y los preadolescentes tienen sus propios espacios.</p>
             <div class="activity-grid">
               <div class="activity-panel">
@@ -604,7 +735,86 @@
               </div>
             </div>
             <p class="family-sundays-note" data-cms-text="sedes.parrafo-21">Consulta con tu sede las edades y los horarios de cada grupo.</p>
-          </section>
+            </div>
+          </details>
+          <details class="branch-photo-credits">
+            <summary>Créditos de las fotos</summary>
+            <p>Fotografías redimensionadas y encuadradas para el sitio.</p>
+            <ul>
+              <li>San Isidro · <a href="https://commons.wikimedia.org/wiki/File:Bosque_El_Olivar%2C_recorrido_peatonal.jpg">Foto de Futuropopular</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+              <li>Chorrillos · <a href="https://commons.wikimedia.org/wiki/File:Atardecer_en_la_playa_Agua_Dulce_de_Chorrillos.jpg">Foto de Afrikaeditx</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+              <li>San Martín de Porres · <a href="https://commons.wikimedia.org/wiki/File:Obra_gesti%C3%B3n_de_Julio_Chavez_Plaza_Bicentenario.jpg">Foto de Mariodg1994</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></li>
+              <li>Reynoso · <a href="https://commons.wikimedia.org/wiki/File:Av._Morales_Duarez_1432_-_panoramio.jpg">Foto de Yullinori</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+              <li>Mirones · <a href="https://commons.wikimedia.org/wiki/File:Lima%2C_Peru_-_Park_of_the_Exposition.jpg">Foto de Stvabod</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <section class="page-section altar-section visitor-registration-section" id="bienvenido" aria-labelledby="visitor-registration-title">
+        <div class="altar-container">
+          <div class="visitor-registration">
+            <div class="visitor-registration-photo" aria-hidden="true">
+              <img src="assets/images/altar-aniversario-celebracion.webp" width="960" height="602" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="visitor-registration-body">
+              <header class="visitor-registration-heading">
+                <h2 id="visitor-registration-title" data-cms-text="registro.titulo">Regístrate en ALTAR</h2>
+                <p id="visitor-required-note">Los campos con * son obligatorios.</p>
+              </header>
+              <noscript><p class="visitor-unavailable">Para registrarte, activa JavaScript o <a href="https://wa.me/51904803980" target="_blank" rel="noopener noreferrer">escríbenos por WhatsApp</a>.</p></noscript>
+              <p class="visitor-form-status" role="status" aria-live="polite" data-visitor-status></p>
+              <div class="visitor-unavailable" data-visitor-unavailable hidden>
+                <p role="status" tabindex="-1" data-visitor-unavailable-message></p>
+                <div class="visitor-notice-actions">
+                  <button class="text-link" type="button" data-visitor-retry>Reintentar</button>
+                  <a class="text-link" href="https://wa.me/51904803980?text=Hola%2C%20es%20mi%20primera%20vez%20en%20ALTAR." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <p class="visitor-form-error" role="alert" tabindex="-1" data-visitor-error hidden></p>
+              <form class="visitor-form" data-visitor-form aria-labelledby="visitor-registration-title" aria-describedby="visitor-required-note" method="post" action="/api/public/visitors" novalidate>
+                <fieldset class="visitor-fields" disabled>
+                  <legend class="visually-hidden">Datos de registro</legend>
+                  <div class="visitor-contact-fields">
+                    <div class="visitor-field"><label for="visitor-full-name">Nombre y apellido *</label><input id="visitor-full-name" name="full_name" type="text" autocomplete="name" required maxlength="160"></div>
+                    <div class="visitor-field"><label for="visitor-email">Correo electrónico *</label><input id="visitor-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+                    <div class="visitor-field visitor-district"><label for="visitor-district">Distrito de residencia *</label><input id="visitor-district" name="district" type="text" autocomplete="address-level2" required maxlength="160"></div>
+                    <div class="visitor-field visitor-age"><label for="visitor-age">Edad *</label><input id="visitor-age" name="age" type="number" inputmode="numeric" min="0" max="120" step="1" required></div>
+                    <div class="visitor-field visitor-birth"><label for="visitor-birth-date">Cumpleaños *</label><input id="visitor-birth-date" name="birth_date" type="date" autocomplete="bday" required></div>
+                  </div>
+                  <div class="visitor-family-fields">
+                    <div>
+                      <fieldset class="visitor-choice-group">
+                        <legend>Estado civil *</legend>
+                        <div class="visitor-choices">
+                          <label><input type="radio" name="marital_status" value="single" required> Soltero/a</label>
+                          <label><input type="radio" name="marital_status" value="married"> Casado/a</label>
+                          <label><input type="radio" name="marital_status" value="other"> Otro</label>
+                        </div>
+                      </fieldset>
+                      <div class="visitor-field visitor-conditional" data-marital-other hidden><label for="visitor-marital-other">Especifica tu estado civil *</label><input id="visitor-marital-other" name="marital_other" type="text" maxlength="120" disabled></div>
+                    </div>
+                    <div>
+                      <fieldset class="visitor-choice-group">
+                        <legend>¿Tienes hijos? *</legend>
+                        <div class="visitor-choices">
+                          <label><input type="radio" name="has_children" value="yes" required> Sí</label>
+                          <label><input type="radio" name="has_children" value="no"> No</label>
+                        </div>
+                      </fieldset>
+                      <div class="visitor-field visitor-conditional" data-children-ages hidden><label for="visitor-children-ages">Edades de tus hijos <span>(opcional)</span></label><input id="visitor-children-ages" name="children_ages" type="text" maxlength="255" disabled></div>
+                    </div>
+                  </div>
+                  <div class="visitor-form-footer">
+                    <label class="visitor-consent"><input type="checkbox" name="consent" required><span>Autorizo a ALTAR a usar mis datos para contactarme y acompañar mi integración.&nbsp;*</span></label>
+                    <button class="altar-button button-dark" type="submit">Enviar mi registro <span class="arrow-icon" aria-hidden="true">↗</span></button>
+                  </div>
+                  <div class="visitor-honeypot visually-hidden" aria-hidden="true"><label for="visitor-website">Sitio web</label><input id="visitor-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+                </fieldset>
+              </form>
+              <button class="text-link visitor-restart" type="button" data-visitor-new hidden>Empezar otro registro</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -615,7 +825,7 @@
             <details class="altar-accordion"><summary data-cms-text="primera-visita.pregunta-o-encabezado">¿Cuándo nos reunimos? <span aria-hidden="true">+</span></summary><p data-cms-text="primera-visita.parrafo-2 primera-visita.parrafo-3" data-cms-combined="primera-visita.respuesta-horarios" data-cms-combined-link>En San Isidro nos reunimos los domingos a las 11:00 a. m. y 5:00 p. m. Encuentra las direcciones y los horarios de todas las sedes en <a href="#sedes" data-cms-text="primera-visita.texto-del-enlace-2">Encuentra tu sede</a>. También compartimos en casas de vida durante la semana.</p></details>
             <details class="altar-accordion"><summary data-cms-text="primera-visita.pregunta-o-encabezado-2">¿Hay actividades para niños y preadolescentes? <span aria-hidden="true">+</span></summary><p data-cms-text="primera-visita.parrafo-4 primera-visita.parrafo-5" data-cms-combined="primera-visita.respuesta-actividades" data-cms-combined-link>Sí. Conoce la Escuela dominical y Tweens en <a href="#domingos-en-familia" data-cms-text="primera-visita.texto-del-enlace-3">Domingos en familia</a>.</p></details>
             <details class="altar-accordion"><summary data-cms-text="primera-visita.pregunta-o-encabezado-3">¿Dónde puedo ver los mensajes? <span aria-hidden="true">+</span></summary><p data-cms-text="primera-visita.parrafo-6 primera-visita.parrafo-7" data-cms-combined="primera-visita.respuesta-mensajes" data-cms-combined-link>Encuentra las prédicas y enseñanzas en nuestro <a href="https://www.youtube.com/@AltarComunidadCristiana" target="_blank" rel="noopener noreferrer" data-cms-href="primera-visita.destino-del-enlace-2" data-cms-text="primera-visita.texto-del-enlace-4">canal oficial de YouTube</a>.</p></details>
-            <details class="altar-accordion"><summary data-cms-text="primera-visita.pregunta-o-encabezado-4">¿Cómo puedo conocer los cursos? <span aria-hidden="true">+</span></summary><p data-cms-text="primera-visita.parrafo-8 primera-visita.parrafo-9" data-cms-combined="primera-visita.respuesta-cursos" data-cms-combined-link>En la sección <a href="#crecer" data-cms-text="primera-visita.texto-del-enlace-5">Sigue creciendo</a> puedes conocer Charisma y El camino del discípulo. Escríbenos por Instagram para consultar las próximas convocatorias y los detalles de cada curso.</p></details>
+            <details class="altar-accordion"><summary data-cms-text="primera-visita.pregunta-o-encabezado-4">¿Cómo puedo conocer los cursos? <span aria-hidden="true">+</span></summary><p data-cms-text="primera-visita.parrafo-8 primera-visita.parrafo-9" data-cms-combined="primera-visita.respuesta-cursos" data-cms-combined-link>En la sección <a href="#crecer" data-cms-text="primera-visita.texto-del-enlace-5">Sigue creciendo</a> puedes conocer Charisma y El camino del discípulo. Escríbenos por WhatsApp para consultar las próximas convocatorias y los detalles de cada curso.</p></details>
           </div>
         </div>
       </section>
@@ -651,6 +861,9 @@
           <small class="altar-footer-copyright" data-cms-text="pie-de-pagina.texto pie-de-pagina.texto-2">© <span id="copyright-year">2026</span> ALTAR · Comunidad Cristiana</small>
           <p class="altar-footer-motto" data-cms-text="pie-de-pagina.texto-3">Encuentro. Rendición. Envío</p>
           <div class="altar-footer-links">
+            <a href="libreria/" data-cms-text="pie-de-pagina.enlace-libreria-texto">Librería</a>
+            <a href="pastores/" data-cms-text="pie-de-pagina.enlace-pastores-texto">Nuestros pastores</a>
+            <a href="nuestro-legado/" data-cms-text="pie-de-pagina.enlace-legado-texto">Nuestro legado</a>
             <a href="/intranet/" data-intranet-link hidden>Intranet</a>
             <a href="#top" data-cms-text="pie-de-pagina.texto-del-enlace-4">Volver arriba ↑</a>
           </div>
@@ -663,6 +876,12 @@
     <span class="fa-whatsapp" aria-hidden="true"></span>
   </a>
 
+  <dialog class="hero-photo-viewer" id="hero-photo-viewer" aria-label="Foto ampliada de la comunidad">
+    <form method="dialog">
+      <button class="hero-photo-close" type="submit" aria-label="Cerrar foto ampliada" autofocus><span aria-hidden="true">×</span></button>
+    </form>
+    <img alt="">
+  </dialog>
   <dialog class="altar-dialog" id="program-dialog" aria-labelledby="program-dialog-title">
     <div class="dialog-shell">
       <button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar información">×</button>
@@ -675,8 +894,8 @@
         <div class="program-testimonials-list" data-cms-testimonials="dialogo-carisma" hidden></div>
       </section>
       <div class="program-dialog-actions">
-        <a class="altar-button button-dark" id="program-dialog-classroom" href="/intranet/" hidden><span>Ingresar al aula</span><span aria-hidden="true">↗</span></a>
-        <a class="text-link" id="program-dialog-contact" href="https://www.instagram.com/cc.altar/" target="_blank" rel="noopener noreferrer">Consulta más información <span aria-hidden="true">↗</span></a>
+        <a class="altar-button button-dark" id="program-dialog-classroom" href="/intranet/" data-cms-href="formacion.enlace-intranet-charisma" data-cms-clear-href="hide" hidden><span data-cms-text="formacion.texto-intranet-charisma">Ingresar al aula</span><span aria-hidden="true">↗</span></a>
+        <a class="altar-button button-dark" id="program-dialog-contact" href="https://wa.me/51904803980" target="_blank" rel="noopener noreferrer">Consulta por WhatsApp <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </dialog>

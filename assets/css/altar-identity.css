@@ -9,7 +9,6 @@
   --altar-line: #ded9d3;
 }
 [data-cms-visible][hidden], [data-cms-hidden-link][hidden] { display: none !important; }
-.series-art-link { display: block; }
 body.altar-site { font-family: var(--font-global); }
 .altar-site h1, .altar-site h2, .altar-site h3, .altar-site h4 {
   font-family: var(--font-alt);
@@ -28,15 +27,15 @@ body.altar-site { font-family: var(--font-global); }
   background: var(--altar-hero-shade);
 }
 .main-hero-brand-mark { filter: invert(1); opacity: .025; }
-.main-hero-copy .section-caption { color: #f5eee6; }
+.main-hero-copy .section-caption { color: #fff; }
 .main-one-hero .hs-title-1 {
-  color: var(--altar-hero-ivory);
+  color: #fff;
   font-weight: 500;
   font-size: clamp(44px, 4.5vw, 67px);
   letter-spacing: -.055em;
   line-height: 1.12;
 }
-.main-one-hero .section-descr { color: #f0ece6; font-size: 18px; line-height: 1.8; letter-spacing: -.01em; }
+.main-one-hero .section-descr { color: #fff; font-size: 18px; line-height: 1.8; letter-spacing: -.01em; }
 .main-one-hero .btn-mod.btn-large { background: var(--altar-hero-ivory); color: #181818; font-size: 13px; }
 .main-one-hero .btn-mod.btn-hover-anim::before { background: #fff; }
 .main-hero-story { color: #fff; font-size: 14px; }
@@ -50,7 +49,7 @@ body.altar-site { font-family: var(--font-global); }
   font-weight: 400;
   letter-spacing: -.02em;
 }
-.identity-band, .messages-section, .life-houses, .events-section,
+.messages-section, .life-houses, .events-section,
 .branches-section, .missions-section { background: #f6f4f1; border-color: var(--altar-line); }
 .carisma-card { background: #e9e8e5; }
 .discipleship-card, .book-display { background: var(--altar-ivory); }
@@ -182,49 +181,78 @@ body.altar-site { font-family: var(--font-global); }
 }
 .program-testimonials blockquote { margin: 0; font-size: 16px; line-height: 1.6; }
 .program-testimonials figcaption { margin-top: 6px; color: var(--altar-muted); font-size: 14px; }
-.branch-details-body {
+.branch-details-body { padding-top: 12px; }
+.branch-card {
+  --branch-card-background: #f6f3ee;
   display: grid;
-  grid-template-columns: minmax(235px, .8fr) minmax(0, 1.7fr);
-  gap: 34px;
-  align-items: center;
-  padding-top: 8px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  grid-template-areas: "contact visual";
+  overflow: hidden;
+  border: 1px solid #e5dfd6;
+  border-radius: 5px;
+  background: var(--branch-card-background);
 }
-.branch-welcome {
+.branch-card:has(.branch-visual > [data-cms-media-removed] + [data-cms-media-removed]) {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "contact";
+}
+.branch-visual {
+  position: relative;
+  grid-area: visual;
   display: grid;
-  align-content: center;
+  place-items: end;
+  isolation: isolate;
+  min-height: 224px;
+  padding: clamp(14px, 2vw, 24px);
+}
+.branch-visual:has(> [data-cms-media-removed] + [data-cms-media-removed]) { display: none; }
+.branch-visual:has(> .branch-photo[data-cms-media-removed]) { place-items: center; }
+.branch-visual > .branch-photo {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.branch-photo[src*="/sede-entorno-san-martin.webp"],
+.branch-photo[src*="/sede-entorno-reynoso.webp"] { object-position: center 70%; }
+.branch-visual::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, var(--branch-card-background), #f6f3ee95 25%, transparent 62%);
+  content: "";
+}
+.branch-visual > .branch-logo {
+  width: clamp(136px, 11.5vw, 160px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 3px 16px #18181826;
+  object-fit: contain;
+}
+.branch-photo-credits {
+  margin-top: 16px;
+  color: #5c554c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.branch-photo-credits > summary { width: fit-content; padding: 4px 0; cursor: pointer; }
+.branch-photo-credits p { margin: 8px 0; }
+.branch-photo-credits ul { margin: 0; padding-inline-start: 20px; }
+.branch-photo-credits a { text-decoration: underline; text-underline-offset: 2px; }
+.branch-contact-details {
+  grid-area: contact;
+  align-self: center;
   min-width: 0;
-  min-height: 210px;
-  padding: 24px;
-  border-radius: 4px;
-  background:
-    radial-gradient(ellipse 100% 45% at 27% -10%, #d2dadd66, transparent 74%),
-    linear-gradient(180deg, #69777e6b, #48545adb 22%, #333e43a8 60%, #11191eea),
-    #424d52 url('../images/altar-mountains-mist.webp') center 72% / cover no-repeat;
-  color: #fff;
+  padding: clamp(20px, 3vw, 36px);
+  padding-inline-end: clamp(20px, 2vw, 24px);
+  overflow-wrap: anywhere;
 }
-.branch-welcome-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: .14em;
-}
-.branch-welcome-title {
-  margin: 0 0 8px;
-  font-size: clamp(26px, 2.6vw, 36px);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -.045em;
-  text-wrap: balance;
-}
-.branch-welcome-title, .branch-welcome-motto { overflow-wrap: anywhere; }
-.branch-welcome-motto { margin: 0; color: #eee7de; font-size: 15px; line-height: 1.55; }
-.branch-contact-details { min-width: 0; }
 .branch-badge { font-size: 15px; letter-spacing: 0; text-transform: none; margin-bottom: 16px; }
-.branch-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.branch-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .branch-info-grid h3 { color: #49443f; font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .branch-info-grid address { font-size: 18px; }
 .branch-service-times { display: flex; flex-wrap: wrap; gap: 2px 18px; font-size: 24px; line-height: 1.5; }
@@ -233,8 +261,7 @@ body.altar-site { font-family: var(--font-global); }
 .event-description h3 a { text-underline-offset: 6px; }
 @media (max-width: 1024px) {
   .main-one-hero .hs-title-1 { font-size: 45px; }
-  .branch-details-body { gap: 24px; }
-  .branch-info-grid { grid-template-columns: 1fr; }
+  .branch-info-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 @media (max-width: 767px) {
   .main-one-hero::after {
@@ -246,7 +273,11 @@ body.altar-site { font-family: var(--font-global); }
   .main-one-hero .section-descr { font-size: 17px; line-height: 1.75; }
   .main-hero-signature { font-size: 23px; }
   .main-hero-bottom > span { display: none; }
-  .branch-details-body { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 0 20px 28px; }
-  .branch-welcome { min-height: 0; padding: 20px; }
+  .branch-details-body { padding: 12px 20px 28px; }
+  .branch-card { grid-template-columns: minmax(0, 1fr); grid-template-areas: "visual" "contact"; }
+  .branch-visual { min-height: clamp(168px, 47vw, 252px); place-items: start end; }
+  .branch-visual::after {
+    background: linear-gradient(0deg, var(--branch-card-background), #f6f3ee60 23%, transparent 52%);
+  }
   .branch-service-times { font-size: 22px; }
 }

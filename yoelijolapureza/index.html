@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../assets/css/yelp.css">
   <link rel="stylesheet" href="../assets/css/altar-navbar.css">
   <script src="../assets/js/altar-event-navbar.js" defer></script>
+  <script src="../assets/js/yelp.js" defer></script>
   <script src="../assets/js/cms.js" data-page="yelp" defer></script>
   <link rel="stylesheet" href="../assets/css/altar-footer.css">
 </head>
@@ -80,22 +81,20 @@
         </figure>
       </div>
     </section>
-    <section class="yelp-section yelp-speakers" id="expositores" aria-labelledby="expositores-titulo" data-cms-background="expositores.fondo-de-la-seccion">
+    <section class="yelp-section yelp-speakers" data-yelp-parallax id="expositores" aria-labelledby="expositores-titulo" data-cms-background="expositores.fondo-de-la-seccion">
       <div class="yelp-container">
         <div class="yelp-section-header"><div><span class="yelp-eyebrow" data-cms-text="expositores.texto">Voces que acompañan</span><h2 class="yelp-title" id="expositores-titulo" data-cms-text="expositores.titulo">Expositores</h2></div></div>
         <div class="yelp-speaker-grid">
           <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/danny-daniela.webp" width="600" height="500" alt="Danny y Daniela Príncipe" loading="lazy" data-cms-src="expositores.imagen" data-cms-alt="expositores.texto-alternativo"><span class="yelp-speaker-role" data-cms-text="expositores.texto-2">Pastores</span><h3 data-cms-text="expositores.subtitulo">Danny y Daniela Príncipe</h3><p data-cms-text="expositores.parrafo">Fundadores de YELP y pastores principales de la comunidad.</p></article>
-          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/michelle.webp" width="600" height="500" alt="Michelle Espinoza de Mejía" loading="lazy" data-cms-src="expositores.imagen-2" data-cms-alt="expositores.texto-alternativo-2"><span class="yelp-speaker-role" data-cms-text="expositores.texto-3">Pastora</span><h3 data-cms-text="expositores.subtitulo-2">Michelle Espinoza de Mejía</h3><p data-cms-text="expositores.parrafo-2">Autora y consejera con formación en teología y sexualidad.</p></article>
-          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/nelida.webp" width="600" height="500" alt="Nelida Ossio de Montes" loading="lazy" data-cms-src="expositores.imagen-3" data-cms-alt="expositores.texto-alternativo-3"><span class="yelp-speaker-role" data-cms-text="expositores.texto-4">Doctora</span><h3 data-cms-text="expositores.subtitulo-3">Nelida Ossio de Montes</h3><p data-cms-text="expositores.parrafo-3">Especialista en salud pública y salud sexual.</p></article>
-          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/emanuel.webp" width="600" height="500" alt="Emanuel Ubierna" loading="lazy" data-cms-src="expositores.imagen-4" data-cms-alt="expositores.texto-alternativo-4"><span class="yelp-speaker-role" data-cms-text="expositores.texto-5">Pastor</span><h3 data-cms-text="expositores.subtitulo-4">Emanuel Ubierna</h3><p data-cms-text="expositores.parrafo-4">Pastor de Punto de Encuentro Perú.</p></article>
-          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/miluska.webp" width="600" height="500" alt="Miluska Príncipe de Guevara" loading="lazy" data-cms-src="expositores.imagen-5" data-cms-alt="expositores.texto-alternativo-5"><span class="yelp-speaker-role" data-cms-text="expositores.texto-6">Pastora</span><h3 data-cms-text="expositores.subtitulo-5">Miluska Príncipe de Guevara</h3><p data-cms-text="expositores.parrafo-5">Pastora de jóvenes y conferencista sobre sexualidad.</p></article>
+          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/miluska.webp" width="600" height="500" alt="Miluska Príncipe de Guevara" loading="lazy" data-cms-src="expositores.imagen-2" data-cms-alt="expositores.texto-alternativo-2"><span class="yelp-speaker-role" data-cms-text="expositores.texto-3">Pastora</span><h3 data-cms-text="expositores.subtitulo-2">Miluska Príncipe de Guevara</h3><p data-cms-text="expositores.parrafo-2">Pastora de jóvenes y conferencista sobre sexualidad.</p></article>
+          <article class="yelp-speaker"><img class="yelp-speaker-photo" src="../assets/images/yelp/nelida.webp" width="600" height="500" alt="Nélida Ossio de Montes" loading="lazy" data-cms-src="expositores.imagen-3" data-cms-alt="expositores.texto-alternativo-3"><span class="yelp-speaker-role" data-cms-text="expositores.texto-4">Doctora</span><h3 data-cms-text="expositores.subtitulo-3">Nélida Ossio de Montes</h3><p data-cms-text="expositores.parrafo-3">Especialista en salud pública y salud sexual.</p></article>
         </div>
       </div>
     </section>
-    <section class="yelp-section yelp-topics" id="temas" aria-labelledby="temas-titulo" data-cms-background="temas.fondo-de-la-seccion">
+    <section class="yelp-section yelp-topics" data-yelp-parallax id="temas" aria-labelledby="temas-titulo" data-cms-background="temas.fondo-de-la-seccion">
       <div class="yelp-container">
         <span class="yelp-eyebrow" data-cms-text="temas.texto">Conversaciones necesarias</span><h2 class="yelp-title" id="temas-titulo" data-cms-text="temas.titulo">Temas para cada etapa</h2>
-        <nav class="yelp-topic-jump" aria-label="Temas por público"><a href="#jovenes" data-cms-text="temas.texto-del-enlace">Jóvenes</a><a href="#padres" data-cms-text="temas.texto-del-enlace-2">Padres y pastores</a><a href="#preadolescentes" data-cms-text="temas.texto-del-enlace-3">Preadolescentes</a></nav>
+        <nav class="yelp-topic-jump" aria-label="Temas por público" data-yelp-tabs><a href="#jovenes" data-cms-text="temas.texto-del-enlace">Jóvenes</a><a href="#padres" data-cms-text="temas.texto-del-enlace-2">Padres y pastores</a><a href="#preadolescentes" data-cms-text="temas.texto-del-enlace-3">Preadolescentes</a></nav>
         <section class="yelp-topic-group" id="jovenes" aria-labelledby="jovenes-titulo"><div class="yelp-topic-heading"><span>01</span><h3 id="jovenes-titulo" data-cms-text="temas-para-jovenes.subtitulo">Jóvenes</h3></div><div class="yelp-topic-grid">
           <figure class="yelp-topic"><img src="../assets/images/yelp/tema-01.webp" width="810" height="671" alt="Cero filtros · Jóvenes" loading="lazy" data-cms-src="temas-para-jovenes.imagen" data-cms-alt="temas-para-jovenes.texto-alternativo"><figcaption><h4 data-cms-text="temas-para-jovenes.subtitulo-2">Cero filtros</h4><p data-cms-text="temas-para-jovenes.parrafo">Identidad, valor y diseño.</p></figcaption></figure>
           <figure class="yelp-topic"><img src="../assets/images/yelp/tema-02.webp" width="810" height="671" alt="Más allá del placer · Jóvenes" loading="lazy" data-cms-src="temas-para-jovenes.imagen-2" data-cms-alt="temas-para-jovenes.texto-alternativo-2"><figcaption><h4 data-cms-text="temas-para-jovenes.subtitulo-3">Más allá del placer</h4><p data-cms-text="temas-para-jovenes.parrafo-2">Sexualidad con propósito.</p></figcaption></figure>
@@ -122,13 +121,13 @@
         </div></section>
       </div>
     </section>
-    <section class="yelp-section yelp-history" aria-labelledby="historia-titulo" data-cms-background="historia.fondo-de-la-seccion">
+    <section class="yelp-section yelp-history" data-yelp-parallax aria-labelledby="historia-titulo" data-cms-background="historia.fondo-de-la-seccion">
       <div class="yelp-container yelp-history-grid">
         <div><img class="yelp-history-art" src="../assets/images/yelp/10-anos.webp" width="635" height="482" alt="10 años · Yo Elijo la Pureza" loading="lazy" data-cms-src="historia.imagen" data-cms-alt="historia.texto-alternativo"><span class="yelp-eyebrow" data-cms-text="historia.texto">Nuestra historia</span><h2 class="yelp-title" id="historia-titulo" data-cms-text="historia.titulo historia.titulo-2">Diez años.<br>Muchas vidas.</h2><p data-cms-text="historia.parrafo">En 2024 celebramos diez años de YELP. Revive el encuentro y a quienes eligieron caminar en integridad.</p><a class="yelp-button yelp-button-secondary" href="https://www.instagram.com/reel/C_ZboCZtlKF/" target="_blank" rel="noopener noreferrer" data-cms-href="historia.destino-del-enlace" data-cms-text="historia.texto-del-enlace">Ver resumen de YELP 2024 <span aria-hidden="true">↗</span><span class="yelp-sr-only"> (abre en una pestaña nueva)</span></a></div>
         <img class="yelp-history-photo" src="../assets/images/yelp/congreso-2024.webp" width="1800" height="1200" alt="Participantes reunidos durante el congreso Yo Elijo la Pureza" loading="lazy" data-cms-src="historia.imagen-2" data-cms-alt="historia.texto-alternativo-2">
       </div>
     </section>
-    <section class="yelp-section yelp-resources" id="recursos" aria-labelledby="recursos-titulo" data-cms-background="recursos.fondo-de-la-seccion">
+    <section class="yelp-section yelp-resources" data-yelp-parallax id="recursos" aria-labelledby="recursos-titulo" data-cms-background="recursos.fondo-de-la-seccion">
       <div class="yelp-container">
         <div class="yelp-resources-intro"><span class="yelp-eyebrow" data-cms-text="recursos.texto">Para leer y compartir</span><h2 class="yelp-title" id="recursos-titulo" data-cms-text="recursos.titulo">Recursos gratuitos</h2></div>
         <article class="yelp-resource" aria-labelledby="valientes-titulo">
@@ -141,6 +140,7 @@
         </article>
       </div>
     </section>
+    <section class="yelp-library-link"><div class="yelp-container"><div><span class="yelp-eyebrow" data-cms-text="libreria.etiqueta">Más lecturas para tu camino</span><h2 data-cms-text="libreria.titulo">Conoce la Librería de ALTAR</h2></div><a class="yelp-button" href="../libreria/" data-cms-text="libreria.texto-del-enlace">Explorar los libros</a></div></section>
     <section class="yelp-section yelp-contact" id="contacto" aria-labelledby="contacto-titulo">
       <div class="yelp-container yelp-contact-grid">
         <img class="yelp-contact-photo" src="../assets/images/yelp/contacto.webp" width="1800" height="1200" alt="Equipo de Yo Elijo la Pureza" loading="lazy" data-cms-src="contacto.imagen" data-cms-alt="contacto.texto-alternativo">
@@ -186,6 +186,9 @@
         <small class="altar-footer-copyright" data-cms-text="pie-de-pagina.texto">© 2026 Yo Elijo la Pureza · ALTAR Comunidad Cristiana</small>
         <p class="altar-footer-motto">Encuentro. Rendición. Envío</p>
         <div class="altar-footer-links">
+          <a href="../libreria/" data-cms-text="pie-de-pagina.enlace-libreria-texto">Librería</a>
+          <a href="../pastores/" data-cms-text="pie-de-pagina.enlace-pastores-texto">Nuestros pastores</a>
+          <a href="../nuestro-legado/" data-cms-text="pie-de-pagina.enlace-legado-texto">Nuestro legado</a>
           <a href="../index.html" data-cms-text="pie-de-pagina.texto-del-enlace-3">← Volver a ALTAR</a>
         </div>
       </div>

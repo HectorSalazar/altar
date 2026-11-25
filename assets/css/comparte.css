@@ -1,0 +1,6 @@
+/* Keep the genuine team photograph visible while a new cover is selected. */
+.comparte-page .mission-cover-inner{grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr)}
+.comparte-page .mission-cover-photo{overflow:hidden}
+.comparte-page .mission-cover-photo img{aspect-ratio:16/9;object-fit:contain;object-position:center;border-color:#e4dacf66}
+.comparte-page .mission-cover-photo figcaption{max-width:48ch;font-size:.875rem}
+@media(max-width:800px){.comparte-page .mission-cover-inner{grid-template-columns:1fr}.comparte-page .mission-cover-photo img{aspect-ratio:16/9;object-fit:contain}}

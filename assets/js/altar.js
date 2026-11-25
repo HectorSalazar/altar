@@ -29,8 +29,7 @@
   const programContact = document.getElementById('program-dialog-contact');
   const defaultProgramContact = programContact.href;
   const programTestimonials = document.getElementById('program-dialog-testimonials');
-  const classroomLink = document.getElementById('charisma-classroom');
-  const dialogClassroomLink = document.getElementById('program-dialog-classroom');
+  const classroomLink = document.getElementById('program-dialog-classroom');
   const defaultClassroomUrl = classroomLink.href;
 
   function syncClassroomLink() {
@@ -39,12 +38,9 @@
     const isLocalStaticPreview = isLoopback && ['4173', '5500'].includes(location.port);
     const isStaticPage = location.protocol === 'file:' || location.hostname.endsWith('.github.io');
     if (isDefault && isLocalStaticPreview) classroomLink.href = 'http://127.0.0.1:5173/intranet/';
-    classroomLink.hidden = !classroomLink.hasAttribute('href') || (isDefault && isStaticPage);
-    dialogClassroomLink.hidden = classroomLink.hidden || programDialog.dataset.activeProgram !== 'carisma';
-    if (!dialogClassroomLink.hidden) {
-      dialogClassroomLink.href = classroomLink.href;
-      dialogClassroomLink.querySelector('span').textContent = classroomLink.querySelector('span').textContent;
-    }
+    classroomLink.hidden = programDialog.dataset.activeProgram !== 'carisma'
+      || !classroomLink.hasAttribute('href') || (isDefault && isStaticPage);
+    programContact.hidden = programDialog.dataset.activeProgram === 'carisma' && !classroomLink.hidden;
   }
 
   let programFields = {};
@@ -85,7 +81,7 @@
     document.getElementById('program-dialog-title').textContent = program.title;
     programContact.href = program.contactUrl ?? defaultProgramContact;
     programDialog.dataset.activeProgram = id;
-    programTestimonials.hidden = id !== 'carisma';
+    programTestimonials.hidden = id !== 'carisma' || !programTestimonials.querySelector('.program-testimonials-list > *');
     syncClassroomLink();
     const body = document.getElementById('program-dialog-body');
     body.replaceChildren();
@@ -93,7 +89,16 @@
     if (program.items) {
       const list = document.createElement(program.ordered ? 'ol' : 'ul'); list.className = 'dialog-list';
       program.items.forEach(text => { const item = document.createElement('li'); item.textContent = text; list.append(item); });
-      body.append(list);
+      if (program.ordered) {
+        const topics = document.createElement('details');
+        topics.className = 'program-syllabus';
+        const summary = document.createElement('summary');
+        summary.textContent = `Conoce los ${program.items.length} temas`;
+        topics.append(summary, list);
+        body.append(topics);
+      } else {
+        body.append(list);
+      }
     }
     if (program.downloadUrl) {
       const download = document.createElement('a');

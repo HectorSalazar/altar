@@ -1,7 +1,8 @@
 /* Encabezado y composición de marca compartidos por ALTAR, YELP y CREE. */
 .altar-site .main-nav,
 .altar-event-navbar {
-  background: #181818 !important;
+  --altar-navbar-background-opacity: .9;
+  background: rgb(24 24 24 / var(--altar-navbar-background-opacity)) !important;
   color: #fff;
   border-bottom: 1px solid #ffffff1f;
   transition: background-color .5s ease, color .5s ease, border-color .5s ease,
@@ -9,11 +10,14 @@
 }
 .altar-site .main-nav.small-height,
 .altar-event-navbar.small-height {
-  background: #fffffff5 !important;
+  background: rgb(255 255 255 / var(--altar-navbar-background-opacity)) !important;
   color: #181818;
   border-color: #ded9d3;
   box-shadow: 0 4px 20px #18181808;
-  backdrop-filter: blur(16px);
+}
+.altar-site .main-nav {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 .altar-site .main-nav .inner-nav > ul > li > a {
   color: inherit;
@@ -100,6 +104,7 @@
   position: relative;
   pointer-events: auto;
   font-family: 'Montserrat', Arial, sans-serif;
+  backdrop-filter: blur(16px);
 }
 .altar-event-navbar-row {
   display: flex;

@@ -1,89 +1,94 @@
-# ALTAR Comunidad Cristiana
+# ALTAR Comunidad Cristiana · sitio público
 
-Sitio informativo de ALTAR con una página principal y vistas propias de Yo Elijo la Pureza, CREE, Comparte, Viajes misioneros y Casas de Vida. Utiliza HTML, CSS y JavaScript sin compilación ni dependencias de instalación. La base es **Resonance Main One Page**, de Bestlooker; la identidad visual se adapta al material oficial de ALTAR 2026.
+Sitio informativo de ALTAR con **nueve páginas** y un formulario de bienvenida que se integra con la intranet. Utiliza HTML, CSS y JavaScript sin compilación. La base es Resonance Main One Page, de Bestlooker, adaptada a la identidad de ALTAR.
 
-[Ver la landing en GitHub Pages](https://hectorsalazar.github.io/altar/)
+La referencia vigente es la lista de 26 puntos de la revisión del 24 de noviembre de 2026. Consulta [su estado y pendientes](docs/REVISION-2026-11-24.md).
 
-## Ver la propuesta
+## Vista local y comprobación
 
-Ejecuta:
+Desde la carpeta de la landing:
 
 ```sh
 npm run dev
-```
-
-La vista local estará disponible en `http://127.0.0.1:4173`. Las páginas completas están en `/`, `/yoelijolapureza/`, `/cree/`, `/comparte/`, `/viajes-misioneros/` y `/casas-de-vida/`. Se pueden abrir los archivos `index.html` directamente. Los accesos `yoelijolapureza.html`, `cree.html`, `comparte.html`, `viajes-misioneros.html` y `casas-de-vida.html` llevan a las páginas correspondientes. Los enlaces de YELP, CREE, Comparte y Viajes misioneros en la página principal abren una pestaña nueva.
-
-Para comprobar recursos, enlaces internos y referencias accesibles:
-
-```sh
 npm run check
 ```
 
-La comprobación estática verifica las páginas, anclas, archivos enlazados, dependencias CSS y cabeceras de los PDF descargables. La actualización del 10 de noviembre de 2026 pasa esta comprobación. Falta completar una nueva revisión visual de escritorio y móvil de esta versión; las capturas anteriores de `.qa/` no certifican el diseño actualizado.
+La vista local abre en [el servidor de la landing](http://127.0.0.1:4173/) y conecta el formulario con Docker en el puerto `8180`. Si usas otro puerto o la vista PHP portátil, define `ALTAR_DEV_ORIGIN` con su origen local antes de ejecutar `npm run dev`. El editor y el aula se abren desde el servidor integrado.
 
-## Identidad y efectos
+El formulario también funciona desde Live Server de VS Code en `127.0.0.1:5500` o `localhost:5500` con Docker local en el puerto `8180`. La conexión se habilita para esas dos direcciones mediante la configuración local de Docker.
 
-Montserrat variable y Lora Regular proceden de la carpeta de fuentes oficial facilitada para el proyecto y se sirven localmente en WOFF2, con sus licencias. Montserrat se utiliza como familia principal y Lora en frases y destacados. La referencia también menciona Neutrif Pro, pero esa fuente no se incluyó en el paquete; queda pendiente su incorporación si se facilita el archivo autorizado.
+`npm run check` verifica HTML, recursos, enlaces, anclas, referencias accesibles, catálogo del CMS, PDF y sincronización del pie. Después de modificar la plantilla compartida del pie o sus valores base, ejecuta `npm run sync:footer`.
 
-El encabezado compartido combina el isotipo oficial con los textos ALTAR y Comunidad Cristiana en Montserrat. El subtítulo mide 11 px y el conjunto ocupa 234 px en escritorio y 207 px en móvil. La barra mide 85 px en escritorio y 78 px en móvil. Al desplazarse se aclara, pasa a 70 px y muestra el isotipo oscuro con una transición de 0,5 segundos. Los estilos se comparten en `assets/css/altar-navbar.css`.
+## Páginas y archivos
 
-El pie de las seis páginas públicas usa la plantilla de `scripts/footer.mjs` y los estilos de `assets/css/altar-footer.css`. Ejecuta `npm run sync:footer` después de editar la plantilla o los valores base del pie en el catálogo del CMS. El comando actualiza los HTML que se publican y `npm run check` verifica que estén sincronizados.
-
-La portada usa el fondo de montañas y bruma con el encuadre y velo gris del video de CREE. El titular y el botón principal toman su marfil `#e4dacf`. Las fotografías superpuestas se muestran a color y mantienen sus efectos de entrada y movimiento.
-
-## Estructura
-
-- `index.html`: página principal, identidad institucional, agenda y cinco sedes.
-- `yoelijolapureza/index.html`: página completa de YELP.
-- `cree/index.html`: página de CREE con espacio para video, galería y testimonios.
-- `comparte/index.html` y `viajes-misioneros/index.html`: páginas de evangelismo, servicio y viajes de ALTAR.
-- `casas-de-vida/index.html`: página sobre los grupos de encuentro entre semana y cómo participar.
-- `yoelijolapureza.html`, `cree.html`, `comparte.html`, `viajes-misioneros.html` y `casas-de-vida.html`: accesos alternativos con redirección relativa y enlace de respaldo.
-- `assets/css/altar.css` y `assets/css/altar-main.css`: estructura y composición de la página principal.
-- `assets/css/altar-identity.css`: identidad ALTAR 2026, encabezado y portada.
-- `assets/css/yelp.css` y `assets/css/cree.css`: estilos de las páginas propias.
-- `assets/fonts/altar-brand.css`: fuentes locales Montserrat y Lora.
-- `assets/js/content.js` y `assets/js/altar.js`: contenido de formación, diálogos y comportamiento de la página principal.
-- `assets/js/cree-content.js` y `assets/js/cree.js`: contenido base y reproductor de CREE.
-- `assets/cms-schema.json` y `assets/js/cms.js`: catálogo de campos y carga del contenido publicado desde la intranet.
-- `assets/images/`: logos, fotografías, gráficas de sedes y recursos de los eventos.
-- `assets/downloads/`: PDF públicos de YELP y El camino del discípulo.
-- `assets/vendor/resonance/`: recursos originales de la plantilla.
-- `docs/`: fuentes, decisiones de contenido y pendientes editoriales.
-
-## Contenido disponible
-
-La página principal incluye Sobre nosotros, visión, misión, ADN, liderazgo, mensajes, Carisma, El camino del discípulo, Casas de Vida, agenda, libros y sedes. La agenda utiliza los nombres **Sector H**, **Valiente** y **Matrimonios**. Visión, misión y valores permanecen visibles. Café con Romanos y Café con Gálatas quedan temporalmente comentados en el HTML de la portada.
-
-El camino del discípulo presenta los doce capítulos del manual facilitado para el proyecto. Su PDF se puede descargar desde la tarjeta de formación y desde el diálogo del curso. No se han definido duración en semanas, precio, certificado ni convocatoria.
-
-YELP reproduce la composición de la portada oficial con las imágenes originales y el video de presentación local en 1080p. Incluye expositores, dieciocho temas, material histórico, contactos y los PDF **Pequeños Valientes** y **Escape** en `assets/downloads/`. La siguiente fecha sigue por anunciar. [Página oficial de YELP](https://www.familiaccp.com/yoelijolapureza) · [Recursos](docs/YELP-RECURSOS.md)
-
-CREE 2026 se presenta como un evento celebrado. Su página tiene preparada la incorporación de un video, imágenes y testimonios aprobados. El resumen audiovisual del aniversario de treinta años es una opción adecuada para ese contexto; no se utiliza como presentación general de ALTAR. El acceso al recurso de Drive no permitió verificar una URL reproducible y el video permanece pendiente. No se han inventado testimonios. Consulta las indicaciones en [CREE.md](docs/CREE.md).
-
-Comparte presenta las salidas de evangelismo y servicio. Viajes misioneros recoge el trabajo de ALTAR en Pucallpa. Los testimonios de cada iniciativa se editan en la sección correspondiente de `comparte/index.html` y `viajes-misioneros/index.html`. Las páginas enlazan a WhatsApp para coordinar la participación y consultar cómo auspiciar estas iniciativas.
-
-Casas de Vida tiene una página propia que explica los encuentros entre semana para compartir la fe y hacer comunidad, con un contacto para consultar cómo integrarse a un grupo.
-
-Los horarios dominicales fueron actualizados por indicación del responsable el **10 de noviembre de 2026** y coinciden con las cinco gráficas oficiales incluidas:
-
-| Sede | Domingos |
+| Ruta | Archivo |
 | --- | --- |
-| San Isidro | 11:00 a. m. y 5:00 p. m. |
-| Chorrillos | 10:00 a. m. y 5:00 p. m. |
-| San Martín de Porres | 10:30 a. m. |
-| Reynoso | 10:30 a. m. |
-| Mirones | 5:30 p. m. |
+| Inicio | `index.html` |
+| `/yoelijolapureza/` | `yoelijolapureza/index.html` |
+| `/cree/` | `cree/index.html` |
+| `/comparte/` | `comparte/index.html` |
+| `/viajes-misioneros/` | `viajes-misioneros/index.html` |
+| `/casas-de-vida/` | `casas-de-vida/index.html` |
+| `/nuestro-legado/` | `nuestro-legado/index.html` |
+| `/pastores/` | `pastores/index.html` |
+| `/libreria/` | `libreria/index.html` |
 
-Las sedes usan acordeones HTML con una bienvenida inspirada en los afiches, dirección, horario, mapa y redes. Los mapas abren una búsqueda de Google Maps por dirección. Las imágenes, fuentes y descargas se sirven localmente; los enlaces a videos, redes y mapas necesitan conexión. La web no recoge formularios ni procesa pagos.
+Cada página secundaria conserva un acceso alternativo `.html` con redirección relativa y enlace de respaldo. Los destinos a eventos, legado y pastores desde Inicio abren una pestaña nueva.
 
-## Publicación futura en cPanel
+- `assets/css/altar-navbar.css`: encabezado compartido con fondo oscuro y claro al 90 % de opacidad.
+- `assets/css/altar-home-revision.css`: franja del ADN, cursos, Misiones, historias y composición de bienvenida.
+- `assets/js/content.js` y `assets/js/altar.js`: contenido y diálogos de los cursos.
+- `assets/js/altar-family-video.js`: reproducción de la presentación con diálogo accesible.
+- `assets/js/visitor-registration.js` y `assets/css/visitor-registration.css`: formulario de bienvenida.
+- `assets/js/yelp.js` y `assets/css/yelp.css`: pestañas y efectos de YELP.
+- `assets/js/secondary-pages.js` y `assets/css/secondary-pages.css`: legado, equipo pastoral y librería.
+- `assets/cms-schema.json` y `assets/js/cms.js`: catálogo y carga del contenido publicado desde la intranet.
+- `scripts/footer.mjs` y `assets/css/altar-footer.css`: pie compartido de las nueve páginas.
+- `assets/images/`, `assets/downloads/` y `assets/fonts/`: imágenes, PDF y fuentes públicos.
 
-Esta entrega actualiza los archivos locales; no se ha desplegado en cPanel. Para publicar el sitio estático, incluye `index.html`, `assets/`, las carpetas `yoelijolapureza/`, `cree/`, `comparte/`, `viajes-misioneros/` y `casas-de-vida/`, y los accesos `yoelijolapureza.html`, `cree.html`, `comparte.html`, `viajes-misioneros.html` y `casas-de-vida.html`. Conserva su estructura relativa. No hace falta ejecutar Node en el hosting.
+## Contenido y comportamiento
 
-No es necesario publicar `docs/`, `scripts/`, `.qa/`, `package.json` ni los originales de trabajo. Antes de publicar, completa el dominio para las URL absolutas de metadatos y revisa los contenidos pendientes. Los recursos de Resonance pertenecen a la compra del proyecto; conserva sus términos de licencia.
+La portada mantiene «Cristo es nuestro altar» sin la cita de Hebreos y utiliza las frases «Juntos en su presencia, juntos en su propósito», «Encuentro → Rendición → Envío» y «Dios es bueno, todo el tiempo». En Viajes misioneros se añade «Y en todo lugar». Los textos próximos al video son breves. El ADN aparece en una franja con fotografía a la izquierda y parallax moderado. El movimiento se reduce según la preferencia del usuario. Los textos alternativos y los controles de teclado se conservan.
 
-El editor **Sitio público** de la intranet guarda borradores y publica cambios para las seis páginas. El contenido publicado se carga desde `/api/public/pages/{slug}` en el mismo dominio. La publicación aplica los campos editados sobre el contenido base de cada página. El pie de la portada muestra el enlace **Intranet** cuando `/api/health` confirma que hay una cuenta ROOT activa. La vista estática y los metadatos de origen siguen disponibles cuando se abre el HTML localmente o cuando la API está fuera de servicio.
+La franja dominical representa a las cinco sedes y enlaza la enseñanza existente de Guiados. Todas las sedes comienzan colapsadas. Domingos en familia también queda compacto para dar espacio a la bienvenida. Las propuestas de estructura y de la frase institucional de los puntos 2 y 7 siguen pendientes de validación editorial.
 
-Para que una página pueda usar un campo nuevo, agrega su definición a `assets/cms-schema.json` y la referencia correspondiente `data-cms-*` al HTML. Las claves de los campos identifican los cambios ya guardados. Las imágenes, enlaces y textos editados mantienen el marcado de accesibilidad y los efectos existentes. Los robots que leen el HTML estático reciben los metadatos originales.
+Charisma y El camino del discípulo utilizan los recursos oficiales disponibles, un encuadre homogéneo y un botón negro por tarjeta. Ambos abren un diálogo; Charisma enlaza al aula y El camino del discípulo ofrece contacto por WhatsApp. La etiqueta es **Escuela bíblica**. No se han creado grabaciones de invitación de los pastores.
+
+YELP presenta únicamente a Danny y Daniela Príncipe, Miluska Príncipe de Guevara y Nélida Ossio de Montes. Sus dieciocho temas se organizan en pestañas de Jóvenes, Padres y pastores, y Preadolescentes. Las imágenes y los fondos mantienen efectos suaves y respetan movimiento reducido.
+
+Librería reúne los cuatro libros disponibles: **El amor vino y se quedó**, **Semillas de sanidad**, **Pequeños Valientes** y **Escape**, con sus recursos locales. El catálogo puede ampliarse cuando se entreguen títulos e imágenes; no se han inventado precios, stock ni una compra con carrito.
+
+Nuestro legado dispone de una enseñanza identificada de Hernán Paredes y espacio para un segundo video autorizado. Pastores ofrece diez fichas editables, con la presentación confirmada de Danny y Daniela y espacios pendientes de nombres, sedes, fotos y reseñas. Los espacios de testimonios no contienen relatos inventados.
+
+## Registro de bienvenida e intranet
+
+El formulario está desplegado en `#bienvenido` y tiene accesos desde la portada y el menú de Inicio. Solicita nombre y apellido, edad, cumpleaños, distrito, correo, estado civil y si tiene hijos. Las edades de los hijos son opcionales. El consentimiento permite usar los datos para contactar a la persona y acompañar su integración.
+
+Con la API activa, solicita un token de sesión a `/api/public/visitor-form` y entrega el registro a `/api/public/visitors`. Conserva el identificador del intento para evitar duplicados. La vista de GitHub Pages muestra los campos y ofrece contacto por WhatsApp.
+
+En la intranet, **Integrantes** muestra las fichas y el seguimiento. El aula de Charisma requiere una cuenta habilitada y cursos asignados.
+
+## Recursos y pendientes editoriales
+
+Las fuentes Montserrat y Lora se sirven localmente con sus licencias. Los logos de los cursos proceden del material facilitado; se conserva su identidad sin redibujarlos.
+
+`assets/images/altar-estudio-laptop-conceptual.webp` fue generada con la herramienta integrada `image_gen` como imagen conceptual para el curso. No representa a un alumno, pastor o sede reales. [El registro de recursos](docs/recursos-2026-11-24.json) contiene el prompt literal y la procedencia de las portadas recuperadas.
+
+Siguen pendientes:
+
+- Fotografías recientes y autorizadas de distintas sedes. Los cinco afiches de horarios disponibles no se presentan como fotografías nuevas de congregaciones.
+- Una fotografía actual de Comparte; se mejoró el encuadre de la imagen disponible, sin atribuirle otra fecha o procedencia.
+- Fotografías y biografías de los fundadores, el segundo video de su legado y los datos completos del equipo pastoral.
+- Testimonios autorizados y futuras incorporaciones al catálogo de libros.
+- El texto definitivo y el enfoque editorial de los puntos 2 y 7.
+- La portada de La Autoridad del Creyente (2-2) y los recursos complementarios que no aparecen en el material revisado.
+
+El punto 15, grabaciones de invitación, está fuera de la tarea de implementación. El punto 24, Google Analytics, queda diferido hasta configurar la cuenta y el identificador de medición. No se activa un seguimiento con un identificador ficticio.
+
+## Editor y preparación de publicación
+
+El CMS cubre las nueve páginas. Para agregar un campo editable, incorpora su definición en `assets/cms-schema.json` y su referencia `data-cms-*` en el HTML. Las claves identifican las ediciones guardadas; los textos, imágenes y alternativas accesibles deben mantenerse coherentes.
+
+Publicar un borrador en el CMS actualiza la base servida por la API; no despliega archivos en otro hosting. Una publicación estática usa el contenido base del HTML y los assets incluidos. El editor, el registro en base de datos y el aula requieren la API y su base. El enlace de intranet se habilita cuando la API confirma su configuración.
+
+GitHub Pages publica la raíz de `main`. Conserva las rutas relativas de las nueve páginas y sus recursos para que funcionen bajo `/altar/`. [Sitio público de ALTAR](https://hectorsalazar.github.io/altar/)

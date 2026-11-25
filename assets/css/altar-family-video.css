@@ -24,6 +24,18 @@
 .family-video-trigger:not([href])::before { display: none; }
 .family-video-trigger[data-family-no-poster] { aspect-ratio: 16 / 9; }
 
+.family-video-intro {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+.family-video-trigger[data-family-intro-playing] .family-video-intro { opacity: 1; }
+.family-video-trigger:is([data-family-intro-pending], [data-family-intro-playing]):not(:focus-visible) .family-video-play { opacity: 0; }
+
 .family-video-trigger:focus-visible,
 .family-video-close:focus-visible,
 .family-video-external:focus-visible {

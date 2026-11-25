@@ -1,0 +1,98 @@
+:root{--secondary-ink:#181818;--secondary-paper:#faf9f7;--secondary-ivory:#d8d1c8;--secondary-line:#d8d5d0;--secondary-muted:#605b55;color-scheme:light;font-family:Montserrat,Arial,sans-serif;font-synthesis:none;scroll-behavior:smooth;scroll-padding-top:100px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--secondary-paper);color:var(--secondary-ink);font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+figure,h1,h2,h3,p{margin:0}
+a{color:inherit;text-underline-offset:.25em}
+button{font:inherit}
+a:focus-visible,button:focus-visible,iframe:focus-visible{outline:3px solid #84725d;outline-offset:5px}
+.secondary-skip{position:fixed;z-index:100;top:-100px;left:20px;padding:12px 20px;background:white;color:#181818}
+.secondary-skip:focus{top:12px}
+.secondary-container{width:min(1240px,calc(100% - 80px));margin-inline:auto}
+.secondary-section{padding-block:clamp(64px,8vw,112px)}
+.secondary-eyebrow{display:block;font-size:.875rem;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.secondary-title{font-size:clamp(2.3rem,5vw,4.5rem);font-weight:500;line-height:1.12;letter-spacing:-.055em;text-wrap:balance}
+.secondary-title em,.secondary-heading em{font-family:Lora,Georgia,serif;font-style:normal;font-weight:400}
+.secondary-heading{font-size:clamp(1.9rem,3.5vw,3.2rem);font-weight:500;line-height:1.18;letter-spacing:-.045em;text-wrap:balance}
+.secondary-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;max-width:100%;padding:13px 24px;background:var(--secondary-ink);color:white;border:1px solid var(--secondary-ink);text-align:center;text-decoration:none;font-size:.875rem;font-weight:500;transition:background .2s,color .2s}
+.secondary-button:hover{background:var(--secondary-ivory);color:var(--secondary-ink)}
+.secondary-text-link{display:inline-block;font-size:.875rem;font-weight:500}
+.secondary-hero{position:relative;overflow:hidden;background:#1b1b1b;color:#f5f0e9}
+.secondary-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,100px);align-items:center;padding-block:clamp(64px,8vw,112px)}
+.secondary-hero .secondary-eyebrow{margin-bottom:24px;color:#d8d1c8}
+.secondary-hero p{max-width:43ch;margin-top:24px;color:#e0dcd5;font-size:clamp(1rem,1.3vw,1.125rem)}
+.secondary-hero .secondary-button{margin-top:30px;border-color:var(--secondary-ivory);background:var(--secondary-ivory);color:var(--secondary-ink)}
+.secondary-hero .secondary-button:hover{background:white}
+.secondary-hero-photo{overflow:hidden}
+.secondary-hero-photo img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.secondary-hero-photo figcaption{padding-top:10px;font-size:.875rem;color:#d8d1c8}
+.secondary-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,100px)}
+.secondary-intro p{max-width:48ch;color:var(--secondary-muted)}
+.secondary-intro .secondary-eyebrow{margin-bottom:18px}
+.legacy-founders{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,7vw,100px);margin-top:50px;padding-top:34px;border-top:1px solid var(--secondary-line)}
+.legacy-founders h3{font-weight:500;font-size:1.5rem;line-height:1.3;letter-spacing:-.03em}
+.legacy-founders p{max-width:45ch;margin-top:14px;color:var(--secondary-muted)}
+.legacy-messages{background:#e8e2da}
+.legacy-video-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
+.legacy-video-card{min-width:0}
+.legacy-video-card h3{font-size:1.2rem;font-weight:500;letter-spacing:-.025em;margin-top:20px}
+.legacy-video-card p{margin-top:8px;color:#5a524a;font-size:1rem;max-width:48ch}
+.legacy-video-frame{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;aspect-ratio:16/9;background:#24221f;color:white;text-align:center;padding:25px;text-decoration:none;overflow:hidden}
+.legacy-video-frame::before{position:absolute;inset:0;background:linear-gradient(140deg,#181818cf,#18181890),url('../images/altar-mountains-mist.webp') center/cover;content:'';transition:transform .5s}
+.legacy-video-frame>*{position:relative}
+.legacy-video-frame img{width:46px;height:auto;opacity:.8}
+.legacy-video-frame strong{max-width:24ch;font-size:1.25rem;line-height:1.4;font-weight:500}
+.legacy-play{display:grid;place-items:center;width:56px;height:56px;border:1px solid #e4dacf80;border-radius:50%}
+.legacy-play::after{content:'';width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #fff;margin-left:3px}
+.legacy-video-frame:hover::before{transform:scale(1.035)}
+.legacy-video-frame span:last-child{font-size:.875rem}
+.legacy-embed{aspect-ratio:16/9;background:#181818}
+.legacy-embed iframe{display:block;width:100%;height:100%;border:0}
+.legacy-video-pending{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;aspect-ratio:16/9;padding:30px;background:#ded5ca;border:1px solid #bfb2a2;text-align:center}
+.legacy-video-pending .secondary-eyebrow{font-size:.875rem;color:#665d52}
+.legacy-video-pending strong{max-width:24ch;font-size:1.3rem;line-height:1.35;font-weight:500}
+.secondary-closing{border-top:1px solid var(--secondary-line);text-align:center}
+.secondary-closing p{max-width:50ch;margin:22px auto 28px;color:var(--secondary-muted)}
+.pastor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:44px}
+.pastor-card{border-top:1px solid var(--secondary-line);min-width:0}
+.pastor-card-main{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center;border:0;margin-bottom:16px}
+.pastor-card-main img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pastor-card-copy{padding:22px 0 12px}
+.pastor-card-copy .secondary-eyebrow{color:#756957;font-size:.875rem}
+.pastor-card-copy h3{margin-top:12px;font-size:1.5rem;line-height:1.3;font-weight:500;letter-spacing:-.03em}
+.pastor-card-copy p{margin-top:12px;color:var(--secondary-muted);font-size:1rem}
+.pastor-card-copy dl{margin:18px 0 0;font-size:.875rem}
+.pastor-card-copy dl>div{display:flex;gap:10px;align-items:baseline;margin-top:5px}
+.pastor-card-copy dt{color:#756957;min-width:75px}
+.pastor-card-copy dd{margin:0}
+.pastor-photo{margin-top:20px;background:#e8e2da;overflow:hidden}
+.pastor-photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pastor-card.is-pending .pastor-photo img{padding:50px;object-fit:contain;opacity:.45}
+.pastor-card.is-pending h3{font-size:1.2rem}
+.pastor-card.is-pending .pastor-card-copy>p{font-size:.9375rem}
+.library-hero-books{position:relative;display:flex;align-items:center;justify-content:center;gap:24px;min-height:350px;background:linear-gradient(145deg,#3b3731,#24221e);padding:30px}
+.library-hero-books img{width:min(39%,185px);box-shadow:12px 18px 22px #0005;transition:transform .4s}
+.library-hero-books img:first-child{transform:translateY(-10px) rotate(-5deg)}
+.library-hero-books img:last-child{transform:translateY(18px) rotate(5deg)}
+.library-hero-books:hover img:first-child{transform:translateY(-14px) rotate(-3deg)}
+.library-hero-books:hover img:last-child{transform:translateY(14px) rotate(3deg)}
+.library-note{max-width:58ch;margin-top:22px;color:var(--secondary-muted)}
+.library-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px 36px;margin-top:44px}
+.library-book{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:28px;border-top:1px solid var(--secondary-line);padding-top:30px;min-width:0}
+.library-book-cover{display:grid;place-items:center;min-height:240px;aspect-ratio:3/4;padding:20px;background:#ece7e0;overflow:hidden}
+.library-book-cover img{max-height:270px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(5px 10px 8px #0002);transition:transform .35s}
+.library-book:hover .library-book-cover img{transform:translateY(-4px)}
+.library-book-cover.is-illustrated{padding:8px}
+.library-book-copy h3{margin:12px 0;font-size:1.45rem;letter-spacing:-.035em;line-height:1.25;font-weight:500}
+.library-book-copy p{font-size:.9375rem;color:var(--secondary-muted)}
+.library-book-copy .secondary-eyebrow{font-size:.875rem;color:#756957;letter-spacing:.07em}
+.library-book-author{font-size:.875rem!important;margin-bottom:16px}
+.library-book-links{display:flex;align-items:start;flex-direction:column;gap:13px;margin-top:24px}
+.library-book-links .secondary-button{padding:12px 16px;font-size:.875rem}
+.library-consultation{background:#e8e2da}
+.library-consultation .secondary-intro{align-items:center}
+.library-consultation .secondary-button{margin-top:24px}
+@media(max-width:1000px){.secondary-container{width:calc(100% - 56px)}.library-grid{grid-template-columns:1fr}.library-book{grid-template-columns:minmax(0,.5fr) minmax(0,1fr);gap:32px}.library-book-cover{min-height:260px}.pastor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-hero-books{gap:18px;min-height:300px}}
+@media(max-width:700px){.secondary-container{width:calc(100% - 36px)}.secondary-hero-grid,.secondary-intro,.legacy-founders,.legacy-video-grid,.pastor-card-main{grid-template-columns:1fr;gap:28px}.secondary-hero-grid{padding-block:52px}.secondary-hero-photo img{aspect-ratio:4/3}.secondary-title{font-size:clamp(2.3rem,9vw,3.6rem)}.secondary-section{padding-block:60px}.legacy-founders{margin-top:34px;padding-top:28px;gap:30px}.legacy-video-grid{gap:36px}.pastor-grid{gap:26px 20px}.pastor-card-main{margin-bottom:6px;gap:6px}.pastor-card-main .pastor-card-copy{padding-top:16px}.pastor-card-copy h3{font-size:1.25rem}.pastor-card-copy p{font-size:.9375rem}.pastor-card-copy dl>div{display:block}.pastor-card.is-pending .pastor-photo img{padding:30px}.pastor-card-copy .secondary-eyebrow{font-size:.875rem;letter-spacing:.07em}.pastor-card.is-pending h3{font-size:1.05rem}.pastor-card.is-pending .pastor-card-copy>p{font-size:.875rem}.library-hero-books{min-height:300px}.library-grid{gap:34px}.library-book{grid-template-columns:1fr;gap:24px}.library-book-cover{width:min(100%,280px);min-height:0;justify-self:center}.library-book-copy h3{font-size:1.6rem}.library-book-links{flex-direction:row;align-items:center;flex-wrap:wrap;gap:16px 22px}.library-book-links .secondary-button{font-size:.875rem}}
+@media(max-width:380px){.pastor-grid{grid-template-columns:1fr}.pastor-card.is-pending .pastor-photo img{max-height:170px}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.library-hero-books img{transform:none!important}}
